@@ -1,0 +1,24 @@
+.l-contents__sidebar{
+    width: 20%;
+    min-height: 100vh;
+    background-color: #F2EDE9;
+    position: relative;
+    
+    @include tab{
+        width: 47%;
+        transform: translateX(100vw);
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #F2EDE9;
+        
+    }
+    @include sp{
+        width: 90%;
+    }
+    }
+      /* アニメーション後のメニューの状態 */
+    .l-contents__sidebar.is-active{
+        transform: translateX(0);
+    }
+

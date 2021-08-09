@@ -1,0 +1,837 @@
+.p-section{
+    display: flex;
+    margin: 10% 8%;
+    @include tab{
+        margin: 2rem;
+    }
+    @include sp{
+        display: flex;
+        flex-direction: column;
+    }
+&__left{
+    position: relative;
+    display: flex;
+    float: left;
+    width: 50%;
+    padding: 0;
+    margin-right: 3rem;
+
+    @include sp{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+&__left__img{
+    width: 100%;
+    
+}
+&__left__text{
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    padding: 2rem 0 0 1rem;
+    font-weight: bold;
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        margin: 3rem 0 0 2.5rem; /* 位置調整 */
+        transform: translate(-50%); /* 位置調整 */
+        width: 5rem; /* 下線の幅 */
+        height: 2px; /* 下線の太さ */
+        background-color: #FFFFFF; /* 下線の色 */
+    }
+    @include tab {
+    font-size: 3rem;
+    }
+}
+&__left__subtext{
+    position: absolute;
+    top: 60%;
+    @include sp{
+        font-size: 1.5rem;
+    }
+
+}
+&__right{
+    position: relative;
+    display: flex;
+    float: right;
+    width: 50%;
+    padding: 0;
+
+    @include sp{
+        width: 100%;
+    
+    }
+}
+
+&__right__img{
+    width: 100%;
+    
+}
+&__right__text{
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    padding: 2rem 0 0 1rem;
+    font-weight: bold;
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        margin: 3rem 0 0 2.5rem; /* 位置調整 */
+        transform: translate(-50%); /* 位置調整 */
+        width: 5rem; /* 下線の幅 */
+        height: 2px; /* 下線の太さ */
+        background-color: #FFFFFF; /* 下線の色 */
+    }
+    @include tab {
+        font-size: 3rem;
+        }
+    
+}
+&__right__subtext{
+    position: absolute;
+    top: 60%;
+    
+}
+&__text1{
+    position: absolute;
+    justify-content: center;
+    top:66%;
+    max-width: 90%;
+    height: 15%;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    opacity: 0.8;
+    left: 1.5rem;
+    right: 1.5rem;
+    margin: 0 auto;
+    @include tab{
+        top:45%;
+        height: 25%;
+        padding: 2rem 1rem 1rem 1rem;
+    }
+}
+&__text2{ 
+    position: absolute;
+    max-width: 90%;
+    height: 15%;
+    top:83%;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    opacity: 0.8;
+    margin: 0 auto;
+    @include tab{
+        height: 25%;
+        top:72.5%;
+        padding: 2rem 1rem 1rem 1rem;
+    }
+}
+&__text1-1{
+    font-size: 1.6rem;
+    font-weight: bold; 
+    margin-right: 4rem;
+    @include tab{
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    @include tabsp{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+}
+&__text2-1{
+    font-size: 1.6rem;
+    font-weight: bold; 
+    @include tab{
+    font-size: 2rem;
+    margin-top: 1rem;
+    }
+    @include tabsp{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+}
+&__text__sub{
+    font-size: 1.1rem;
+    margin-top: 1.4rem;
+    color:#3C2A10;
+    @include tab{
+        margin-top: 2.5rem;
+        font-size: 1.6rem;
+    }
+    @include tabsp{
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+    @include sp{
+        margin-top: 2.5rem;
+        font-size: 1.6rem;
+    }
+}
+&__map {
+    clear: both;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url(../image/map.png);
+    height: 100%;
+    width: auto;
+    background-size: cover;
+    background-position: 50% 10%;
+    position: relative;
+    @include sp{
+        zoom: 1.6;
+        background-repeat: no-repeat;
+        background-position: right 65% bottom 0;
+    
+    }
+}
+&__map2{
+    @include sp{
+        background-color: rgba(0, 0, 0, 0.4);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        position: absolute;
+    }
+
+}
+&__map3{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 60%;
+    padding: 6rem;
+    color: white;
+    height: 100%;
+    @include tab{
+        width: 100%;
+        padding: 1.5rem;
+    }
+    @include sp{
+        position: relative;
+        background-color: transparent;
+    }
+}
+
+&__map3__text {
+    font-size: 3rem;
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        margin: 6rem 0 0 4rem; /* 位置調整 */
+        transform: translate(-50%); /* 位置調整 */
+        width: 8rem; /* 下線の幅 */
+        height: 2px; /* 下線の太さ */
+        background-color: #FFFFFF; /* 下線の色 */
+        @include sp{
+            margin: 2rem 0 0 4rem; /* 位置調整 */
+        }
+}
+    @include tab{
+        padding-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        top: 0;
+    }
+    @include sp{
+        
+    }
+}
+
+&__map3__subtext{
+    line-height: 2;
+    margin-top: 10rem;
+    box-sizing:border-box;border:none;
+    font-size: 1.8rem;
+    box-sizing: border-box;
+    color:#FFFFFF;
+    @include tab{
+        line-height: 2.5;
+    }
+    @include sp{
+        line-height: 2;
+        margin-top: 3rem;
+        font-size: 1.6rem;
+    }
+
+}
+
+}
+.p-footer__container{
+    height: 15rem;
+    background-color: #9D8670;
+    text-align: center;
+    color: #FFFFFF;
+    
+&__text{
+    font-size: 1.5rem;
+    padding-top: 5rem;
+}
+&__subtext{
+    padding: 2rem;
+}
+}
+
+// アーカイブページ
+    .p-section__second{
+        color: #3C2A10;
+    &__text{
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+    &__subtext{
+        font-size: 1.3rem;
+        line-height: 1.5;
+        margin-bottom: 5rem;
+        @include sp {
+            font-size: 1.65rem;
+            margin-bottom: 3rem;
+        }
+    }
+    }
+    
+    .p-section__third1{
+        display: flex;
+        margin-bottom: 2rem;
+        @include sp{
+            flex-direction: column;
+        }
+    &__img {
+        width: 50%;
+        object-fit: cover;
+        @include sp{
+            width: 100%;
+        }
+    }
+    &__sub {
+        background-color: #3C2B1C;
+        width: 50%;
+        color: #FFFFFF;
+        @include sp{
+            width: 100%;
+        }
+    }
+    &__text1{
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 4rem;
+        @include tab {
+            display: none;
+            font-size: 2rem;
+            margin: 3rem 6rem 3rem 1rem;
+        }
+    }
+    &__text1__sp{
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 4rem;
+        display: none;
+        @include tab {
+            display: block;
+            font-size: 2rem;
+            margin: 3rem 6rem 3rem 1rem;
+        }
+    }
+    &__text2{
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 1rem 5rem 1.5rem 4rem;
+        @include tab {
+            font-size: 1.4rem;
+            margin: 3rem 6rem 3rem 1rem;
+        }
+    }
+    &__text3{
+        font-weight: bold;
+        margin: 0 6rem 1rem 4rem;
+        line-height: 1.5;
+        font-size: 1.4rem;
+        @include tab {
+            margin: 3rem 6rem 3rem 1rem;
+        }
+    }
+    }
+    
+    .p-section__third2{
+        display: flex;
+        margin-bottom: 2rem;
+        @include sp{
+            flex-direction: column;
+        }
+    &__img {
+        width: 50%;
+        object-fit: cover;
+        @include sp{
+            width: 100%;
+        }
+    }
+    &__sub {
+        background-color: #3C2B1C;
+        width: 50%;
+        color: #FFFFFF;
+        @include sp{
+            width: 100%;
+        }
+    }
+    &__text1{
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 4rem;
+        @include tab {
+            font-size: 2rem;
+            margin: 3rem 6rem 3rem 1rem;
+        }
+    }
+
+    }
+    
+    .p-section__third3{
+        display: flex;
+        margin-bottom: 2rem;
+        @include sp{
+            flex-direction: column;
+        }
+    &__img {
+        width: 50%;
+        object-fit: cover;
+        @include sp{
+            width: 100%;
+        }
+    }
+    &__sub {
+        background-color: #3C2B1C;
+        width: 50%;
+        color: #FFFFFF;
+        @include sp{
+            width: 100%;
+        }
+        
+    }
+    &__text1{
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 4rem;
+        @include tab {
+            font-size: 2rem;
+            margin: 3rem 6rem 3rem 1rem;
+        }
+    }
+    }
+.p-section{
+    &__search{
+        text-align: center;
+        margin-top: 5rem;
+    }
+        
+    &__search__text{
+        background-color: #FFFFFF;
+        color: #707070;
+        padding: 2rem 2.5rem;
+        width: 25rem;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        @include tab {
+            padding: 1.5rem 1.5rem;
+            width: 15rem;
+            font-size: 1.6rem;
+        }
+        @include sp{
+            
+        }
+    }
+}
+    
+    .p-section__page{
+        margin-top: 15rem;
+        text-align: center;
+        justify-content: center;
+        color:#707070;
+        margin-bottom: 5rem;
+        display: flex;
+    ul{
+        display: flex;
+    }
+    li{
+        
+        color:#707070;
+        padding: 1rem;   
+    }
+    &__nation{
+        
+    font-size: 1rem;
+    }
+    
+    a{  
+        
+        border:1px #ccc solid;
+        padding: 1rem;
+    }
+    }
+    
+
+    
+.p-Menu__nav{
+    padding-left: 3rem;
+    color: #707070;
+
+&__text{
+    font-size: 2.5rem;
+    padding-top: 6rem;
+    padding-bottom: 3.5rem;
+    font-weight: bold;
+&__open{
+        display: none;
+    }
+}
+&__subtext{
+    font-size: 1.8rem;
+    padding-bottom: 2.5rem;
+    padding-top: 3rem;
+    font-weight: bold;
+}
+
+ul{
+    line-height: 2.2;
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+}
+}
+.p-Menu__nav__text__open{
+    display: none;
+}
+
+
+.p-pagenation{
+    width: 100%;
+    height: 24rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -8rem;
+ul{
+    display: flex;
+    li{
+        padding: 0 0.8rem;
+        font-size: 1.2rem;
+        
+    &:first-of-type{
+        padding-top: 1rem;
+    &::after{
+        
+        content: "<<";
+        color: #3C2B1C;
+        top: 1rem;
+        margin-left: 1rem;
+    
+            }
+    }
+    &:last-of-type{
+        position: relative;
+    &::after{
+        position: absolute;
+        top: 1rem;
+        right: -2.4rem;
+        content: ">>";
+        color: #3C2B1C;
+            }
+    }
+    a{
+        display: block;
+        color: #3C2B1C;
+        border: solid 1px #3C2B1C;
+        padding: 1rem;
+    }
+        }
+    }
+    @include sp{
+        display: none;
+    }
+}
+.p-pagenation__sp{
+    display: none;
+
+    
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        li{
+            
+            font-size: 1.2rem;
+            margin-left: 1rem;
+        &:first-of-type{
+            position: relative;
+        &::before{
+            position: absolute;
+            content: "<<";
+            color: #3C2B1C;
+            top: 1rem;
+            left: -0.5rem;
+                }
+        }
+        &:last-of-type{
+            position: relative;
+        &::after{
+            position: absolute;
+            top: 1rem;
+            right: -0.5rem;
+            content: ">>";
+            color: #3C2B1C;
+                }
+        }
+        a{
+            display: block;
+            color: #3C2B1C;
+            padding: 1rem;
+        }
+    }
+} 
+    @include sp{
+        display: inline-block;
+        width: 100%;
+    }
+}
+// シングルページ
+.p-section__second{
+    color: #3C2A10;
+
+&__text__h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+&__text__h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+&__text__h5{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+&__text__h6{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+}
+.p-section__URL{
+    padding: 3rem;
+
+&__text{
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    line-height: 1.5;
+}
+&__subtext{
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    a{
+        text-decoration:underline;
+        color: blue;
+    }
+}
+}
+
+
+.p-section__third{
+    line-height: 1.5;
+&__1{
+    margin-bottom: 4rem;
+}
+
+&__1__img{
+    width: 103rem;
+    height: 50rem;
+    object-fit: cover;
+    object-position: bottom;
+    @include tab{
+        width: 100%;
+        height: 25rem;
+    }
+}
+&__2{
+    margin-bottom: 4rem;
+    display: flex;
+    @include sp{
+        margin-bottom: -7rem;
+    }
+
+}
+&__2__img{
+    width: 42.5%;
+    height: 25rem;
+    object-fit: cover;
+    @include tab{
+        margin-bottom: 20rem;
+    }
+    @include sp{
+        height: auto;
+    }
+}
+&__2__text{
+    margin-left: 3.5rem;
+    font-size: 1.6rem;
+    @include sp{
+        display: none;
+    }
+}
+&__2__sptext{
+    display: none;
+    @include sp{
+        display: block;
+        margin-left: 1rem;
+        font-size: 1.7rem;
+    }
+}
+
+&__3{
+    margin-bottom: 4rem;
+    display: flex;
+
+    @include sp{
+        margin-bottom: -7rem;
+    }
+
+}
+&__3__img{
+    width: 42.5%;
+    height: 25rem;
+    object-fit: cover;
+    @include tab{
+        margin-bottom: 20rem;
+    }
+    @include sp{
+        height: auto;
+    }
+
+}
+&__3__text{
+    margin-right: 3.5rem;
+    font-size: 1.6rem;
+    overflow: hidden;
+    @include sp{
+        display: none;
+    }
+}
+&__3__sptext{
+    display: none;
+
+    @include sp{
+        display: block;
+        margin-right: 1rem;
+        font-size: 1.7rem;
+    }
+}
+&__4{
+    margin-bottom: 4rem;
+    display: block;
+    text-align: center;  
+}
+&__4__img{
+    width: 42.5%;
+    @include tab{
+        width: 85%;
+    }
+}
+&__5{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+&__5__box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+
+li{
+    display: flex;
+    flex-wrap: wrap;
+    width: 33%;
+    padding: 1rem;
+    @include tab{
+        width: 50%;
+    }
+    @include sp{
+        width: 100%;
+    }
+}
+img {
+    width: 100%;
+    margin: 0 0 auto;
+}
+}
+}
+
+.p-section__list{
+    padding: 5rem 0 0 5rem;
+ol{
+    line-height: 1.3rem;
+    padding: 2rem;
+    
+li{
+    list-style: decimal;
+
+}
+}
+    
+ul{
+    line-height: 1.2rem;
+    padding: 2rem 2rem 2rem 1rem;
+
+}
+}
+
+
+
+.p-section__code{
+    line-height: 1.5;
+    margin: 5rem;
+    font-size: 1.2rem;
+}
+
+.p-section__table{
+    
+table{
+    width: 100%;
+    font-size: 1.2rem;
+}
+&__left{
+    width: 33%;
+    padding: 2rem;
+    border: solid 1px;
+    @include sp{
+        width: 45%;
+
+    }
+}
+&__right{
+    width: 66%;
+    padding: 2rem;
+    border: solid 1px;
+    @include sp{
+        width: 55%;
+    }
+}
+}
+.p-section__under{
+    margin-bottom: 25rem;
+    @include sp{
+        margin-bottom: 15rem;
+    }
+}
+

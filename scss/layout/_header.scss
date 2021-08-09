@@ -1,0 +1,36 @@
+.l-contents{
+    display: flex;
+&__header{
+    width: 80%;
+    @include tab{
+        width: 100%;
+    }
+}
+}
+
+
+.l-header__container{
+    background-color: #FFF7EF;
+    height: 15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include tab{
+        display: block;
+        text-align: center;
+        padding-top: 3rem;
+    }
+}
+.l-header__title{
+    font-size: 4rem;
+    font-family: Roboto;
+    color:#707070;
+    margin-left: 2rem;
+    @include tab{
+        font-size: 3.5rem;
+    }
+}    
+
+
+
+
