@@ -268,16 +268,14 @@
     background-color: #9D8670;
     text-align: center;
     color: #FFFFFF;
-    
-&__text{
     font-size: 1.5rem;
     padding-top: 5rem;
-}
-&__subtext{
-    padding: 2rem;
-}
+    
 }
 
+#menu-item-273{
+    padding: 2rem;
+}
 // アーカイブページ
     .p-section__second{
         color: #3C2A10;
@@ -479,7 +477,7 @@
     
 
     
-.p-Menu__nav{
+.p-Menu{
     padding-left: 3rem;
     color: #707070;
 
@@ -492,18 +490,26 @@
         display: none;
     }
 }
-&__subtext{
-    font-size: 1.8rem;
-    padding-bottom: 2.5rem;
-    padding-top: 3rem;
-    font-weight: bold;
-}
 
-ul{
-    line-height: 2.2;
-    font-size: 1.5rem;
-    padding-left: 1.5rem;
 }
+.menu-item-244,.menu-item-246,.menu-item-245{
+    margin-bottom: 2rem;
+a{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 3;
+    
+
+}
+}
+.sub-menu{
+    a{
+        line-height: 2.2;
+        font-size: 2rem;
+        padding-left: 1.5rem; 
+        font-weight: normal;
+    }
+
 }
 .p-Menu__nav__text__open{
     display: none;
@@ -517,89 +523,9 @@ ul{
     align-items: center;
     justify-content: center;
     margin-bottom: -8rem;
-ul{
-    display: flex;
-    li{
-        padding: 0 0.8rem;
-        font-size: 1.2rem;
-        
-    &:first-of-type{
-        padding-top: 1rem;
-    &::after{
-        
-        content: "<<";
-        color: #3C2B1C;
-        top: 1rem;
-        margin-left: 1rem;
-    
-            }
-    }
-    &:last-of-type{
-        position: relative;
-    &::after{
-        position: absolute;
-        top: 1rem;
-        right: -2.4rem;
-        content: ">>";
-        color: #3C2B1C;
-            }
-    }
-    a{
-        display: block;
-        color: #3C2B1C;
-        border: solid 1px #3C2B1C;
-        padding: 1rem;
-    }
-        }
-    }
-    @include sp{
-        display: none;
-    }
 }
-.p-pagenation__sp{
-    display: none;
-
     
-    ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        li{
-            
-            font-size: 1.2rem;
-            margin-left: 1rem;
-        &:first-of-type{
-            position: relative;
-        &::before{
-            position: absolute;
-            content: "<<";
-            color: #3C2B1C;
-            top: 1rem;
-            left: -0.5rem;
-                }
-        }
-        &:last-of-type{
-            position: relative;
-        &::after{
-            position: absolute;
-            top: 1rem;
-            right: -0.5rem;
-            content: ">>";
-            color: #3C2B1C;
-                }
-        }
-        a{
-            display: block;
-            color: #3C2B1C;
-            padding: 1rem;
-        }
-    }
-} 
-    @include sp{
-        display: inline-block;
-        width: 100%;
-    }
-}
+ 
 // シングルページ
 .p-section__second{
     color: #3C2A10;
