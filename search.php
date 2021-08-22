@@ -11,9 +11,10 @@
      <h3 class="p-section__second__text">小見出しが入ります</h3>
      <p class="p-section__second__subtext">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
     </div>
-
+    <?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post(); ?>
    <div class="p-section__third1">
-    <img class="p-section__third1__img" src="<?php echo get_template_directory_uri(); ?>/image/cheeseburgar.png">
+  <img class="p-section__third1__img" src="<?php echo get_template_directory_uri(); ?>/image/cheeseburgar.png">
     <div class="p-section__third1__sub">
      <h4 class="p-section__third1__text1">見出しが入ります</h4>
      <p class="p-section__third1__text1__sp">チーズバーガー</p>
@@ -22,60 +23,12 @@
       <div class="p-section__search">
 	   <p class="p-section__search__text">詳しく見る</p>
       </div>
-    </div>												
+    </div>							
    </div>
-
-   <div class="p-section__third1">
-    <img class="p-section__third1__img" src="<?php echo get_template_directory_uri(); ?>/image/cheeseburgar.png">
-    <div class="p-section__third1__sub">
-     <h4 class="p-section__third1__text1">見出しが入ります</h4>
-     <p class="p-section__third1__text1__sp">チーズバーガー</p>
-     <h5 class="p-section__third1__text2">小見出しが入リます</h5>
-     <p class="p-section__third1__text3">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-      <div class="p-section__search">
-	   <p class="p-section__search__text">詳しく見る</p>
-      </div>
-    </div>												
-   </div>
-
-   <div class="p-section__third1">
-    <img class="p-section__third1__img" src="<?php echo get_template_directory_uri(); ?>/image/cheeseburgar.png">
-    <div class="p-section__third1__sub">
-     <h4 class="p-section__third1__text1">見出しが入ります</h4>
-     <p class="p-section__third1__text1__sp">チーズバーガー</p>
-     <h5 class="p-section__third1__text2">小見出しが入リます</h5>
-     <p class="p-section__third1__text3">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-      <div class="p-section__search">
-	   <p class="p-section__search__text">詳しく見る</p>
-      </div>
-    </div>												
-   </div>
-
-   <div class="p-section__third1">
-    <img class="p-section__third1__img" src="<?php echo get_template_directory_uri(); ?>/image/cheeseburgar.png">
-    <div class="p-section__third1__sub">
-     <h4 class="p-section__third1__text1">見出しが入ります</h4>
-     <p class="p-section__third1__text1__sp">チーズバーガー</p>
-     <h5 class="p-section__third1__text2">小見出しが入リます</h5>
-     <p class="p-section__third1__text3">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-      <div class="p-section__search">
-	   <p class="p-section__search__text">詳しく見る</p>
-      </div>
-    </div>												
-   </div>
-
-   <div class="p-section__third1">
-    <img class="p-section__third1__img" src="<?php echo get_template_directory_uri(); ?>/image/cheeseburgar.png">
-    <div class="p-section__third1__sub">
-     <h4 class="p-section__third1__text1">見出しが入ります</h4>
-     <p class="p-section__third1__text1__sp">チーズバーガー</p>
-     <h5 class="p-section__third1__text2">小見出しが入リます</h5>
-     <p class="p-section__third1__text3">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-      <div class="p-section__search">
-	   <p class="p-section__search__text">詳しく見る</p>
-      </div>
-    </div>												
-   </div>
+   <?php endwhile; ?>
+ 
+ <?php endif; ?>
+ <?php wp_reset_query(); ?>
 
     <div class="p-pagenation">
 
