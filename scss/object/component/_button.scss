@@ -121,9 +121,8 @@
     }
 
 .c-button{
-    margin: 4rem 0 4rem 0;
-    &__kadomaru{
-        width:35.5rem;
+&__under{
+        width:35rem;
         height:7rem;
         border-radius: 1rem;
         background:#F2EDE9;
@@ -131,9 +130,12 @@
         font-size:1.3rem;
         color: #707070;
         text-align: center;
-        border: solid 0.1rem #707070;/*線*/
+        align-items: center;
+        border: solid 0.1rem #707070;
+        margin-bottom: 3rem;
         @include sp{
             width: 33rem;
         }
     }
+
 }

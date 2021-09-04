@@ -701,12 +701,8 @@ body {
   font-size: 5rem;
 }
 
-.c-button {
-  margin: 4rem 0 4rem 0;
-}
-
-.c-button__kadomaru {
-  width: 35.5rem;
+.c-button__under {
+  width: 35rem;
   height: 7rem;
   border-radius: 1rem;
   background: #F2EDE9;
@@ -714,12 +710,13 @@ body {
   font-size: 1.3rem;
   color: #707070;
   text-align: center;
+  align-items: center;
   border: solid 0.1rem #707070;
-  /*線*/
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 375px) {
-  .c-button__kadomaru {
+  .c-button__under {
     width: 33rem;
   }
 }
@@ -1467,12 +1464,25 @@ body {
   margin-bottom: -8rem;
 }
 
-.p-main h1 {
+.p-top__image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.p-top__image img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
+
+.p-top__image h1 {
   position: absolute;
   font-size: 3.6rem;
   font-weight: bold;
   color: white;
-  margin-left: 4rem;
+  margin-left: 5.5rem;
   z-index: 10;
 }
 
@@ -1523,20 +1533,6 @@ body {
   margin-bottom: 3rem;
 }
 
-.wp-block-image {
-  margin-bottom: 3rem;
-  width: 70vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  align-items: center;
-  object-fit: cover;
-}
-
-.wp-block-column {
-  margin: -1rem;
-}
-
 .wp-block-table tr, .wp-block-table td {
   border: solid 1px #707070;
   padding: 2rem;
@@ -1547,21 +1543,43 @@ body {
   margin: 5rem 2rem;
 }
 
-.wp-block-buttons {
-  width: 27rem;
-  height: 7rem;
-  border-radius: 1rem;
-  background: #F2EDE9;
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: #707070;
-  text-align: center;
-  border: solid 0.1rem #707070;
-  margin-bottom: 5rem;
+.img__top {
+  margin: 0 -6rem 2rem -6rem;
+}
+
+.img__top img {
+  height: 40rem;
+  width: 100%;
+}
+
+.img__center {
+  margin-bottom: 3rem;
+}
+
+.img__center img {
+  height: 40rem;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.__1, .__2, .__3 {
+  margin: 0 -0.5rem 0 0;
+}
+
+.__center1 img {
+  height: 40rem;
+  object-fit: cover;
+  object-position: bottom;
+  margin-bottom: 2rem;
+}
+
+.__center2 img {
+  height: 40%;
+  margin: -3rem 0 1rem 0;
 }
 
 .bold {
-  margin-bottom: 25rem;
+  padding-bottom: 20rem;
 }
 
 .blocks-gallery-grid, .wp-block-gallery {

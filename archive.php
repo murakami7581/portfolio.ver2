@@ -9,7 +9,23 @@
   </div>
 
   <div class="l-section__main">
-   <div class="p-section__second">
+  <?php
+if (have_posts()) :
+    while (have_posts()) :
+        the_post(); ?>
+        <div class="p-menu-card" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <?php the_post_thumbnail(); ?> //記事のアイキャッチを表示
+            <div class="p-menu-card__intro">
+                <h3><?php the_title(); ?></h3>
+                <?php the_excerpt(); ?> //抜粋を表示
+                <a href="<?php the_permalink(); ?>">詳しく見る</a> //詳しく見るから個別記事に飛ぶテンプレートタグ
+            </div>
+        </div>
+    <?php endwhile;
+else :
+    ?><p>表示する記事がありません</p>
+<?php endif; ?>
+   <!-- <div class="p-section__second">
     <h3 class="p-section__second__text">小見出しが入ります</h3>
     <p class="p-section__second__subtext">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
    </div>
@@ -47,8 +63,8 @@
       <div class="p-section__search">
        <p class="p-section__search__text"><a href="single.html">詳しく見る</a></p>
       </div>
-     </div>
-   </div>
+     </div> -->
+   <!-- </div> -->
 
    <div class="p-pagenation">
 
