@@ -1,6 +1,7 @@
 .p-section{
     display: flex;
     margin: 10% 8%;
+    position: relative;
     @include tab{
         margin: 2rem;
     }
@@ -15,7 +16,7 @@
     width: 50%;
     padding: 0;
     margin-right: 3rem;
-
+    z-index: 10;
     @include sp{
         width: 100%;
         margin-bottom: 2rem;
@@ -25,26 +26,7 @@
     width: 100%;
     
 }
-&__left__text{
-    position: absolute;
-    color: white;
-    font-size: 4rem;
-    padding: 2rem 0 0 1rem;
-    font-weight: bold;
-    &::after{
-        content: '';
-        display: block;
-        position: absolute;
-        margin: 3rem 0 0 2.5rem; /* 位置調整 */
-        transform: translate(-50%); /* 位置調整 */
-        width: 5rem; /* 下線の幅 */
-        height: 2px; /* 下線の太さ */
-        background-color: #FFFFFF; /* 下線の色 */
-    }
-    @include tab {
-    font-size: 3rem;
-    }
-}
+
 &__left__subtext{
     position: absolute;
     top: 60%;
@@ -59,7 +41,7 @@
     float: right;
     width: 50%;
     padding: 0;
-
+    z-index: 10;
     @include sp{
         width: 100%;
     
@@ -175,6 +157,7 @@
         font-size: 1.6rem;
     }
 }
+
 &__map {
     clear: both;
     background-color: rgba(0, 0, 0, 0.6);
@@ -261,9 +244,68 @@
     }
 
 }
+}
+.menu-main-container{
+    position: absolute;
+    color: #FFFFFF;
+    z-index: 100;
+    width: 100%;
+    font-weight: bold;
+    @include sp{
+        
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      @include sp{
+      display: block; 
+    }
+     &::after{
+        content:"";
+        display: block;
+        width:5%;
+     }
+      li{
+        a{
+            font-size: 4rem;
+    @include tab {
+        font-size: 3rem;
+        } 
+        }
+      }
+    }
 
 }
-
+#menu-item-981{
+    padding: 1.5% 0 0 1%;
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        margin: 3rem 0 0 3rem; /* 位置調整 */
+        transform: translate(-50%); /* 位置調整 */
+        width: 5rem; /* 下線の幅 */
+        height: 2px; /* 下線の太さ */
+        background-color: #FFFFFF; /* 下線の色 */
+    }
+}
+#menu-item-980{
+    padding: 1.5% 0 0 1%;
+    @include sp{
+        padding-top: 185%;
+      }
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        margin: 3rem 0 0 3rem; /* 位置調整 */
+        transform: translate(-50%); /* 位置調整 */
+        width: 5rem; /* 下線の幅 */
+        height: 2px; /* 下線の太さ */
+        background-color: #FFFFFF; /* 下線の色 */
+    }
+}
 
 #menu-item-273{
     padding: 2rem;
@@ -287,159 +329,77 @@
     }
     }
     
-    .p-section__third1{
+    .p-section__menu{
         display: flex;
         margin-bottom: 2rem;
+        height: 35rem;
         @include sp{
             flex-direction: column;
+            height: 45rem;
         }
-    &__img {
-        width: 50%;
-        object-fit: cover;
-        @include sp{
-            width: 100%;
+        img {
+            width: 50%;
+            height: 35rem;
+            object-fit: cover;
+            @include sp{
+                width: 100%;
+                height: 20rem;
+            }
         }
-    }
-    &__sub {
-        background-color: #3C2B1C;
-        width: 50%;
-        color: #FFFFFF;
-        @include sp{
-            width: 100%;
+        &__sub {
+            background-color: #3C2B1C;
+            width: 50%;
+            color: #FFFFFF;
+            @include sp{
+                width: 100%;
+                height: 25rem;
+            }
+            h3{
+                font-size: 3rem;
+                font-weight: bold;
+                margin: 4rem;
+             @include tab {
+                font-size: 2rem;
+                margin: 2rem;
+             }
+             @include sp {
+                display: none;
+                
+             }
+         }
+         p{
+            margin: 4rem 4rem 6rem 4rem;
+            @include tab {
+                margin: 0rem 3rem 5rem 2rem;
+             }
+            @include sp {
+                margin: 1rem 4rem 5rem 1rem;
+             }
+         }
         }
-    }
-    &__text1{
-        font-size: 3rem;
-        font-weight: bold;
-        margin: 4rem;
-        @include tab {
-            display: none;
-            font-size: 2rem;
-            margin: 3rem 6rem 3rem 1rem;
+        &__botton{
+            text-align: center;
+            @include sp {
+                
+             }
+         a{
+            background-color: #FFFFFF;
+            color: #707070;
+            padding: 2rem 8rem;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            @include tab {
+                padding: 5% 15%;
+             }
+            @include sp {
+                padding: 5% 15%;
+             }
+         }
+       
+         }
         }
-    }
-    &__text1__sp{
-        font-size: 3rem;
-        font-weight: bold;
-        margin: 4rem;
-        display: none;
-        @include tab {
-            display: block;
-            font-size: 2rem;
-            margin: 3rem 6rem 3rem 1rem;
-        }
-    }
-    &__text2{
-        font-size: 2rem;
-        font-weight: bold;
-        margin: 1rem 5rem 1.5rem 4rem;
-        @include tab {
-            font-size: 1.4rem;
-            margin: 3rem 6rem 3rem 1rem;
-        }
-    }
-    &__text3{
-        font-weight: bold;
-        margin: 0 6rem 1rem 4rem;
-        line-height: 1.5;
-        font-size: 1.4rem;
-        @include tab {
-            margin: 3rem 6rem 3rem 1rem;
-        }
-    }
-    }
-    
-    .p-section__third2{
-        display: flex;
-        margin-bottom: 2rem;
-        @include sp{
-            flex-direction: column;
-        }
-    &__img {
-        width: 50%;
-        object-fit: cover;
-        @include sp{
-            width: 100%;
-        }
-    }
-    &__sub {
-        background-color: #3C2B1C;
-        width: 50%;
-        color: #FFFFFF;
-        @include sp{
-            width: 100%;
-        }
-    }
-    &__text1{
-        font-size: 3rem;
-        font-weight: bold;
-        margin: 4rem;
-        @include tab {
-            font-size: 2rem;
-            margin: 3rem 6rem 3rem 1rem;
-        }
-    }
-
-    }
-    
-    .p-section__third3{
-        display: flex;
-        margin-bottom: 2rem;
-        @include sp{
-            flex-direction: column;
-        }
-    &__img {
-        width: 50%;
-        object-fit: cover;
-        @include sp{
-            width: 100%;
-        }
-    }
-    &__sub {
-        background-color: #3C2B1C;
-        width: 50%;
-        color: #FFFFFF;
-        @include sp{
-            width: 100%;
-        }
-        
-    }
-    &__text1{
-        font-size: 3rem;
-        font-weight: bold;
-        margin: 4rem;
-        @include tab {
-            font-size: 2rem;
-            margin: 3rem 6rem 3rem 1rem;
-        }
-    }
-    }
-.p-section{
-    &__search{
-        text-align: center;
-        margin-top: 5rem;
-    }
-        
-    &__search__text{
-        background-color: #FFFFFF;
-        color: #707070;
-        padding: 2rem 2.5rem;
-        width: 25rem;
-        margin: 0 auto;
-        margin-bottom: 3rem;
-        border-radius: 50px;
-        font-size: 1.2rem;
-        @include tab {
-            padding: 1.5rem 1.5rem;
-            width: 15rem;
-            font-size: 1.6rem;
-        }
-        @include sp{
-            
-        }
-    }
-}
-    
     .p-section__page{
         margin-top: 15rem;
         text-align: center;
@@ -468,26 +428,35 @@
     }
     
 
-    
+// サイドバー
 .p-Menu{
     padding-left: 3rem;
     color: #707070;
+    z-index: 1500;
+    position: relative;
 
 &__text{
     font-size: 2.5rem;
     padding-top: 6rem;
-    padding-bottom: 3.5rem;
+    padding-bottom: 4rem;
     font-weight: bold;
+    @include tab{
+        display: none;
+    }
 &__open{
         display: none;
     }
 }
-
+}
+.menu-categrymenu-container{
+    @include tab{
+        margin-top: 5rem;
+    }
 }
 .menu-item-651,.menu-item-652,.menu-item-653{
     margin-bottom: 2rem;
 a{
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: bold;
     line-height: 3;
     
@@ -496,8 +465,8 @@ a{
 }
 .sub-menu{
     a{
-        line-height: 2.2;
-        font-size: 2rem;
+        line-height: 3;
+        font-size: 1.35rem;
         padding-left: 1.5rem; 
         font-weight: normal;
     }
@@ -507,7 +476,7 @@ a{
     display: none;
 }
 
-
+// ページネーション
 .p-pagenation{
     width: 100%;
     height: 24rem;
@@ -516,6 +485,31 @@ a{
     justify-content: center;
     margin-bottom: -8rem;
 }
+.wp-pagenavi {
+	clear: both;
+	text-align:center;
+
+}
+.wp-pagenavi a, .wp-pagenavi span {
+	color: #999;
+	background-color: #FFF;
+	padding: 1rem;
+	margin: 0 0.5rem;
+	text-align: center;
+	text-decoration:none;
+    border: 1px solid;
+}
+.wp-pagenavi a:hover{
+    color:#FFF; 
+    background-color:#3C2B1C; 
+    border-color:#3C2B1C;
+    }
+.wp-pagenavi span.current{
+    color: #FFF;
+    background-color: #3C2B1C;
+    border-color: #3C2B1C;
+    font-weight: bold;
+    }
     
  
 // シングルページ
@@ -606,21 +600,13 @@ a{
     }
   }
  
-  .img__center{
-      margin-bottom: 3rem;
-      
-      img{
-       height: 40rem;
-       object-fit: cover;
-       object-position: bottom;
-      }
-  }
+
 .__1,.__2,.__3{
     margin: 0 -0.5rem 0 0;
 }
 .__center1{
     img{
-        height: 40rem;
+        height: 30rem;
         object-fit: cover;
         object-position: bottom;
         margin-bottom: 2rem;
@@ -630,8 +616,11 @@ a{
     img{
         height: 40%;
         margin: -3rem 0 1rem 0;
-    }
-    
+        @include tab{
+            margin: 0 auto;
+        }   
+    } 
+    flex-basis: 0;
 }
 
     .bold{

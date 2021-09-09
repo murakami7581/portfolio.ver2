@@ -15,7 +15,7 @@
 
     function register_my_menu() {
       register_nav_menu( 'categrymenu','CategryMenu');
-      register_nav_menu( 'footer','Footer');
+      register_nav_menu( 'main','Main');
     }
     add_action( 'after_setup_theme', 'register_my_menu' ); 
 
@@ -50,8 +50,13 @@
           }
           add_action( 'init', 'load_google_cdn' );
 
+          function SearchFilter($query) {
+            if ( !is_admin() && $query->is_main_query() && $query->is_search() ) {
+            $query->set( 'post_type', 'post' );
+            }
+            }
+            add_action( 'pre_get_posts','SearchFilter' );
 
-
-          
+        
 
         

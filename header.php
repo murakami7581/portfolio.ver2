@@ -17,6 +17,7 @@
 		</div>
 
 		 <header class="l-header__container">
-		  <p class="l-header__title"><?php bloginfo( 'name' ); ?></p>
+		 <p class="l-header__title"><a href="<?php echo esc_url(home_url()); ?>"><?php bloginfo( 'name' ); ?></a></p>
 		    <?php get_search_form();?>
 		 </header>
+

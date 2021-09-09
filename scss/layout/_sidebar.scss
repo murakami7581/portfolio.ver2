@@ -3,6 +3,7 @@
     min-height: 100vh;
     background-color: #F2EDE9;
     position: relative;
+    z-index: 500;
     
     @include tab{
         width: 47%;
@@ -12,6 +13,8 @@
         right: 0;
         background: #F2EDE9;
         
+
+        
     }
     @include sp{
         width: 90%;
@@ -20,5 +23,7 @@
       /* アニメーション後のメニューの状態 */
     .l-contents__sidebar.is-active{
         transform: translateX(0);
+        overflow-y: scroll;
+
     }
 
