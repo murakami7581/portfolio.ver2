@@ -2,7 +2,7 @@
  <div class="l-main">
   <div class="c-section">
    <div class="c-main__container__top">
-    <img class="c-main__container__img" src="<?php echo get_template_directory_uri(); ?>/image/Hamburger.png" alt="一番上の写真">
+    <img class="c-main__container__img" src="<?php echo esc_url( get_template_directory_uri() . '/image/Hamburger.png' ); ?>" alt="一番上の写真">
     <h2 class="c-main__container__text">Search:</h2>
     <p class="c-main__container__subtext2"><?php echo $_GET['s']; ?></p>
    </div>
@@ -18,9 +18,9 @@ if (have_posts()) :
         <div class="p-section__menu" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <?php the_post_thumbnail(); ?> 
             <div class="p-section__menu__sub">
-                <h3><?php the_title(); ?></h3>
-                <?php the_excerpt(); ?> 
-                <p class="p-section__menu__botton"><a href="<?php the_permalink(); ?>">詳しく見る</a></p>
+                <h1><?php the_title(); ?></h1>
+                <h2><?php the_excerpt(); ?></h2>
+                <div class="p-section__menu__botton"><a href="<?php the_permalink(); ?>">詳しく見る</a></div>
             </div>
         </div>
     <?php endwhile;
@@ -40,7 +40,7 @@ else :
      $my_query = new WP_Query( $args );
      if($my_query->have_posts()):
     ?>
-
+    <?php wp_link_pages(); ?>
     <?php
     if(function_exists('wp_pagenavi')):
     ?>
