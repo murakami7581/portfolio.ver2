@@ -29,10 +29,10 @@
     
         //JavaScriptの読み込みはここから
         
-        //全てのページにjs/pagetop.jsを読み込み
+        //全てのページにjs/script.jsを読み込み
         
 
-        wp_enqueue_script('script', get_template_directory_uri().'/js/script.js','jquery', $theme_version, true );    
+        wp_enqueue_script('script', get_template_directory_uri().'/js/script.js','jquery', '1.0.0', true );    
 
     }
       add_action('wp_enqueue_scripts', 'add_css_js');
