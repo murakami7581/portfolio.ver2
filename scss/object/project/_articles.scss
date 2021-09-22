@@ -545,6 +545,19 @@ a{
         justify-content: space-between;
     }
 }
+.smaller{
+    color: #999;
+	padding: 1rem;
+	margin: 0 0.5rem;
+    border: 1px solid;
+    @include tab{
+        padding: 1%;
+        margin: 0 1%;
+    }
+    @include sp{
+        display: none;
+    }
+}
 .previouspostslink{
     color: #999;
 	background-color: #FFF;
@@ -585,12 +598,7 @@ a{
         margin: 0 0.25rem;
     }
 }
-// .page, .pages ,.current{
-//     @include sp{
-//         display: none;
-//     }
-    
-// }
+
 .wp-pagenavi a:hover{
     color:#FFF; 
     background-color:#3C2B1C; 

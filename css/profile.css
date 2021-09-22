@@ -537,6 +537,7 @@ body {
   background-color: #F2EDE9;
   position: relative;
   z-index: 500;
+  right: 0;
 }
 
 @media (max-width: 834px) {
@@ -1526,6 +1527,26 @@ body {
   .clearfix {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.smaller {
+  color: #999;
+  padding: 1rem;
+  margin: 0 0.5rem;
+  border: 1px solid;
+}
+
+@media (max-width: 834px) {
+  .smaller {
+    padding: 1%;
+    margin: 0 1%;
+  }
+}
+
+@media (max-width: 375px) {
+  .smaller {
+    display: none;
   }
 }
 
