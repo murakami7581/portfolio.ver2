@@ -505,6 +505,7 @@ body {
     display: block;
     text-align: center;
     padding-top: 3rem;
+    height: 17.5rem;
   }
 }
 
@@ -512,12 +513,14 @@ body {
   font-size: 4rem;
   font-family: Roboto;
   color: #707070;
-  margin-left: 2rem;
+  margin-left: 4.5rem;
 }
 
 @media (max-width: 834px) {
   .l-header__title {
     font-size: 3.5rem;
+    margin-left: 0;
+    margin-bottom: 1rem;
   }
 }
 
@@ -571,6 +574,7 @@ body {
   position: fixed;
   z-index: 100;
   text-align: right;
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 375px) {
@@ -615,7 +619,8 @@ body {
 @media (max-width: 834px) {
   #c-form {
     padding: 2rem 0;
-    margin: 0 15%;
+    margin: 0;
+    justify-content: center;
   }
 }
 
@@ -626,16 +631,10 @@ body {
 }
 
 #c-form__search {
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   background: #FFFFFF;
-  width: 25rem;
+  width: 30rem;
   border: solid 0.1rem #707070;
-}
-
-@media (max-width: 834px) {
-  #c-form__search {
-    width: 100%;
-  }
 }
 
 #c-form__search__text {
@@ -644,6 +643,13 @@ body {
   left: 0;
   top: 0;
   font-size: 1.5rem;
+}
+
+@media (max-width: 834px) {
+  #c-form__search__text {
+    text-align: left;
+    margin-left: -10rem;
+  }
 }
 
 #c-form button {
@@ -658,20 +664,19 @@ body {
 }
 
 #c-form__submit {
-  margin-left: 0.5rem;
-  width: 8rem;
+  margin-left: 1rem;
+  width: 10rem;
   height: 3.5rem;
   left: 15rem;
   top: 0;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   background: #F2EDE9;
-  color: #fff;
   font-weight: bold;
   font-size: 1rem;
   border: none;
   color: #707070;
   text-align: center;
-  border: solid 0.1rem #707070;
+  border: solid 0.5px #707070;
   /*線*/
 }
 
@@ -750,36 +755,66 @@ body {
   object-fit: cover;
 }
 
+@media (max-width: 375px) {
+  .c-main__container__img {
+    object-position: 29% 71%;
+  }
+}
+
 .c-main__container__img1 {
   width: 100%;
   height: 40rem;
   object-fit: cover;
 }
 
+@media (max-width: 834px) {
+  .c-main__container__img1 {
+    height: auto;
+  }
+}
+
 @media (max-width: 375px) {
   .c-main__container__img1 {
-    height: 20rem;
+    display: none;
+  }
+}
+
+.c-main__container__img1sp {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .c-main__container__img1sp {
+    display: block;
+    width: 100%;
   }
 }
 
 .c-main__container__text {
   position: absolute;
-  font-size: 3.6rem;
+  font-size: 4rem;
   font-weight: bold;
   color: white;
-  margin-left: 4rem;
+  margin-left: 6rem;
+}
+
+@media (max-width: 375px) {
+  .c-main__container__text {
+    margin-left: 10%;
+  }
 }
 
 .c-main__container__subtext {
   position: absolute;
   color: #FFFFFF;
-  margin-left: 17rem;
+  margin-left: 20rem;
   margin-top: 0.5rem;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 375px) {
   .c-main__container__subtext {
-    margin: 12rem 4rem 6rem 4rem;
+    margin: 35% 0% 10% 10%;
   }
 }
 
@@ -788,11 +823,12 @@ body {
   color: #FFFFFF;
   margin-left: 20rem;
   margin-top: 0.5rem;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 375px) {
   .c-main__container__subtext2 {
-    margin: 12rem 4rem 6rem 4rem;
+    margin: 35% 0% 10% 10%;
   }
 }
 
@@ -828,7 +864,7 @@ body {
 
 @media (max-width: 834px) {
   .p-section {
-    margin: 2rem;
+    margin: 4rem;
   }
 }
 
@@ -836,6 +872,7 @@ body {
   .p-section {
     display: flex;
     flex-direction: column;
+    margin: 2rem;
   }
 }
 
@@ -943,7 +980,7 @@ body {
   .p-section__text1 {
     top: 45%;
     height: 25%;
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 5%;
   }
 }
 
@@ -964,7 +1001,7 @@ body {
   .p-section__text2 {
     height: 25%;
     top: 72.5%;
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 5%;
   }
 }
 
@@ -977,7 +1014,6 @@ body {
 @media (max-width: 834px) {
   .p-section__text1-1 {
     font-size: 2rem;
-    margin-top: 1rem;
   }
 }
 
@@ -996,7 +1032,6 @@ body {
 @media (max-width: 834px) {
   .p-section__text2-1 {
     font-size: 2rem;
-    margin-top: 1rem;
   }
 }
 
@@ -1015,7 +1050,7 @@ body {
 
 @media (max-width: 834px) {
   .p-section__text__sub {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     font-size: 1.6rem;
   }
 }
@@ -1023,38 +1058,31 @@ body {
 @media (max-width: 600px) {
   .p-section__text__sub {
     font-size: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 7.5%;
   }
 }
 
 @media (max-width: 375px) {
   .p-section__text__sub {
-    margin-top: 2.5rem;
     font-size: 1.6rem;
+    margin-top: 10%;
   }
 }
 
 .p-section__map {
-  clear: both;
-  background-color: rgba(0, 0, 0, 0.6);
-  background-image: url(../image/map.png);
-  height: 100%;
-  width: auto;
-  background-size: cover;
-  background-position: 50% 10%;
   position: relative;
+  font-weight: bold;
+}
+
+.p-section__map iframe {
+  background-color: black;
+  height: 60vh;
+  width: auto;
+  background-position: 0 100%;
 }
 
 @media (max-width: 375px) {
-  .p-section__map {
-    zoom: 1.6;
-    background-repeat: no-repeat;
-    background-position: right 65% bottom 0;
-  }
-}
-
-@media (max-width: 375px) {
-  .p-section__map2 {
+  .p-section__map1 {
     background-color: rgba(0, 0, 0, 0.4);
     top: 0;
     left: 0;
@@ -1064,37 +1092,39 @@ body {
   }
 }
 
-.p-section__map3 {
+.p-section__map2 {
+  position: absolute;
   background-color: rgba(0, 0, 0, 0.4);
-  width: 60%;
-  padding: 6rem;
+  width: 65%;
+  margin-bottom: 2rem;
+  padding: 5rem 10rem 0 10rem;
   color: white;
+  top: 0;
   height: 100%;
 }
 
 @media (max-width: 834px) {
-  .p-section__map3 {
+  .p-section__map2 {
     width: 100%;
-    padding: 1.5rem;
+    padding: 3rem;
   }
 }
 
 @media (max-width: 375px) {
-  .p-section__map3 {
-    position: relative;
+  .p-section__map2 {
     background-color: transparent;
   }
 }
 
-.p-section__map3__text {
-  font-size: 3rem;
+.p-section__map2__text {
+  font-size: 2.2rem;
 }
 
-.p-section__map3__text::after {
+.p-section__map2__text::after {
   content: '';
   display: block;
   position: absolute;
-  margin: 6rem 0 0 4rem;
+  margin: 5rem 0 0 4rem;
   /* 位置調整 */
   transform: translate(-50%);
   /* 位置調整 */
@@ -1106,43 +1136,54 @@ body {
   /* 下線の色 */
 }
 
-@media (max-width: 375px) {
-  .p-section__map3__text::after {
-    margin: 2rem 0 0 4rem;
+@media (max-width: 834px) {
+  .p-section__map2__text::after {
+    margin: 2rem 0 0 3.5rem;
     /* 位置調整 */
+    width: 7rem;
   }
 }
 
 @media (max-width: 834px) {
-  .p-section__map3__text {
-    padding-top: 2rem;
+  .p-section__map2__text {
     margin-bottom: 1rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     top: 0;
   }
 }
 
-.p-section__map3__subtext {
+@media (max-width: 375px) {
+  .p-section__map2__text {
+    font-size: 2.5rem;
+  }
+}
+
+.p-section__map2__subtext {
   line-height: 2;
-  margin-top: 10rem;
+  margin-top: 9rem;
   box-sizing: border-box;
   border: none;
-  font-size: 1.8rem;
   box-sizing: border-box;
   color: #FFFFFF;
+  font-size: 1.2rem;
+  height: 21rem;
+  overflow: hidden;
 }
 
 @media (max-width: 834px) {
-  .p-section__map3__subtext {
+  .p-section__map2__subtext {
+    margin-top: 4rem;
+    font-size: 1.25rem;
     line-height: 2.5;
+    height: 30rem;
   }
 }
 
 @media (max-width: 375px) {
-  .p-section__map3__subtext {
+  .p-section__map2__subtext {
     line-height: 2;
-    margin-top: 3rem;
-    font-size: 1.6rem;
+    margin-top: 3.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -1172,6 +1213,18 @@ body {
   width: 5%;
 }
 
+@media (max-width: 834px) {
+  .menu-main-container ul::after {
+    width: 3%;
+  }
+}
+
+@media (max-width: 375px) {
+  .menu-main-container ul::after {
+    width: 0;
+  }
+}
+
 .menu-main-container ul li a {
   font-size: 4rem;
 }
@@ -1182,19 +1235,31 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .menu-main-container ul li a {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .menu-main-container ul li a {
+    font-size: 3rem;
+  }
+}
+
 #menu-item-981 {
-  padding: 1.5% 0 0 1%;
+  padding: 2.5% 0 0 2%;
 }
 
 #menu-item-981::after {
   content: '';
   display: block;
   position: absolute;
-  margin: 3rem 0 0 3rem;
+  margin: 3rem 0 0 2rem;
   /* 位置調整 */
   transform: translate(-50%);
   /* 位置調整 */
-  width: 5rem;
+  width: 3.5rem;
   /* 下線の幅 */
   height: 2px;
   /* 下線の太さ */
@@ -1202,8 +1267,14 @@ body {
   /* 下線の色 */
 }
 
+@media (max-width: 375px) {
+  #menu-item-981::after {
+    display: none;
+  }
+}
+
 #menu-item-980 {
-  padding: 1.5% 0 0 1%;
+  padding: 2.5% 0 0 2%;
 }
 
 @media (max-width: 375px) {
@@ -1216,11 +1287,11 @@ body {
   content: '';
   display: block;
   position: absolute;
-  margin: 3rem 0 0 3rem;
+  margin: 3rem 0 0 2rem;
   /* 位置調整 */
   transform: translate(-50%);
   /* 位置調整 */
-  width: 5rem;
+  width: 3.5rem;
   /* 下線の幅 */
   height: 2px;
   /* 下線の太さ */
@@ -1237,13 +1308,13 @@ body {
 }
 
 .p-section__second__text {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: bold;
   margin-bottom: 2rem;
 }
 
 .p-section__second__subtext {
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 5rem;
 }
@@ -1264,7 +1335,7 @@ body {
 @media (max-width: 375px) {
   .p-section__menu {
     flex-direction: column;
-    height: 45rem;
+    height: 50rem;
   }
 }
 
@@ -1290,31 +1361,31 @@ body {
 @media (max-width: 375px) {
   .p-section__menu__sub {
     width: 100%;
-    height: 25rem;
+    height: 30rem;
   }
 }
 
 .p-section__menu__sub h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin: 3rem 3rem 3rem 4rem;
+  margin: 4rem 0 4rem 4rem;
 }
 
 @media (max-width: 834px) {
   .p-section__menu__sub h1 {
     font-size: 2rem;
-    margin: 2rem;
+    margin: 10% 0% 7.5% 10%;
   }
 }
 
 @media (max-width: 375px) {
   .p-section__menu__sub h1 {
-    margin: 1rem 0rem 2rem 1rem;
+    margin: 7.5% 0% 6% 5%;
   }
 }
 
 .p-section__menu__sub h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   margin: 0 0 0 4rem;
 }
@@ -1322,31 +1393,34 @@ body {
 @media (max-width: 834px) {
   .p-section__menu__sub h2 {
     font-size: 1.6rem;
-    margin: 2rem 2rem 1.5rem 2rem;
+    margin: 5% 0% 0% 10%;
   }
 }
 
 @media (max-width: 375px) {
   .p-section__menu__sub h2 {
-    margin: 1rem 4rem 0rem 1rem;
+    margin: 5% 0% 5% 5%;
   }
 }
 
 .p-section__menu__sub p {
   font-size: 1.2rem;
-  margin: 2rem 6rem 6rem 4rem;
+  margin: 2rem 6rem 15% 4rem;
 }
 
 @media (max-width: 834px) {
   .p-section__menu__sub p {
-    font-size: 1.4rem;
-    margin: 10% 20% 20% 10%;
+    font-size: 1.3rem;
+    margin: 5% 20% 20% 10%;
   }
 }
 
 @media (max-width: 375px) {
   .p-section__menu__sub p {
-    margin: 1rem 4rem 2rem 1rem;
+    margin: 5% 25% 15% 5%;
+    overflow: hidden;
+    height: 8rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -1372,7 +1446,7 @@ body {
 
 @media (max-width: 375px) {
   .p-section__menu__botton a {
-    padding: 5% 15%;
+    padding: 4% 10%;
   }
 }
 
@@ -1439,10 +1513,6 @@ body {
   .menu-categrymenu-container {
     margin-top: 5rem;
   }
-}
-
-.menu-item-651, .menu-item-652, .menu-item-653 {
-  margin-bottom: 2rem;
 }
 
 .menu-item-651 a, .menu-item-652 a, .menu-item-653 a {
@@ -1618,7 +1688,7 @@ body {
 
 .p-top__image img {
   width: 100%;
-  height: 40rem;
+  height: 30rem;
   object-fit: cover;
   /* Safari */
   backface-visibility: hidden;
@@ -1655,9 +1725,22 @@ body {
   margin-bottom: 5rem;
 }
 
+@media (max-width: 375px) {
+  .p-main__section1 h2 {
+    margin-bottom: 2rem;
+  }
+}
+
 .p-main__section1 p {
   line-height: 1.5;
   margin-bottom: 5rem;
+}
+
+@media (max-width: 375px) {
+  .p-main__section1 p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .p-main__section1 h3 {
@@ -1666,14 +1749,32 @@ body {
   margin-bottom: 5rem;
 }
 
+@media (max-width: 375px) {
+  .p-main__section1 h3 {
+    margin-bottom: 2rem;
+  }
+}
+
 .p-main__section1 h4, .p-main__section1 h5, .p-main__section1 h6 {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 5rem;
 }
 
+@media (max-width: 375px) {
+  .p-main__section1 h4, .p-main__section1 h5, .p-main__section1 h6 {
+    margin-bottom: 2.5rem;
+  }
+}
+
 .wp-block-quote {
-  padding: 3rem;
+  padding: 3rem 3rem 6rem 3rem;
+}
+
+@media (max-width: 375px) {
+  .wp-block-quote {
+    padding: 2rem 1.5rem 6rem 1.5rem;
+  }
 }
 
 .wp-block-quote cite {
@@ -1692,7 +1793,7 @@ body {
   .wp-block-image img {
     width: 90%;
     object-fit: cover;
-    margin-bottom: 15rem;
+    margin-bottom: 12.5rem;
   }
 }
 
@@ -1719,7 +1820,7 @@ body {
 
 @media (max-width: 375px) {
   .wp-block-columns {
-    height: 15rem;
+    height: 14rem;
     overflow: hidden;
   }
 }
@@ -1751,9 +1852,16 @@ body {
 
 .__center1 img {
   height: 30rem;
+  width: 120vh;
   object-fit: cover;
   object-position: bottom;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 834px) {
+  .__center1 img {
+    height: 20rem;
+  }
 }
 
 @media (max-width: 375px) {

@@ -5,6 +5,7 @@
     position: fixed; //上部に固定
     z-index: 100;
     text-align: right; //子要素を右揃え
+    margin-top: 0.5rem;
     @include sp{
         height: 2rem;
     }
@@ -39,18 +40,19 @@
     margin-right: 2rem;
     @include tab{
         padding: 2rem 0;
-        margin: 0 15%;
+        margin: 0;
+        justify-content: center;
     }
     @include sp{
         margin:0 5%;
     }
 &__search{
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     background:#FFFFFF;
-    width: 25rem;
+    width: 30rem;
     border: solid 0.1rem #707070;
     @include tab{
-        width: 100%;
+
     }
 }
 &__search__text{	
@@ -59,6 +61,10 @@
     left:0;
     top:0; 
     font-size: 1.5rem;
+    @include tab{
+        text-align: left;
+        margin-left: -10rem;
+    }
     }
 button{
     padding-left: 0.5rem;
@@ -68,20 +74,19 @@ button{
     }
 }
 &__submit{
-    margin-left: 0.5rem;
-    width:8rem;
+    margin-left: 1rem;
+    width:10rem;
     height:3.5rem;
     left:15rem; 
     top:0;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     background:#F2EDE9;
-    color:#fff;
     font-weight:bold;
     font-size:1rem;
     border:none;
     color: #707070;
     text-align: center;
-    border: solid 0.1rem #707070;/*線*/
+    border: solid 0.5px #707070;/*線*/
     }
     }
 

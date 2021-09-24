@@ -3,11 +3,12 @@
     margin: 10% 8%;
     position: relative;
     @include tab{
-        margin: 2rem;
+        margin: 4rem;
     }
     @include sp{
         display: flex;
         flex-direction: column;
+        margin: 2rem;
     }
 &__left{
     position: relative;
@@ -93,7 +94,7 @@
     @include tab{
         top:45%;
         height: 25%;
-        padding: 2rem 1rem 1rem 1rem;
+        padding: 5%;
     }
 }
 &__text2{ 
@@ -110,7 +111,7 @@
     @include tab{
         height: 25%;
         top:72.5%;
-        padding: 2rem 1rem 1rem 1rem;
+        padding: 5%;
     }
 }
 &__text1-1{
@@ -119,7 +120,6 @@
     margin-right: 4rem;
     @include tab{
         font-size: 2rem;
-        margin-top: 1rem;
     }
     @include tabsp{
         font-size: 1.5rem;
@@ -132,7 +132,6 @@
     font-weight: bold; 
     @include tab{
     font-size: 2rem;
-    margin-top: 1rem;
     }
     @include tabsp{
         font-size: 1.5rem;
@@ -145,36 +144,29 @@
     margin-top: 1.4rem;
     color:#3C2A10;
     @include tab{
-        margin-top: 2.5rem;
+        margin-top: 2rem;
         font-size: 1.6rem;
     }
     @include tabsp{
         font-size: 1rem;
-        margin-top: 0.5rem;
+        margin-top: 7.5%;
     }
     @include sp{
-        margin-top: 2.5rem;
         font-size: 1.6rem;
+        margin-top: 10%;
     }
 }
-
-&__map {
-    clear: both;
-    background-color: rgba(0, 0, 0, 0.6);
-    background-image: url(../image/map.png);
-    height: 100%;
-    width: auto;
-    background-size: cover;
-    background-position: 50% 10%;
-    position: relative;
-    @include sp{
-        zoom: 1.6;
-        background-repeat: no-repeat;
-        background-position: right 65% bottom 0;
-    
+&__map{
+ position: relative;
+ font-weight: bold;
+    iframe{
+        background-color: rgba(0, 0, 0, 1);
+        height: 60vh;
+        width: auto;
+        background-position: 0 100%;
     }
 }
-&__map2{
+&__map1{
     @include sp{
         background-color: rgba(0, 0, 0, 0.4);
         top: 0;
@@ -185,62 +177,70 @@
     }
 
 }
-&__map3{
+&__map2{
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.4);
-    width: 60%;
-    padding: 6rem;
+    width: 65%;
+    margin-bottom: 2rem;
+    padding: 5rem 10rem 0 10rem;
     color: white;
+    top: 0;
     height: 100%;
     @include tab{
         width: 100%;
-        padding: 1.5rem;
+        padding: 3rem;
     }
     @include sp{
-        position: relative;
         background-color: transparent;
     }
 }
 
-&__map3__text {
-    font-size: 3rem;
+&__map2__text {
+    font-size: 2.2rem;
     &::after{
         content: '';
         display: block;
         position: absolute;
-        margin: 6rem 0 0 4rem; /* 位置調整 */
+        margin: 5rem 0 0 4rem; /* 位置調整 */
         transform: translate(-50%); /* 位置調整 */
         width: 8rem; /* 下線の幅 */
         height: 2px; /* 下線の太さ */
         background-color: #FFFFFF; /* 下線の色 */
-        @include sp{
-            margin: 2rem 0 0 4rem; /* 位置調整 */
+        @include tab{
+            margin: 2rem 0 0 3.5rem; /* 位置調整 */
+            width: 7rem;
         }
+      
 }
     @include tab{
-        padding-top: 2rem;
         margin-bottom: 1rem;
-        font-size: 3rem;
+        font-size: 2.5rem;
         top: 0;
     }
     @include sp{
-        
+        font-size: 2.5rem;
     }
 }
 
-&__map3__subtext{
+&__map2__subtext{
     line-height: 2;
-    margin-top: 10rem;
+    margin-top: 9rem;
     box-sizing:border-box;border:none;
-    font-size: 1.8rem;
     box-sizing: border-box;
     color:#FFFFFF;
+    font-size: 1.2rem;
+    height: 21rem;
+    overflow: hidden;
     @include tab{
+        margin-top: 4rem;
+        font-size: 1.25rem;
         line-height: 2.5;
+        height: 30rem;
     }
     @include sp{
         line-height: 2;
-        margin-top: 3rem;
-        font-size: 1.6rem;
+        margin-top: 3.5rem;
+        font-size: 1rem;
     }
 
 }
@@ -265,6 +265,12 @@
         content:"";
         display: block;
         width:5%;
+        @include tab{
+            width:3%;
+          }
+        @include sp{
+            width: 0;
+          }
      }
       li{
         a{
@@ -272,26 +278,35 @@
     @include tab {
         font-size: 3rem;
         } 
+    @include tabsp{
+        font-size: 2.5rem;
+        }
+    @include sp{
+        font-size: 3rem;
+        }
         }
       }
     }
 
 }
 #menu-item-981{
-    padding: 1.5% 0 0 1%;
+    padding: 2.5% 0 0 2%;
     &::after{
         content: '';
         display: block;
         position: absolute;
-        margin: 3rem 0 0 3rem; /* 位置調整 */
+        margin: 3rem 0 0 2rem; /* 位置調整 */
         transform: translate(-50%); /* 位置調整 */
-        width: 5rem; /* 下線の幅 */
+        width: 3.5rem; /* 下線の幅 */
         height: 2px; /* 下線の太さ */
         background-color: #FFFFFF; /* 下線の色 */
+        @include sp{
+            display: none;
+        }
     }
 }
 #menu-item-980{
-    padding: 1.5% 0 0 1%;
+    padding: 2.5% 0 0 2%;
     @include sp{
         padding-top: 185%;
       }
@@ -299,9 +314,9 @@
         content: '';
         display: block;
         position: absolute;
-        margin: 3rem 0 0 3rem; /* 位置調整 */
+        margin: 3rem 0 0 2rem; /* 位置調整 */
         transform: translate(-50%); /* 位置調整 */
-        width: 5rem; /* 下線の幅 */
+        width: 3.5rem; /* 下線の幅 */
         height: 2px; /* 下線の太さ */
         background-color: #FFFFFF; /* 下線の色 */
     }
@@ -314,12 +329,12 @@
     .p-section__second{
         color: #3C2A10;
     &__text{
-        font-size: 2rem;
+        font-size: 2.25rem;
         font-weight: bold;
         margin-bottom: 2rem;
     }
     &__subtext{
-        font-size: 1.3rem;
+        font-size: 1rem;
         line-height: 1.5;
         margin-bottom: 5rem;
         @include sp {
@@ -335,7 +350,7 @@
         height: 35rem;
         @include sp{
             flex-direction: column;
-            height: 45rem;
+            height: 50rem;
         }
         img {
             width: 50%;
@@ -352,40 +367,43 @@
             color: #FFFFFF;
             @include sp{
                 width: 100%;
-                height: 25rem;
+                height: 30rem;
             }
             h1{
-                font-size: 3rem;
+                font-size: 2.5rem;
                 font-weight: bold;
-                margin: 3rem 3rem 3rem 4rem;
+                margin: 4rem 0 4rem 4rem;
              @include tab {
                 font-size: 2rem;
-                margin: 2rem;
+                margin: 10% 0% 7.5% 10%;
              }
              @include sp {
-                margin: 1rem 0rem 2rem 1rem;
+                margin: 7.5% 0% 6% 5%;
              }
          }
          h2{
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
             margin: 0 0 0 4rem;
          @include tab {
             font-size: 1.6rem;
-            margin: 2rem 2rem 1.5rem 2rem;
+            margin: 5% 0% 0% 10%;
          }
          @include sp {
-            margin: 1rem 4rem 0rem 1rem;
+            margin: 5% 0% 5% 5%;
          }
      }
          p{ font-size: 1.2rem;
-            margin: 2rem 6rem 6rem 4rem;
+            margin: 2rem 6rem 15% 4rem;
             @include tab {
-                font-size: 1.4rem;
-                margin: 10% 20% 20% 10%
+                font-size: 1.3rem;
+                margin: 5% 20% 20% 10%;
              }
             @include sp {
-                margin: 1rem 4rem 2rem 1rem;
+                margin: 5% 25% 15% 5%;
+                overflow: hidden;
+                height: 8rem;
+                font-size: 1.4rem;
              }
          }
         }
@@ -407,7 +425,7 @@
                 padding: 5% 15%;
              }
             @include sp {
-                padding: 5% 15%;
+                padding: 4% 10%;
              }
          }
        
@@ -471,7 +489,7 @@
     }
 }
 .menu-item-651,.menu-item-652,.menu-item-653{
-    margin-bottom: 2rem;
+    
 a{
     font-size: 2rem;
     font-weight: bold;
@@ -621,7 +639,7 @@ a{
     margin-bottom: 3rem;
     img{
         width: 100%;
-        height: 40rem;
+        height: 30rem;
         object-fit: cover;
         -webkit-backface-visibility: hidden; /* Safari */
         backface-visibility: hidden;
@@ -650,27 +668,42 @@ a{
         font-size: 2rem;
         font-weight: bold;
         margin-bottom: 5rem;
+        @include sp{
+            margin-bottom: 2rem;
+        }
     }
     p{
         line-height: 1.5;
         margin-bottom: 5rem; 
-        
+        @include sp{
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
     }
     h3{
         font-size: 1.5rem;
         font-weight: bold;
         margin-bottom: 5rem;
+        @include sp{
+            margin-bottom: 2rem;
+        }
 
     }
     h4,h5,h6{
         font-size: 1.2rem;
         font-weight: bold;
         margin-bottom: 5rem;
+        @include sp{
+            margin-bottom: 2.5rem;
+        }
     }
 }
     .wp-block-{
         &quote{
-            padding: 3rem;
+            padding: 3rem 3rem 6rem 3rem;
+            @include sp{
+            padding: 2rem 1.5rem 6rem 1.5rem;
+                    } 
         cite{
             margin-bottom: 3rem;
         }
@@ -684,7 +717,7 @@ a{
         @include tab{
             width: 90%;
             object-fit: cover;
-            margin-bottom: 15rem;
+            margin-bottom: 12.5rem;
                 }
         @include sp{
             width: 35vh;
@@ -704,7 +737,7 @@ a{
         flex-wrap: nowrap;
             }
        @include sp{
-           height: 15rem;
+           height: 14rem;
            overflow: hidden;
            
        }
@@ -730,6 +763,7 @@ a{
         margin-left: 2rem;
     }  
   }
+ 
   .img__top{
     margin:0 -6rem 2rem -6rem;
     img{
@@ -740,9 +774,13 @@ a{
   .__center1{
     img{
         height: 30rem;
+        width: 120vh;
         object-fit: cover;
         object-position: bottom;
         margin-bottom: 2rem;
+        @include tab{
+            height: 20rem;
+                } 
         @include sp{
             width: 100vh;
             height: 13rem;

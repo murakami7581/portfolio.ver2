@@ -21,15 +21,18 @@
         display: block;
         text-align: center;
         padding-top: 3rem;
+        height: 17.5rem;
     }
 }
 .l-header__title{
     font-size: 4rem;
     font-family: Roboto;
     color:#707070;
-    margin-left: 2rem;
+    margin-left: 4.5rem;
     @include tab{
         font-size: 3.5rem;
+        margin-left: 0;
+        margin-bottom: 1rem;
     }
 }    
 
