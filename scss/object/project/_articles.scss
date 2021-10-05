@@ -82,10 +82,7 @@
             font-size: 5rem;
             font-family:  serif;
         }
-        &--inner{
-            position: absolute;
-            top: 10%;
-        }
+
         a{
             color: #FFFFFF;
             position: absolute;
@@ -97,6 +94,9 @@
             padding: 0.5rem 1rem;
             font-size: 1.5rem;
         }
+    }
+    &__contact{
+        background-color: #FFFFFF;
     }
 }
 .main-contents {

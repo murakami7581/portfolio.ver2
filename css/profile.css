@@ -600,6 +600,11 @@ body {
   /*文字の周りに*/
 }
 
+.c-section__contact {
+  height: 50vh;
+  background-color: #FFFFFF;
+}
+
 .p-section__top {
   position: relative;
 }
@@ -687,11 +692,6 @@ body {
   font-family: serif;
 }
 
-.p-section__under--inner {
-  position: absolute;
-  top: 10%;
-}
-
 .p-section__under a {
   color: #FFFFFF;
   position: absolute;
@@ -702,6 +702,10 @@ body {
   background-color: #000;
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
+}
+
+.p-section__contact {
+  background-color: #FFFFFF;
 }
 
 .main-contents {

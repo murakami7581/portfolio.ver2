@@ -48,7 +48,7 @@
        </div>
     <?php endwhile; endif; ?>
 </div>
-   <div class="p-section__contact"></div>
+
  </div>
  </div>
 </article>
