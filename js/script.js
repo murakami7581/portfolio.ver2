@@ -11,6 +11,7 @@ $(function () {
     setTimeout('rect()'); //アニメーションを実行
 });
 
+// Skillsのアニメーションの初め
 function rect() {
     $('.p-section__top--text').animate({
         marginTop: '-=10px'
@@ -40,4 +41,43 @@ $(document).on('ready', function() {
         $(elem).css('top', y);
     });
 });
+// Skillsのアニメーションの終わり
+
+// ヘッダーのアニメーションの初め
+var particles = Particles.init({
+    selector: '.l-header__background',
+    sizeVariations: 10,
+    color: ['#dd00d2', '#404B69', '#DBEDF3'],
+    connectParticles: true,
+    maxParticles: 100,
+    responsive: [
+        {
+            breakpoint: 800,
+            options: {
+                maxParticles: 15,
+            },
+        
+        },
+    ]
+  });
+
+  $(window).on('load',function(){
+    $("#loading-wrapper").addClass("completed")
+ });
+// ヘッダーのアニメーションの初め
+
+$(window).mousemove(function (e) {
+    $('.cursor span').css({
+      left: e.pageX,
+      top: e.pageY
+    })
+  })
+  $('a').on('mouseenter', function () {
+    $('.cursor span').addClass('active');
+  })
+  $('a').on('mouseleave', function () {
+    $('.cursor span').removeClass('active');
+  })
+
+
 

@@ -491,6 +491,44 @@ body {
   }
 }
 
+* {
+  cursor: none;
+}
+
+.cursor span {
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cursor span.dot1 {
+  background: #00dda2;
+  transition: width 0.05s, height 0.05s;
+}
+
+.cursor span.dot1.active {
+  height: 40px;
+  width: 40px;
+  background: #00dda2;
+}
+
+.cursor span.dot2 {
+  height: 22.5px;
+  width: 22.5px;
+  border: solid 1px #00dda2;
+  transition: top 0.05s, left 0.05s, width 0.5s, height 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.cursor span.dot2.active {
+  height: 60px;
+  width: 60px;
+}
+
 .l-header {
   position: relative;
   margin-bottom: 15rem;
@@ -503,6 +541,7 @@ body {
 
 .l-header h1 {
   position: absolute;
+  z-index: 10;
   color: #FFF;
   top: 65%;
   left: 25%;
@@ -513,17 +552,6 @@ body {
   text-align: center;
 }
 
-.l-header h2 {
-  position: absolute;
-  color: #FFF;
-  top: 72.5%;
-  left: 25%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.5rem;
-  font-family: fantasy;
-}
-
 .l-header__container {
   width: 100%;
   display: flex;
@@ -532,6 +560,7 @@ body {
   position: absolute;
   top: 5%;
   color: #FFFFFF;
+  z-index: 1000;
 }
 
 .l-header__container img {
@@ -562,6 +591,14 @@ body {
 
 .l-header .menu-header-container ul li a:hover {
   text-decoration: underline;
+}
+
+.l-header .l-header__background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 @keyframes spin {
@@ -741,50 +778,55 @@ div.item {
   }
 }
 
-.p-section__p {
+.p-section__profile {
   position: relative;
   height: 100vh;
   background-color: #FFFFFF;
   font-weight: bold;
 }
 
-.p-section__p img {
+.p-section__profile img {
   width: 100%;
 }
 
-.p-section__p h1 {
+.p-section__profile h1 {
   font-size: 4rem;
   text-align: center;
   padding-top: 3rem;
   font-family: serif;
 }
 
-.p-section__p--content {
+.p-section__profile--content {
   position: absolute;
   color: #000000;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: serif;
 }
 
-.p-section__p--content h2 {
+.p-section__profile--content h2 {
   margin: 3rem 0;
   font-size: 1.5rem;
 }
 
-.p-section__p--content .wp-block-column p {
+.p-section__profile--content .wp-block-column p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
-.p-section__p--content h3 {
+.p-section__profile--content h3 {
   margin: 3rem 0;
   font-size: 2rem;
 }
 
-.p-section__p--content p {
+.p-section__profile--content p {
   font-size: 1.5rem;
   line-height: 2.5;
+}
+
+.background {
+  display: block;
 }
 
 .p-section__skills {

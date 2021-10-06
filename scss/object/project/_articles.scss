@@ -129,7 +129,7 @@ div.item {
     }
   }
 
-.p-section__p{  
+.p-section__profile{  
     position: relative;
     height: 100vh;
     background-color: #FFFFFF;
@@ -149,7 +149,7 @@ div.item {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-  
+    font-family:  serif;
     h2{
         margin: 3rem 0 ;
         font-size: 1.5rem;
@@ -170,6 +170,10 @@ div.item {
     }
     }
 }
+.background {
+    display: block;
+
+  }
 .p-section__skills{
     position: relative;
     height: 150vh;
