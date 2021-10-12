@@ -1,3 +1,4 @@
+
 //例
 *{ margin: 0;
     padding: 0;
@@ -10,7 +11,21 @@
  body { 
   margin: 0px;
   -webkit-text-size-adjust: 100%;
-  background-color: #000000;
+  background-image: url(../image/purple.jpg);
+  background-size: contain;
+  background-attachment: fixed;
+}
+.f-body{
+  position: relative;
+
+
+}
+.f-body__background{
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 
@@ -50,41 +65,41 @@
     75% { transform: rotate(-5deg); }
     100% { transform: rotate(0deg); }
 }
-* {
+.f-cursor{
     cursor: none;
   }
-  .cursor span {
+  .dot1,.dot2 {
     height: 15px;
     width: 15px;
     border-radius: 100%;
     transform: translate(-50%, -50%);
     position: absolute;
-    z-index: 1;
+    z-index: 200;
     pointer-events: none;
   }
-  .cursor span.dot1 {
+  .dot1 {
     background: #00dda2;
     transition: width 0.05s, height 0.05s;
   }
-  .cursor span.dot1.active {
+  .dot1.active {
     height: 40px;
     width: 40px;
     background: #00dda2;
   }
-  .cursor span.dot2 {
+  .dot2 {
     height: 22.5px;
     width: 22.5px;
     border: solid 1px #00dda2;
     transition: top 0.05s, left 0.05s, width 0.5s, height 0.5s;
     transition-timing-function: ease-out;
   }
-  .cursor span.dot2.active {
+  .dot2.active {
     height: 60px;
     width: 60px;
   }
 
 
-
+// ロード画面
 // #loading-wrapper { 
 //     position: fixed;
 //     top: 0; 

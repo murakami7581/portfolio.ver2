@@ -1,5 +1,25 @@
 .l-main{
     width: 100%;
     height: auto;
-    
+    position: relative;
+    &__text--scrool{
+        position: absolute;
+        z-index: 10;
+        color: #FFF;
+        top: 5%;
+        left: 5%;
+        font-size: 1.25rem;
+        writing-mode: vertical-rl;
+        font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+    }
+    &--line{
+        position: absolute;
+        z-index: 100;
+        color: #FFF;
+        top: 5%;
+        left: 4.95%;
+        width: 1.5px;
+        height: 100%;
+        background-color: brown;
+    }
 }
