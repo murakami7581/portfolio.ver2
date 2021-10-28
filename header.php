@@ -8,22 +8,31 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="description" content="WordPress theme development static data for beginners">
   <meta name="keywords" content="WordPress, Theme, development">
+  <!-- slick CSS -->
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/slick/slick.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/slick/slick-theme.css" media="screen" />
+<!-- /slick CSS -->
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- /jQuery -->
    <?php wp_head(); ?>
  </head>
    <body <?php body_class(); ?>>
-   <?php wp_body_open(); ?>
-
    <div class="f-cursor">
      <div class="f-cursor2">
      <span class="dot1"></span>
      <span class="dot2"></span>
-</div>
+   </div>
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
    <div class="f-body">
    <canvas class="f-body__background"></canvas>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
-   
+   <?php wp_body_open(); ?>
 
-  
+   
+   
+   
   <!-- ローディング画面 -->
   <!-- <div id="loading-wrapper">
     <div class="loader"></div>

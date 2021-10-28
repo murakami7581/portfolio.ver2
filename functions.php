@@ -83,3 +83,22 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 
 function redirect_404() { if(is_front_page() || is_single() || is_archive() || is_page()|| is_search()) return; include(TEMPLATEPATH . '/404.php'); exit; } add_action('template_redirect', 'redirect_404');
 
+// jquery読み込み -----
+function my_scripts_method() {
+  wp_enqueue_script(
+  'slick.min',
+  get_stylesheet_directory_uri().'/slick/slick.min.js',
+  array( 'jquery' ),
+  '1.8.1', true
+  );
+ }
+ add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
+
+
+function theme_name_scripts() {
+//jqueryの読み込み(jQueryはフォルダを作成し設置しています)
+wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-3.6.0.min.js', '3.4.1', false );
+//Slickの読み込み(CDNで読み込んでいます)
+wp_enqueue_style( 'slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css' );
+wp_enqueue_style( 'slick-theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css' );
+wp_enqueue_script( 'slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array( 'jquery' ), '1.9.0', false );}

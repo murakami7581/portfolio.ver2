@@ -35,7 +35,7 @@ var particles = Particles.init({
     sizeVariations: 8,
     color: ['#dd00d2', '#404B69', '#DBEDF3'],
     connectParticles: true,
-    maxParticles: 100,
+    maxParticles: 300,
     speed: 0.5,
     responsive: [
         {
@@ -64,6 +64,44 @@ $(window).mousemove(function (e) {
   $('a').on('mouseleave', function () {
     $('.dot1,.dot2').removeClass('active');
   })
+ 
 
 
-  
+
+
+
+  $(function() {
+    $('.c-section__under--slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      fade: true,
+      prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+      nextArrow: '<button class="slide-arrow next-arrow"></button>',
+      asNavFor: '.c-section__under--slider--nav',
+    });  
+    $('.c-section__under--slider--nav').slick({
+      slidesToShow: 5,
+      slidesToScroll: 2,
+      asNavFor: '.c-section__under--slider',
+      arrows: false,
+      dots: false,
+      centerMode: true,
+      focusOnSelect: true,
+    }); 
+});
+
+// $(function(){
+//   $(".c-section__center--pulse1").hover(
+//     //マウスオーバー時の処理
+//     function() {
+//       $(this).css('padding', '50px');
+//       $(this).css('transform', 'rotateX(60deg)');
+//     },
+//     //マウスアウト時の処理
+//     function() {
+//       $(this).css('padding', '8px');
+//       $(this).css('transform', 'rotateX(0deg)');
+//     }
+//   );
+// });

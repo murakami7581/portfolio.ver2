@@ -1,0 +1,22 @@
+.u-section__text{
+    margin-bottom: 5rem;
+    &--cursive{
+        position: absolute;
+        z-index: 100;
+        color: #FFF;
+        top: 40%;
+        left: 20%;
+        font-size: 5rem;
+        font-family: cursive;
+    }
+    &--cursive::after{
+        content: "MURAKAKAMIYOSHIYA";
+        position: absolute;
+        z-index: 100;
+        color: #FFF;
+        top: 80%;
+        left: 40%;
+        font-family: cursive;
+    }
+
+}

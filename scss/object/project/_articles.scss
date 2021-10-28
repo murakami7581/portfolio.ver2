@@ -4,102 +4,39 @@
     width: 80%;
     height: 100%;
     margin: 0 auto;
-    border-radius: 20px;
-  
-    &__text{
-        margin-bottom: 5rem;
-        &--cursive{
-            position: absolute;
-            z-index: 100;
-            color: #FFF;
-            top: 10%;
-            left: 20%;
-            font-size: 5rem;
-            font-family: cursive;
-        
-        }
-        &--cursive::after{
-            content: "MURAKAKAMIYOSHIYA";
-            position: absolute;
-            z-index: 100;
-            color: #FFF;
-            top: 80%;
-            left: 40%;
-            font-family: cursive;
-        }
-    
-    }
-
-    &__img{
-        width: 100%;
-        filter: brightness(150%);
-        opacity: 0.8;
-    }
-
-       
+  &__main{
+      width: 100%;
+      height: 60rem;
+      position: relative;
+  }
+  &__inner{
+      position: relative;
+      z-index: 500;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      border-radius: 30px;
+  }  
     &__top{
         position: relative;
         width: 100%;
         height: 100rem;
-        background-image: url(../image/murakami.jpg);
+        background-image: url(../image/murakami.png);
         background-attachment: fixed;
         background-size: cover;
-        opacity: 0.9;
+        background-repeat: no-repeat;
         margin-bottom: 15rem;
+        border-radius: 30px;
         h2{
             position: absolute;
-            color: #707070;
+            color: #FFF8DC	;
             top: 0%;
             left: -2.5%;
             font-size: 15rem;
-            font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+            font-family: cursive;
             transform: rotate(-20deg);
             -moz-transform: rotate(-20deg);
             -webkit-transform: rotate(-20deg);
-        }
-        &__inner--text{
-            position: absolute;
-            top: 30%;
-            left: 5%;
-            font-size: 2rem;
-            color: #FF33FF;
-            font-family: 'klee', sans-serif;
-            width: 37.5%;
-            height: 50%;
-        }
-        &__inner--text1{
-            position: absolute;
-            top: 10%;
-            left: 2.5%;
-            font-size: 2rem;
-        }
-        &__inner--text2{
-            position: absolute;
-            top: 45%;
-            left: 2.5%;
-            font-size: 2rem;
-        }
-        &__inner--text3{
-            position: absolute;
-            top: 70%;
-            left: 2.5%;
-            font-size: 2rem;
-        }
-        &__botton{
-            position: absolute;
-            color: #000;
-            top: 60%;
-            left: 22%;
-            transform: translate(-50%, -50%);
-            padding: 1rem 1.5rem 0.5rem 1.5rem;
-            margin: 2rem 0;
-            font-family: fantasy;
-            border-left: double 7px #FF3366;/*左線*/
-            border-right: double 7px #FF3366;/*右線*/
-            a{
-                
-                font-size: 2.5rem;
-            }
         }
         img{
             width: 90%;
@@ -109,328 +46,66 @@
             opacity: 0.8;
             
         }
-
-        
     }
 
     &__center{
         position: relative;
         width: 100%;
-        height: 100%;
+        height: 80rem;
         margin-bottom: 15rem;
-        &--inner{
-            position: absolute;
-            top: 90%;
-            left: 10%;
-            transform: translate(-50%, -50%);
-            background-image: url(../image/fairy.png);
-            width: 45rem;
-            height: 45rem;
-            background-size:cover;
-            opacity: 0.75;
-        }
-        &__botton{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-image: url(../image/hand.png);
-            width: 30%;
-            height: 30%;
-            background-size:cover;
-            z-index: 200;
-            a{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                padding: 2.5rem 3rem;
-                color: #FFF;
-                font-family: fantasy;
-                font-size: 3rem;
-                
-            }
-        
-          :hover{
-            box-shadow: 0 0 1.5rem 0.75rem #fff;/*ボタンの外側に*/
-            text-shadow: 0 0 1rem 1rem #fff;/*文字の周りに*/
-          }
-          
-        }
-        img{
-            width: 7.5rem;
-            background-color: #FFFFFF;
-            border-radius: 50%;
-        }
-
 
         h2{
             position: absolute;
-            color: #707070;
+            color: #FFF8DC;
             font-size: 15rem;
             top: -5%;
             left: 75%;
-            font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+            font-family: cursive;
             transform: rotate(20deg);
             -moz-transform: rotate(20deg);
             -webkit-transform: rotate(20deg);
         }
-
-
+        &__inner{
+            width: 75%;
+            height: 100%;
+            background-image: url(../image/gears.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.2;
         }
-  
+        }
     
-        
-    &__under{
-        position: relative;
-        width: 100%;
-        height: 80rem;
-        position: relative;
-        background-color: #000;
-        z-index: 10;
-        img{
-            width: 100%;
-            border: 3px solid #dd00d2;
-            a{
-
-            }
-        }
-        h2{
-            position: absolute;
-            color: #707070;
-            font-size: 15rem;
-            top: 0.5%;
-            left: 0%;
-            font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
-            transform: rotate(-20deg);
-            -moz-transform: rotate(-20deg);
-            -webkit-transform: rotate(-20deg);
-    
-        }
-
-        a{
-            color: #FFFFFF;
-            font-family: fantasy;
-            position: absolute;
-            z-index: 100;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 0.5em 1em;
-            margin: 2em 0;
-            font-size: 2rem;
-            background: #993399;
-            border-bottom: solid 6px #993366	;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-            border-radius: 9px;
-        }
-        &--inner{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-image: url(../image/angel.png);
+        &__container { 
+            position: relative;
             width: 100%;
             height: 100%;
-            background-size:cover;
-            opacity: 0.75;
-        }
-    }
- 
-}
-.pitems{
-    width: 100%;
-	display: flex;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-	justify-content: space-between;
-	flex-wrap: wrap;
-    z-index: 100;
-}
-.item{
-    margin-top: 15%;
-	width: 33%;
-    height: 60%;
-    padding: 1rem;
-  
-}
-.p-section__square{
-    box-sizing:border-box;
-    position:relative;
-    z-index: 100;
-    max-width:70rem;
-    width:100%;
-    border:2px solid #dd00d2;
-    border-radius:50%;
-    box-shadow:0 0 15px 2px #29B6F6,0 0 3px 0 #29B6F6 inset;
-    transform:perspective(600px) rotateX(10deg);
-    transition:all 0.3s;overflow:hidden;
-    margin: 0 auto;
-    .p-section__square__content{
-        padding-top:100%;
-        animation:magicSquare 15s linear infinite;
-        @keyframes magicSquare{
-            0%{transform:rotate(0)
-            }100%{transform:rotate(360deg)
+          }
+          &__under{
+            position: relative;
+            width: 100%;
+            height: 100rem;
+            z-index: 10;
+            opacity: 0.8;
+            img{
+                width: 100%;
             }
-        }
-        &::before,&::after{
-            display:block;
-            content:"";
-            transition:all .3s 1.7s;
-            box-sizing:border-box;
-            position:absolute;
-            top:50%;
-            left:50%;
-            border-radius:50%;
-            border:3px solid #29b6f6;
-            box-shadow:0 0 15px 2px #29B6F6,0 0 3px 0 #29B6F6 inset;
-        }
-        &::before{
-            width:60%;
-            margin-top:-30%;
-            margin-left:-30%;
-            padding-top:60%;
-            background-color: #707070;
-            opacity: 0.6;
-        }
-            &::after{
-                width:74%;
-                margin-top:-37%;
-                margin-left:-37%;
-                padding-top:74%;
-
+            h2{
+                position: absolute;
+                color: #FFF8DC;
+                font-size: 15rem;
+                top: 0.5%;
+                left: 0%;
+                font-family: cursive;
+                transform: rotate(-20deg);
+                -moz-transform: rotate(-20deg);
+                -webkit-transform: rotate(-20deg);
+                
             }
-                &--inner1{
-                    position:absolute;
-                    top:0;
-                    left:0;
-                    width:100%;
-                    height:100%;
-                    &::before,&::after{
-                        box-sizing:border-box;
-                        position:absolute;
-                        left:10%;
-                        top:10%;
-                        width:80%;
-                        height:80%;
-                        border:1px solid #FF0066;
-                        box-shadow:0 0 30px 0 #FF0066,0 0 1px 0 #29b6f6 inset;
-                        content:""
-                    }
-                    &::after{transform:rotate(45deg)}
-                    
-                }
-                &--inner2{
-                    position:absolute;
-                    top:0;
-                    left:0;
-                    width:100%;
-                    height:100%;
-                    &::before,&::after{
-                        box-sizing:border-box;
-                        position:absolute;
-                        left:10%;
-                        top:10%;
-                        width:80%;
-                        height:80%;
-                        transform:rotate(30deg);
-                        border:1px solid #CCCC99;
-                        box-shadow:0 0 30px 0 #CCCC99,0 0 1px 0 #29b6f6 inset;
-                        content:""
-                    }
-                    &::after{transform:rotate(60deg)}
-                    
-                }
-                &--inner3{
-                    position:absolute;
-                    top:0;
-                    left:0;
-                    width:100%;
-                    height:100%;
-                    &::before,&::after{
-                        box-sizing:border-box;
-                        position:absolute;
-                        left:10%;
-                        top:10%;
-                        width:80%;
-                        height:80%;
-                        transform:rotate(75deg);
-                        border:1px solid #29b6f6;
-                        box-shadow:0 0 30px 0 #29b6f6,0 0 1px 0 #29b6f6 inset;
-                        content:""
-                    }
-                    &::after{transform:rotate(105deg)}
-                    
-                }
-                &--inner4{
-                    position:absolute;
-                    top:0;
-                    left:0;
-                    width:100%;
-                    height:100%;
-                    &::before,&::after{
-                        box-sizing:border-box;
-                        position:absolute;
-                        left:10%;
-                        top:10%;
-                        width:80%;
-                        height:80%;
-                        transform:rotate(deg);
-                        border:1px solid #29b6f6;
-                        box-shadow:0 0 30px 0 #29b6f6,0 0 1px 0 #29b6f6 inset;
-                        content:""
-                    }
-                    &::after{transform:rotate(135deg)}
-                    
-                }
-                %magic-square__txt{
-                    position:absolute;
-                    z-index: 100;
-                    color:#29B6F6;
-                }
-                    &__txt{&--top{
-                        top:0;
-                        left:50%;
-                        transform:translateX(-50%);
-                        transition:all .2s .3s;
-                        @extend %magic-square__txt}
-                        &--top-right{top:12.5%;
-                            right:15%;
-                            transition:all .2s .5s;
-                            @extend %magic-square__txt}
-                            &--right{top:50%;
-                                right:1.5%;
-                                transform:translateY(-50%);
-                                transition:all .3s .7s;
-                                @extend %magic-square__txt}
-                                &--bottom-right{right:15%;
-                                    bottom:12.5%;
-                                    transition:all .3s .9s;
-                                    @extend %magic-square__txt}
-                                    &--bottom{
-                                        bottom:0;
-                                        left:50%;
-                                        transform:translateX(-50%);
-                                        transition:all .3s 1.1s;
-                                        @extend %magic-square__txt}
-                                        &--bottom-left{
-                                            bottom:12.5%;
-                                            left:15%;transition:all .3s 1.3s;
-                                            @extend %magic-square__txt}
-                                            &--left{
-                                                top:50%;
-                                                left:1.5%;
-                                                transform:translateY(-50%);
-                                                transition:all .3s 1.5s;
-                                                @extend %magic-square__txt}
-                                                &--top-left{top:12.5%;
-                                                    left:15%;
-                                                    transition:all .3s 1.7s;
-                                                    @extend %magic-square__txt}}}}
-
+    
+         
+        
+        }
+        }
 
 .p-section__profile{  
     width: 80%;

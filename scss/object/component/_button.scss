@@ -1,1 +1,68 @@
+.c-section__top__botton{
+    position: absolute;
+    z-index: 100;
+    color: #FFF5EE;
+    top: 30%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+
+    a{
+        color: #FFFFFF;
+        font-family: 'klee', sans-serif;
+        padding: 1.5rem 2rem;
+        background-image: url(../image/light.jpg);
+        border-left: solid 7px #9057FF;/*左線*/
+        border-right: solid 7px #9057FF;/*右線*/
+        font-size: 2.25rem;
+    }
+    :hover{
+        box-shadow: 0 0 1.5rem 0.75rem #fff;/*ボタンの外側に*/
+        text-shadow: 0 0 1rem 1rem #fff;/*文字の周りに*/
+      }
+}
+
+.c-section__center{
+&__botton{
+    position: absolute;
+    top: 90%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    a{
+        color: #FFFFFF;
+        font-family: 'klee', sans-serif;
+        padding: 1.5rem 2rem;
+        font-size: 2.25rem;
+        background-image: url(../image/light.jpg);
+        border-left: solid 7px #9057FF;/*左線*/
+        border-right: solid 7px #9057FF;/*右線*/
+    }
+    :hover{
+    box-shadow: 0 0 1.5rem 0.75rem #fff;/*ボタンの外側に*/
+    text-shadow: 0 0 1rem 1rem #fff;/*文字の周りに*/
+  }
+}
+}
+.c-section__under__botton{
+    position: absolute;
+    z-index: 100;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+    a{
+        color: #FFFFFF;
+        font-family: 'klee', sans-serif;
+        padding: 1.5rem 2rem;
+        font-size: 2.25rem;
+        background-image: url(../image/light.jpg);
+        border-left: solid 7px #9057FF;/*左線*/
+        border-right: solid 7px #9057FF;/*右線*/
+        
+    }
+    :hover{
+        box-shadow: 0 0 1.5rem 0.75rem #fff;/*ボタンの外側に*/
+        text-shadow: 0 0 1rem 1rem #fff;/*文字の周りに*/
+      }
+}
 

@@ -1,0 +1,48 @@
+.c-section__top__inner{
+
+&--text{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    font-size: 2rem;
+    color: #FFF5EE;
+    line-height: 2;
+    font-family: 'klee', sans-serif;
+    width: 37.5%;
+    height: 50%;
+}
+
+&--text1{
+    position: absolute;
+    top: 0%;
+    left: 2.5%;
+    font-size: 2rem;
+}
+&--text2{
+    position: absolute;
+    top: 45%;
+    left: 2.5%;
+    font-size: 2rem;
+}
+&--text3{
+    position: absolute;
+    top: 70%;
+    left: 2.5%;
+    font-size: 2rem;
+}
+}
+
+.c-section__center{
+    &--text1{
+        display: none;
+        width: 80%;
+        height: 15%;
+        border: 1px solid #FFF5EE;
+        position: absolute;
+        top:85%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        color:#FFFFFF;
+        position: fixed;
+    }
+}
