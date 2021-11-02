@@ -24,10 +24,23 @@
     max-width: 80%;
     width: 100%;
     margin: 0 auto;
-
+    @include tab{
+      top: 20%;
+   }
+    @include sp{
+      top: 25%;
+   }
     img{
     width: 100%;
     height: 35rem;
+    @include tab{
+      width: 80%;
+      height: 25rem;
+   }
+   @include sp{
+    width: 80%;
+    height: 10rem;
+ }
     }
     &--nav{
         position: absolute;
@@ -36,22 +49,32 @@
         width: 100%;
         height: 10rem;
         margin: 0 auto;
+        @include tab{
+          top: 25%;
+       }
+        @include sp{
+          top: 35%;
+       }
         .slick-slide{
             margin: 0 1rem;
             border: 2px solid #9966CC;
-            
+            @include tab{
+              margin: 0 0.5rem;
+           }  
         }
+    
         img{
             height: 10rem;
             border: 1.5px solid #CCCCFF;
+            @include tab{
+              height: 7.5rem;
+           } 
+       
         }
-        &img::after{
-            content: "";
-            width: 100%;
-            
-        }
+      
     }
 }
+
 .slide-arrow {
     bottom: 0;
     height: 0;
@@ -67,6 +90,16 @@
     height: 60px;
     transform: rotate(225deg);
     left: -45px;
+    @include tab{
+      width: 30px;
+      height: 30px;
+      left: -30px;
+   }
+    @include sp{
+      width: 25px;
+      height: 25px;
+      left: -20px;
+   }
   }
   .next-arrow {
     border-top: solid 5px #CC33FF;
@@ -75,6 +108,16 @@
     height: 60px;
     transform: rotate(45deg);
     right: -45px;
+    @include tab{
+      width: 30px;
+      height: 30px;
+      right: -30px;
+   }
+    @include sp{
+      width: 25px;
+      height: 25px;
+      right: -25px;
+   }
   }
   button {
     -webkit-appearance: none;
@@ -83,7 +126,12 @@
     outline: none;
     padding: 0;
   }
+  // .slick-track{
+  //   @include tab{
+  //     width: 0;
 
+  //  }
+  // }
 
 
 
@@ -99,8 +147,8 @@
     z-index: 10;
 
   }                       
-  &--pulse1-1{
-    background: linear-gradient(-135deg, #333333, #A16EFF);
+  &--pulse01{
+    background: linear-gradient(-135deg, #333333, #FF6600);
     position: absolute;
     top:50%;
     left:27%;
@@ -127,25 +175,14 @@
     z-index: 1;
 
   }
+  &:hover ~.c-section__center__container{
+    display: block;
+    display: flex;
+    justify-content: space-between;
+  }
 }
-&--pulse1-2{
-  position: absolute;
-  top:50%;
-  left:27%;
-  transform: translate(-50%,-50%);
-  padding: 8px;
-  border-radius: 50%;
-  z-index: 10;
-
-&:hover +.c-section__center--text1{
-  display: block;
-}
-
-}
-
-
   &--pulse02{
-    background: linear-gradient(-135deg, #333333, #A16EFF);
+    background: linear-gradient(-135deg, #333333, #000033);
     position: absolute;
     top:13%;
     left:23.8%;
@@ -169,9 +206,14 @@
         left:23.75%;
         transform: translate(-50%,-50%);
       }
+      &:hover ~.c-section__center__container{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+      }
   }
   &--pulse03{
-    background: linear-gradient(-135deg, #333333, #A16EFF);
+    background: linear-gradient(-135deg, #333333, #FFFF33);
     position: absolute;
     top:24%;
     left:39%;
@@ -196,9 +238,14 @@
         transform: translate(-50%,-50%);
         z-index: 1;
       }
+      &:hover ~.c-section__center__container{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+      }
   }
   &--pulse04{
-    background: linear-gradient(-135deg, #333333, #A16EFF);
+    background: linear-gradient(-135deg, #333333, #FF99CC);
     position: absolute;
     top:46%;
     left:47.25%;
@@ -224,9 +271,14 @@
         transform: translate(-50%,-50%);
         z-index: 1;
       }
+      &:hover ~.c-section__center__container{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+      }
   }
   &--pulse05{
-    background: linear-gradient(-135deg, #333333, #A16EFF);
+    background: linear-gradient(-135deg, #333333, #00CCFF);
     position: absolute;
     top:50%;
     left:64.25%;
@@ -251,9 +303,14 @@
         transform: translate(-50%,-50%);
         z-index: 1;
       }
+      &:hover ~.c-section__center__container{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+      }
   }
   &--pulse06{
-    background: linear-gradient(-135deg, #333333, #A16EFF);
+    background: linear-gradient(-135deg, #333333, #0066FF);
     position: absolute;
     top:67.5%;
     left:39.25%;
@@ -278,9 +335,14 @@
         transform: translate(-50%,-50%);
         z-index: 1;
       }
+      &:hover ~.c-section__center__container{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+      }
   }
   &--pulse07{
-    background: linear-gradient(-135deg, #333333, #A16EFF);
+    background: linear-gradient(-135deg, #333333, #00FFFF);
     position: absolute;
     top:61.25%;
     left:11.75%;
@@ -305,9 +367,14 @@
         transform: translate(-50%,-50%);
         z-index: 1;
       }
+      &:hover ~.c-section__center__container{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+      }
   }
   &--pulse08{
-    background: linear-gradient(-135deg, #333333, #A16EFF);
+    background: linear-gradient(-135deg, #333333, #FF9966);
     position: absolute;
     top:85.75%;
     left:9.5%;
@@ -331,6 +398,11 @@
         left:9.5%;
         transform: translate(-50%,-50%);
         z-index: 1;
+      }
+      &:hover ~.c-section__center__container{
+        display: block;
+        display: flex;
+        justify-content: space-between;
       }
   }
   &--pulse09{
@@ -359,6 +431,11 @@
       transform: translate(-50%,-50%);
       z-index: 1;
     }
+    &:hover ~.c-section__center__container{
+      display: block;
+      display: flex;
+      justify-content: space-between;
+    }
 
   }
   &--pulse010{
@@ -386,6 +463,11 @@
       left:23%;
       transform: translate(-50%,-50%);
       z-index: 1;
+    }
+    &:hover ~.c-section__center__container{
+      display: block;
+      display: flex;
+      justify-content: space-between;
     }
 
   }

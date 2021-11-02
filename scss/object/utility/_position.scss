@@ -1,22 +1,36 @@
 .u-section__text{
     margin-bottom: 5rem;
-    &--cursive{
+    font-family: cursive;
+    z-index: 100;
+    color: #FFF;
+    font-size: 5rem;
+    @include tab{
+        font-size: 2.5rem;
+     }
+    &--1{
         position: absolute;
-        z-index: 100;
-        color: #FFF;
-        top: 40%;
+        top: 50%;
         left: 20%;
-        font-size: 5rem;
-        font-family: cursive;
+        transform: translate(-50%, -50%);
+        @include tab{
+            font-size: 3.5rem;
+         }
+        @include sp{
+            font-size: 2rem;
+         }
     }
-    &--cursive::after{
-        content: "MURAKAKAMIYOSHIYA";
+    &--2{
         position: absolute;
-        z-index: 100;
-        color: #FFF;
-        top: 80%;
-        left: 40%;
-        font-family: cursive;
+        top: 60%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        @include tab{
+            font-size: 3.5rem;
+         }
+        @include sp{
+            font-size: 2rem;
+            top: 60%;
+            left: 60%;
+         }
     }
-
 }

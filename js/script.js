@@ -5,7 +5,7 @@ $(function () {
 
 
 function rect() {
-    $('.p-section__text--cursive').animate({
+    $('.u-section__text--1,.u-section__text--2').animate({
         marginTop: '-=10px'
     }, 800).animate({
         marginTop: '+=10px'
@@ -88,20 +88,28 @@ $(window).mousemove(function (e) {
       dots: false,
       centerMode: true,
       focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 834, 
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 375, 
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+
     }); 
 });
 
-// $(function(){
-//   $(".c-section__center--pulse1").hover(
-//     //マウスオーバー時の処理
-//     function() {
-//       $(this).css('padding', '50px');
-//       $(this).css('transform', 'rotateX(60deg)');
-//     },
-//     //マウスアウト時の処理
-//     function() {
-//       $(this).css('padding', '8px');
-//       $(this).css('transform', 'rotateX(0deg)');
-//     }
-//   );
-// });
+
+
+$(function(){
+  $('.c-header__botton').on('click', function(){
+    $('.l-header__container--tab').toggleClass('is-active');
+  });
+}());

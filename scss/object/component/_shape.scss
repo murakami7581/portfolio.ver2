@@ -33,18 +33,7 @@
           }
         &--hexagon--1{
             display: none;
-        // &::after{
-        //     content: "HTML";
-        //     width: 100rem;
-        //     height: 15%;
-        //     border: 1px solid #FFF5EE;
-        //     position: absolute;
-        //     top:50rem;
-        //     left:50%;
-        //     transform: translate(-50%,-50%);
-        //     color:#FFFFFF;
-        //     position: fixed;
-        // }
+ 
             &__img{
                 position: absolute;
                 top: 50%;
@@ -219,26 +208,3 @@
 }
 
 
-// .text {
-//     position: relative;
-//     width: 100px;
-//     height: 86.67px; 
-//     z-index: 1000;
-//   }
-// .fukidashi {
-//     display: none;
-//     width: 30rem;
-//     position: absolute;
-//     top: -10rem;
-//     left: 60rem;
-//     padding: 3rem;
-//     background: #000000;
-//     border: 1px solid #9966FF;
-//     color: #FFFFFF;
-//     font-weight: bold;
-//   }
-
-//   .text:hover + .fukidashi {
-//     display: block;
-//   }
-  

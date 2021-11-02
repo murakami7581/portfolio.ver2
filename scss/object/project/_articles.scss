@@ -27,6 +27,10 @@
         background-repeat: no-repeat;
         margin-bottom: 15rem;
         border-radius: 30px;
+        @include sp{
+            background-size: contain;
+            height: 70rem;
+         }
         h2{
             position: absolute;
             color: #FFF8DC	;
@@ -37,15 +41,14 @@
             transform: rotate(-20deg);
             -moz-transform: rotate(-20deg);
             -webkit-transform: rotate(-20deg);
+            @include tab{
+                font-size: 10rem;
+             }
+            @include sp{
+                font-size: 7.5rem;
+             }
         }
-        img{
-            width: 90%;
-            margin: 5%;
-            border-radius: 3rem;
-            height: 85rem;
-            opacity: 0.8;
-            
-        }
+
     }
 
     &__center{
@@ -58,15 +61,22 @@
             position: absolute;
             color: #FFF8DC;
             font-size: 15rem;
-            top: -5%;
-            left: 75%;
+            top: 0%;
+            right: 0%;
             font-family: cursive;
             transform: rotate(20deg);
             -moz-transform: rotate(20deg);
             -webkit-transform: rotate(20deg);
+            @include tab{
+                font-size: 10rem;
+             }
+            @include sp{
+                font-size: 7.5rem;
+             }
         }
         &__inner{
-            width: 75%;
+            position: relative;
+            width: 100%;
             height: 100%;
             background-image: url(../image/gears.png);
             background-size: contain;
@@ -86,6 +96,12 @@
             height: 100rem;
             z-index: 10;
             opacity: 0.8;
+            @include tab{
+                height: 70rem;
+             }
+            @include sp{
+                height: 50rem;
+             }
             img{
                 width: 100%;
             }
@@ -99,7 +115,12 @@
                 transform: rotate(-20deg);
                 -moz-transform: rotate(-20deg);
                 -webkit-transform: rotate(-20deg);
-                
+                @include tab{
+                    font-size: 10rem;
+                 }
+                @include sp{
+                    font-size: 7.5rem;
+                 }
             }
     
          
@@ -107,150 +128,291 @@
         }
         }
 
-.p-section__profile{  
+.p-section__profile{ 
+    position: relative; 
     width: 80%;
     height: 100%;
     background-color: #000000;
     font-family: 'klee', sans-serif;
     color: #FFFFFF;
     margin: 0 auto;
+    z-index: 100;
     h1{
-        font-size: 4rem;
+        font-size: 8rem;
         text-align: center;
-        padding: 3rem;
-        font-family: serif;
+        padding: 7.5rem;
+        font-weight: bold;
+        font-family: cursive;
+        @include tab{
+            font-size: 5rem;
+            padding: 5rem;
+         }
     }
     &--content{
-    font-family:  serif;
+ 
     h2{
         margin: 3rem;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .wp-image-216{
-        margin-left: 25%;
-        width: 45rem;
-        height: 40rem;
+        margin: 0% 15% 15% 30%;
+        width: 40rem;
+        height: 35rem;
+        @include tab{
+            margin: 0;
+            width: 25rem;
+            height: 25rem;
+         }
     }
     .wp-block-column{
         p{
             display: flex;
             justify-content: center;
-            font-size: 1.5rem;
-            line-height: 1.5;
+            font-size: 2rem;
+            line-height: 2;
         }
     }
+    .wp-block-table{
+        text-align: center;
+    }
     h3{
-        margin: 3rem 0 ;
-        font-size: 2rem;
+        margin: 7.5rem 0 ;
+        font-size: 2.5rem;
+    }
+    h4{
+        font-size: 2.25rem;
+        margin-bottom: 3rem;
+        color: #FFFF22;
     }
     p{
-        font-size: 1.5rem;
+        font-size: 2rem;
         line-height: 2.5;
+    }
+    .wp-block-column{
+        text-align: center;
+    }
+    .wp-block-columns{
+        h4{
+            
+            background: linear-gradient(transparent 70%, #A16EFF 0%);
+            display: inline-block;
+           
+        }
     }
     }
 }
 
 .p-section__skills{
-    position: relative;
+    position: relative; 
     width: 80%;
-    height: 150vh;
+    height: 100%;
     background-color: #000000;
+    font-family: 'klee', sans-serif;
     color: #FFFFFF;
     margin: 0 auto;
+    z-index: 100;
     h1{
-       font-size: 5rem;
-       position: absolute;
-       top: 7.5%;
-       left: 50%;
-       transform: translate(-50%, -50%);
-       z-index: 10;
-       font-family:  serif;
+        font-size: 8rem;
+        text-align: center;
+        padding: 7.5rem;
+        font-weight: bold;
+        font-family: cursive;
+        @include tab{
+            font-size: 5rem;
+            padding: 5rem;
+         }
     }
     &--content{
 
-        position: absolute;
-        top: 10%;
-        left: 0;
         margin: 5rem;
         font-family: 'klee', sans-serif;
         
     
     h3{
         font-weight: bold;
-        font-size: 2.25rem;
+        font-size: 3rem;
         margin-bottom: 2rem;
     }
     p{
-        font-size: 1.85rem;
+        font-size: 2rem;
         line-height: 2;
     }
-    .wp-image-162,.wp-image-166{
-        margin-left: 25%;
+  
+    
+    .wp-image-162,.wp-image-166,.wp-image-232{
+        display: block;
+        margin: 0 auto;
         width: 15rem;
         height: 15rem;
     }
-    .wp-image-169,.wp-image-198{
-        margin-left: 25%;
+    .blocks-gallery-grid{
+        margin: 0 auto;
     }
 
+
+
     .wp-block-column{
-        margin-bottom: 3rem;
+        margin-bottom: 6rem;
     }
     }
 }
 
 .p-section__works{
     position: relative;
-    background-color: #000;
     width: 80%;
-    margin: 0 auto;
-    h1{
-       font-size: 5rem;
-       position: absolute;
-       top: 10%;
-       left: 50%;
-       transform: translate(-50%, -50%);
-       color: #FFFFFF;
-       z-index: 10;
-       font-family:  serif;
-    }
-    &--gallery{
-        margin-top: 10rem;
-    }
-}
-.p-section__contact{
-    position: relative;
-    width: 80%;
-    height: 100vh;
-    margin: 0 auto;
+    height: 100%;
     background-color: #000000;
+    font-family: 'klee', sans-serif;
+    color: #FFFFFF;
+    margin: 0 auto;
     z-index: 100;
     h1{
-       font-size: 5rem;
-       position: absolute;
-       top: 5%;
-       left: 50%;
-       transform: translate(-50%, -50%);
-       color: #FFFFFF;
-       z-index: 10;
-       font-family:  serif;
+        font-size: 8rem;
+        text-align: center;
+        padding: 7.5rem 0 0 0;
+        font-weight: bold;
+        font-family: cursive;
+        @include tab{
+            font-size: 5rem;
+            padding: 5rem;
+         }
+    }
+    &--gallery{
+        
+        .wp-block-gallery{
+            font-size: 2.25rem;
+            li{
+                margin-top: 10%;
+                border: 1px solid #A16EFF;
+              
+            }
+         
+        }
+      
+    }
+}
+
+
+.p-section__contact{
+    position: relative; 
+    width: 80%;
+    height: 100%;
+    background-color: #000000;
+    font-family: 'klee', sans-serif;
+    color: #FFFFFF;
+    margin: 0 auto;
+    z-index: 100;
+    h1{
+        font-size: 8rem;
+        text-align: center;
+        padding: 7.5rem;
+        font-weight: bold;
+        font-family: cursive;
+        @include tab{
+            font-size: 5rem;
+            padding: 5rem;
+         }
     }
     &--content{
-        background-color: #FFFFFF;
-        color: #000000;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        width: 60%;
+        height: 100%;
+        margin: 0 auto;
+        display: block;
+        @include tab{
+            margin-left: 20%;
+         }
+        
     p{
         font-size: 2rem;
-        margin-bottom: 3rem;
+      
     }
-    span{
-        border: 1px solid #000;
-        input{
-            height: 3rem;
-        }
+ 
     }
     }
+    .wpcf7-form-control-wrap{
+        display: inline-block;
+        border: 1px solid #FFFFFF;
+        margin:5% 10%;
+        width: 80%;
+        @include tab{
+            margin: 0 0 5% 0;
+            width: 100%;
+         }
+    }
+    .your-message{
+        border: 0px solid #FFFFFF;
+       
+    }
+    .wpcf7-textarea {
+        border: 1px solid #FFFFFF;
+        width: 100%;
+    }
+    // .wpcf7-form-control{
+    //     margin-top: 30rem;
+    // }
+    
+    
+    // .has-spinner
+    // .wpcf7-submit{
+        
+    // }
+
+    *{
+        box-sizing: border-box;
+    }
+    .outer{
+        position: relative;
+        width: 300px;
+        height: 300px;
+    }
+    
+    .iconGear,
+    .iconGear:before,
+    .iconGear:after,
+    .iconGear div:before{
+        position: absolute;
+        width: 40px;
+        height: 200px;
+        content: '';
+        background-color: #A16EFF;
+        border-radius: 1px;
+    }
+    .iconGear{
+        top: 50px;
+        left: 130px;
+    }
+    .iconGear:before{
+        top: 0;
+        left: 0;
+        transform: rotate(45deg);
+    }
+    .iconGear:after {
+        top: 0;
+        left: 0;
+        transform: rotate(-45deg);
+    }
+    .iconGear div:before{
+        top: -20px;
+        left: 60px;
+        transform: rotate(90deg);
+     }
+    .iconGear div{
+        position: absolute;
+        top: 20px;
+        left: -60px;
+        width: 160px;
+        height: 160px;
+        background-color: #A16EFF;
+        border-radius: 50%;
+        z-index: 5;
+     }
+    .iconGear div:after {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        content: '';
+        width: 80px;
+        height: 80px;
+        background-color: #000000;
+        border-radius: 50%;
     }

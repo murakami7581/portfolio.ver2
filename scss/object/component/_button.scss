@@ -2,10 +2,17 @@
     position: absolute;
     z-index: 100;
     color: #FFF5EE;
-    top: 30%;
-    left: 22%;
+    top: 92.5%;
+    left: 25%;
     transform: translate(-50%, -50%);
-
+    @include tab{
+        top: 82.5%;
+        left: 30%;
+     }
+     @include sp{
+        top:  92.5%;
+        left: 30%;
+     }
     a{
         color: #FFFFFF;
         font-family: 'klee', sans-serif;
@@ -14,20 +21,29 @@
         border-left: solid 7px #9057FF;/*左線*/
         border-right: solid 7px #9057FF;/*右線*/
         font-size: 2.25rem;
+        @include tab{
+            padding: 1.25rem 1.5rem;
+            font-size: 2rem;
+         }
+         @include sp{
+            padding: 1rem 1.25rem;
+            font-size:1.5rem;
+         }
     }
     :hover{
         box-shadow: 0 0 1.5rem 0.75rem #fff;/*ボタンの外側に*/
         text-shadow: 0 0 1rem 1rem #fff;/*文字の周りに*/
       }
+
 }
 
 .c-section__center{
 &__botton{
     position: absolute;
-    top: 90%;
-    left: 80%;
+    top: 80%;
+    left: 75%;
     transform: translate(-50%, -50%);
-    z-index: 1000;
+    z-index: 100;
     a{
         color: #FFFFFF;
         font-family: 'klee', sans-serif;
@@ -36,6 +52,14 @@
         background-image: url(../image/light.jpg);
         border-left: solid 7px #9057FF;/*左線*/
         border-right: solid 7px #9057FF;/*右線*/
+        @include tab{
+            padding: 1.25rem 1.5rem;
+            font-size: 2rem;
+         }
+         @include sp{
+            padding: 1rem 1.25rem;
+            font-size:1.5rem;
+         }
     }
     :hover{
     box-shadow: 0 0 1.5rem 0.75rem #fff;/*ボタンの外側に*/
@@ -49,7 +73,10 @@
     top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
-   
+    @include tab{
+        top: 85%;
+     }
+     
     a{
         color: #FFFFFF;
         font-family: 'klee', sans-serif;
@@ -58,7 +85,15 @@
         background-image: url(../image/light.jpg);
         border-left: solid 7px #9057FF;/*左線*/
         border-right: solid 7px #9057FF;/*右線*/
-        
+        @include tab{
+            padding: 1rem;
+            font-size: 1rem;
+         }
+         @include sp{
+            padding: 0.25rem;
+            font-size: 0.25rem;
+         }
+    
     }
     :hover{
         box-shadow: 0 0 1.5rem 0.75rem #fff;/*ボタンの外側に*/
@@ -66,3 +101,143 @@
       }
 }
 
+.c-header__botton{
+    display: none;
+
+    @include tab{
+        display: block;
+        position: fixed;
+        top: 60px;
+        right: 40px;
+        z-index: 2000;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+
+  }
+  
+  /*----------------------------
+  * メニュー本体
+  *----------------------------*/
+  .l-header__container--tab{
+      display: none;
+    @include tab{
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #555;
+    }
+
+  }
+  .menu-item{
+   
+    @include tab{
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: .5em 1em;
+        text-align: center;
+        color: #fff;
+        box-sizing: border-box;
+    }
+ 
+  }
+  
+  /*----------------------------
+  * アニメーション部分
+  *----------------------------*/
+  
+  /* アニメーション前のメニューの状態 */
+  .l-header__container--tab{
+    display: none;
+    @include tab{
+        display: block;
+        transform: translateX(100%);
+        transition: all .3s linear;
+    }
+
+  }
+  /* アニメーション後のメニューの状態 */
+  .l-header__container--tab.is-active{
+    display: none;
+    @include tab{
+        display: block;
+        transform: translateX(0);
+    }
+   
+  }
+  
+  .c-header__botton--line > span{
+    display: none;
+    @include tab{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background: #666;
+        border-radius: 10px;
+        -webkit-transition: all 400ms;
+        transition: all 400ms;
+    }
+
+}
+.c-header__botton--line > span:nth-child(1) {
+    display: none;
+    @include tab{
+        display: block;
+        top:0;
+    }
+	
+}
+.c-header__botton--line > span:nth-child(2) {
+    display: none;
+    @include tab{
+        display: block;
+        top:10px;
+    }
+
+}
+.c-header__botton--line > span:nth-child(3) {
+    display: none;
+    @include tab{
+        display: block;
+        top:20px;
+    }
+
+}
+.l-header__container--tab.click span:nth-child(1){
+    display: none;
+    @include tab{
+        display: block;
+        background: #fff;
+        top: 6px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform   : rotate(-45deg);
+        transform        : rotate(-45deg);
+    }
+
+}
+.l-header__container--tab.click span:nth-child(2),.c-header__botton--line.open span:nth-child(3){
+    display: none;
+    @include tab{
+        display: block;
+        top: 6px;
+	background :#fff;
+	-webkit-transform: rotate(45deg);
+	-moz-transform   : rotate(45deg);
+	transform        : rotate(45deg);
+    }
+	
+}

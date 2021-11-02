@@ -43,12 +43,21 @@
   <!-- <div id="page"> -->
 
     <header class="l-header">
+    <button type="button" class="c-header__botton">
+    <p class="c-header__botton--line">
+    <span></span>
+    <span></span>
+    <span></span>
+  </p>
+    </button>
      <div class="l-header__container">
+ 
       <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url( get_template_directory_uri() . "/image/gia2.png" ); ?>" alt="一覧の写真"></img></a>
 	    <?php wp_nav_menu( array( 
       'theme_location' => 'header' 
       ) ); 
       ?>
+          <div class="l-header__container--tab"></div>
 	   </div>
     </header>
 <!-- header.php終わり -->

@@ -16,6 +16,7 @@
     color: #FFFFFF;
     z-index: 1000;
     position: fixed;
+  
 img{
   width: 3rem;
   height: 3rem;
@@ -36,6 +37,9 @@ img{
 
  }
 .menu-header-container{
+  @include tab{
+    display: none;
+ }
     ul{
         display: flex;
         align-items: center;
