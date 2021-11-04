@@ -136,22 +136,12 @@
 
 
 .c-section__center{
-  &--pulse0{
-    background: linear-gradient(-135deg, #333333, #FFEEFF);
-    position: absolute;
-    top:35%;
-    left:13%;
-    transform: translate(-50%,-50%);
-    padding: 12.5px;
-    border-radius: 50%;
-    z-index: 10;
-
-  }                       
+                     
   &--pulse01{
-    background: linear-gradient(-135deg, #333333, #FF6600);
+    background: linear-gradient(-135deg, #333333, #9966CC);
     position: absolute;
-    top:40vh;
-    left:19.5vw;
+    top:50%;
+    left:50%;
     transform: translate(-50%,-50%);
     padding: 8px;
     border-radius: 50%;
@@ -159,8 +149,8 @@
     z-index: 10;
    &:hover{
     position: absolute;
-    top:45.5%;
-    left:23.5%;
+    top:37.5%;
+    left:37%;
     transform: translate(-50%,-50%);
     padding: 40px;
     transform:rotateX(75deg);
@@ -169,8 +159,8 @@
    &:hover +.c-section--hexagon--1{
     display: block;
     position: absolute;
-    top:42.5%;
-    left:27%;
+    top:30%;
+    left:50%;
     transform: translate(-50%,-50%);
     z-index: 1;
 
@@ -182,10 +172,10 @@
   }
 }
   &--pulse02{
-    background: linear-gradient(-135deg, #333333, #000033);
+    background: linear-gradient(-135deg, #333333, #9966CC);
     position: absolute;
-    top:13%;
-    left:23.8%;
+    top:50%;
+    left:50%;
     transform: translate(-50%,-50%);
     padding: 8px;
     border-radius: 50%;
@@ -193,8 +183,8 @@
     z-index: 10;
     &:hover{
         position: absolute;
-        top:8.5%;
-        left:20.3%;
+        top:37.5%;
+        left:37%;
         transform: translate(-50%,-50%);
         padding: 40px;
         transform:rotateX(75deg);
@@ -202,9 +192,10 @@
        &:hover +.c-section--hexagon--2{
         display: block;
         position: absolute;
-        top:5%;
-        left:23.75%;
+        top:30%;
+        left:50%;
         transform: translate(-50%,-50%);
+        z-index: 1;
       }
       &:hover ~.c-section__center__container{
         display: block;
@@ -213,10 +204,10 @@
       }
   }
   &--pulse03{
-    background: linear-gradient(-135deg, #333333, #FFFF33);
+    background: linear-gradient(-135deg, #333333, #9966CC);
     position: absolute;
-    top:24%;
-    left:39%;
+    top:50%;
+    left:50%;
     transform: translate(-50%,-50%);
     padding: 8px;
     border-radius: 50%;
@@ -224,8 +215,8 @@
     z-index: 10;
     &:hover{
         position: absolute;
-        top:19.5%;
-        left:35.5%;
+        top:37.5%;
+        left:37%;
         transform: translate(-50%,-50%);
         padding: 40px;
         transform:rotateX(75deg);
@@ -233,8 +224,8 @@
        &:hover +.c-section--hexagon--3{
         display: block;
         position: absolute;
-        top:16.5%;
-        left:39%;
+        top:30%;
+        left:50%;
         transform: translate(-50%,-50%);
         z-index: 1;
       }
@@ -245,10 +236,10 @@
       }
   }
   &--pulse04{
-    background: linear-gradient(-135deg, #333333, #FF99CC);
+    background: linear-gradient(-135deg, #333333, #9966CC);
     position: absolute;
-    top:46%;
-    left:47.25%;
+    top:50%;
+    left:50%;
     transform: translate(-50%,-50%);
     padding: 8px;
     border-radius: 50%;
@@ -256,32 +247,34 @@
     z-index: 10;
     &:hover{
         position: absolute;
-        top:41.5%;
-        left:43.75%;
+        top:37.5%;
+        left:37%;
         transform: translate(-50%,-50%);
         padding: 40px;
         transform:rotateX(75deg);
-        
+  
        }
        &:hover +.c-section--hexagon--4{
         display: block;
         position: absolute;
-        top:38.5%;
-        left:47.5%;
+        top:30%;
+        left:50%;
         transform: translate(-50%,-50%);
         z-index: 1;
       }
-      &:hover ~.c-section__center__container{
+      &:hover~.c-section__center__container{
         display: block;
         display: flex;
         justify-content: space-between;
+       
+
       }
   }
   &--pulse05{
-    background: linear-gradient(-135deg, #333333, #00CCFF);
+    background: linear-gradient(-135deg, #333333, #9966CC);
     position: absolute;
     top:50%;
-    left:64.25%;
+    left:50%;
     transform: translate(-50%,-50%);
     padding: 8px;
     border-radius: 50%;
@@ -289,8 +282,8 @@
     z-index: 10;
     &:hover{
         position: absolute;
-        top:45.5%;
-        left:60.75%;
+        top:37.5%;
+        left:37%;
         transform: translate(-50%,-50%);
         padding: 40px;
         transform:rotateX(75deg);
@@ -298,8 +291,8 @@
        &:hover +.c-section--hexagon--5{
         display: block;
         position: absolute;
-        top:42.5%;
-        left:64%;
+        top:30%;
+        left:50%;
         transform: translate(-50%,-50%);
         z-index: 1;
       }
@@ -310,10 +303,10 @@
       }
   }
   &--pulse06{
-    background: linear-gradient(-135deg, #333333, #0066FF);
+    background: linear-gradient(-135deg, #333333, #9966CC);
     position: absolute;
-    top:67.5%;
-    left:39.25%;
+    top:50%;
+    left:50%;
     transform: translate(-50%,-50%);
     padding: 8px;
     border-radius: 50%;
@@ -321,17 +314,18 @@
     z-index: 10;
     &:hover{
         position: absolute;
-        top:63%;
-        left:35.75%;
+        top:37.5%;
+        left:37%;
         transform: translate(-50%,-50%);
         padding: 40px;
         transform:rotateX(75deg);
+        z-index: 1;
        }
        &:hover +.c-section--hexagon--6{
         display: block;
         position: absolute;
-        top:60%;
-        left:39%;
+        top:30%;
+        left:50%;
         transform: translate(-50%,-50%);
         z-index: 1;
       }
@@ -342,10 +336,10 @@
       }
   }
   &--pulse07{
-    background: linear-gradient(-135deg, #333333, #00FFFF);
+    background: linear-gradient(-135deg, #333333, #9966CC);
     position: absolute;
-    top:61.25%;
-    left:11.75%;
+    top:50%;
+    left:50%;
     transform: translate(-50%,-50%);
     padding: 8px;
     border-radius: 50%;
@@ -353,17 +347,18 @@
     z-index: 10;
     &:hover{
         position: absolute;
-        top:56.75%;
-        left:8.25%;
+        top:37.5%;
+        left:37%;
         transform: translate(-50%,-50%);
         padding: 40px;
         transform:rotateX(75deg);
+        z-index: 1;
        }
        &:hover +.c-section--hexagon--7{
         display: block;
         position: absolute;
-        top:53.5%;
-        left:11.5%;
+        top:30%;
+        left:50%;
         transform: translate(-50%,-50%);
         z-index: 1;
       }
@@ -374,10 +369,10 @@
       }
   }
   &--pulse08{
-    background: linear-gradient(-135deg, #333333, #FF9966);
+    background: linear-gradient(-135deg, #333333, #9966CC);
     position: absolute;
-    top:85.75%;
-    left:9.5%;
+    top:50%;
+    left:50%;
     transform: translate(-50%,-50%);
     padding: 8px;
     border-radius: 50%;
@@ -385,17 +380,18 @@
     z-index: 10;
     &:hover{
         position: absolute;
-        top:81.25%;
-        left:6%;
+        top:37.5%;
+        left:37%;
         transform: translate(-50%,-50%);
         padding: 40px;
         transform:rotateX(75deg);
+        z-index: 1;
        }
        &:hover +.c-section--hexagon--8{
         display: block;
         position: absolute;
-        top:78%;
-        left:9.5%;
+        top:30%;
+        left:50%;
         transform: translate(-50%,-50%);
         z-index: 1;
       }
@@ -487,95 +483,3 @@
     box-shadow:  0 0 0 0 rgba(29, 171, 209, 0),0 0 0 10px rgba(29, 171, 209, 0);
   }
  }
-
- .c-section__center{
-  
-    &--line01{
-      position: absolute;
-      top: 42.5%;
-      left: 11.5%;
-      transform: translate(-50%, -50%);
-      width: 17.5%;
-      border:solid rgba(255,221,255,0.4)1px;
-      transform: rotate(37deg);
-    }
-  
-    &--line02{
-      position: absolute;
-      top: 18.5%;
-      left: 22.5%;
-      width: 17.5%;
-      border:solid rgba(255,221,255,0.4)1px;
-      transform: rotate(27deg);
-    }
-    &--line03{
-      position: absolute;
-      top: 47.5%;
-      left: 3.5%;
-      transform: translate(-50%, -50%);
-      width: 17.5%;
-      border:solid rgba(255,221,255,0.4)1px;
-      transform: rotate(93.5deg);
-    }
-    &--line04{
-      position: absolute;
-      top: 73.5%;
-      left: 1.75%;
-      width: 17.5%;
-      border:solid rgba(255,221,255,0.4)1px;
-      transform: rotate(97.5deg);
-    }
-    &--line05{
-      position: absolute;
-      top: 59%;
-      left: 24.5%;
-      transform: translate(-50%, -50%);
-      width: 17.5%;
-      border:solid rgba(255,221,255,0.4)1px;
-      transform: rotate(45deg);
-    }
-    &--line06{
-      position: absolute;
-      top: 56.5%;
-      left: 34.5%;
-      width: 17.5%;
-      border:solid rgba(255,221,255,0.4)1px;
-      transform: rotate(119deg);
-    }
-    &--line07{
-      position: absolute;
-      top: 35%;
-      left: 34.5%;
-      transform: translate(-50%, -50%);
-      width: 17.5%;
-      border:solid rgba(255,221,255,0.4)1px;
-      transform: rotate(62deg);
-    }
-    &--line08{
-      position: absolute;
-      top: 48%;
-      left: 47.5%;
-      width: 17.5%;
-      border:solid rgba(255,221,255,0.4)1px;
-      transform: rotate(10deg);
-    }
-    &--line09{
-      position: absolute;
-      top: 32.5%;
-      left: 12.5%;
-      transform: translate(-50%, -50%);
-      width: 12.5%;
-      border:solid rgba(68,68,68,0.6)1px;
-      transform: rotate(162deg);
-    }
-    &--line010{
-      position: absolute;
-      top: 33%;
-      left:17.5%;
-      height: 42.5%;
-      border:solid rgba(68,68,68,0.6)1px;
-      transform: rotate(161.5deg);
-    }
-      
-  }
-

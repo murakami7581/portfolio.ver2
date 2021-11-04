@@ -208,3 +208,211 @@
 }
 
 
+
+    *{
+        box-sizing: border-box;
+    }
+    .outer{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        animation:20s linear infinite rotation2;
+    }
+    
+    .iconGear,
+    .iconGear:before,
+    .iconGear:after,
+    .iconGear div:before{
+        position: absolute;
+        width: 40px;
+        height: 200px;
+        content: '';
+        background-color: rgba(51, 102, 153 ,0.15);
+        border-radius: 1px;
+    }
+    .iconGear{
+        top: 50px;
+        left: 130px;
+    }
+    .iconGear:before{
+        top: 0;
+        left: 0;
+        transform: rotate(45deg);
+    }
+    .iconGear:after {
+        top: 0;
+        left: 0;
+        transform: rotate(-45deg);
+    }
+    .iconGear div:before{
+        top: -20px;
+        left: 60px;
+        transform: rotate(90deg);
+     }
+    .iconGear div{
+        position: absolute;
+        top: 20px;
+        left: -60px;
+        width: 160px;
+        height: 160px;
+        background-color: rgba(51, 102, 153 ,0.15);
+        border-radius: 50%;
+        z-index: 5;
+     }
+    .iconGear div:after {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        content: '';
+        width: 80px;
+        height: 80px;
+        background-color: #000000;
+        border-radius: 50%;
+    }
+
+    .outer1{
+        position: relative;
+        width: 750px;
+        height: 750px;
+    }
+    
+    .iconGear1,
+    .iconGear1:before,
+    .iconGear1:after,
+    .iconGear1 div:before{
+        position: absolute;
+        width: 100px;
+        height: 500px;
+        content: '';
+        background-color: #336699;
+        border-radius: 1px;
+        
+    }
+    .iconGear1{
+        top: 125px;
+        left: 325px;
+    }
+    .iconGear1:before{
+        top: 0;
+        left: 0;
+        transform: rotate(45deg);
+    }
+    .iconGear1:after {
+        top: 0;
+        left: 0;
+        transform: rotate(-45deg);
+    }
+    .iconGear1 div:before{
+        top: -50px;
+        left: 150px;
+        transform: rotate(90deg);
+     }
+    .iconGear1 div{
+        position: absolute;
+        top: 50px;
+        left: -150px;
+        width: 400px;
+        height: 400px;
+        background-color: #336699;
+        border-radius: 50%;
+        z-index: 5;
+     }
+    .iconGear1 div:after {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        content: '';
+        width: 200px;
+        height: 200px;
+        background-color: #000000;
+        border-radius: 50%;
+    }
+
+    .ad{
+        position: absolute;
+        top:60%;
+        left:37.5%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        opacity: 0.15;
+        
+      }
+
+      .ad1{
+        position: absolute;
+        top:60%;
+        left:37.5%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        z-index: 700;
+      }
+      
+      .ad2{
+        position: absolute;
+        top:20%;
+        left:35%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        z-index: 900;
+        
+      }
+      .ad3{
+        position: absolute;
+        top:30%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        z-index: 800;
+      }
+      .ad4{  
+        position: absolute;
+        top:55%;
+        left:60%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        z-index: 700;
+      }
+      .ad5{
+        position: absolute;
+        top:70%;
+        left:75%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        z-index: 600;
+      }
+      .ad6{
+        position: absolute;
+        top:82.5%;
+        left:51.5%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        z-index: 500;
+        
+      }
+      .ad7{
+          position: absolute;
+          top:80%;
+          left:25%;
+          transform: translate(-50%,-50%);
+          border-radius: 50%;
+          z-index: 400;
+         
+      }
+      .ad8{
+        position: absolute;
+        top:95%;
+        left:10%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        z-index: 300;
+        
+      }
+      
+      @keyframes rotation1{
+        0%{ transform:rotate(0);}
+        100%{ transform:rotate(360deg); }
+      }
+      @keyframes rotation2{
+        0%{ transform:rotate(0);}
+        100%{ transform:rotate(-360deg); }
+      }

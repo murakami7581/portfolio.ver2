@@ -29,12 +29,15 @@
  
    <div class="p-section__center">
     <h2>Skills</h2>
-    <div class="p-section__center__inner"></div>
-    <div class="outer">
-    <div class="iconGear"><div></div></div>
-</div>
-    <div class="c-section__center--pulse0"></div>
 
+
+    <div class="ad">
+    <div class="outer1">
+    <div class="iconGear1"><div></div></div>
+    </div>
+    </div>
+
+    <div class="ad1">
     <div class="c-section__center--pulse1">
      <div class="c-section__center--pulse01"></div>
      <div class="c-section--hexagon--1">
@@ -61,6 +64,14 @@
       </div>
      </div>
     </div>
+    <div class="outer">
+    <div class="iconGear"><div></div></div>
+    </div>
+    </div>
+
+
+    <div class="ad2">
+
 
     <div class="c-section__center--pulse2">
     <div class="c-section__center--pulse02"></div>
@@ -89,8 +100,12 @@
       </div>
      </div>
     </div>
-
-
+    <div class="outer">
+    <div class="iconGear"><div></div></div>
+    </div>
+    </div>
+    
+    <div class="ad3">
     <div class="c-section__center--pulse3">
     <div class="c-section__center--pulse03"></div>
     <div class="c-section--hexagon--3">
@@ -118,8 +133,13 @@
       </div>
      </div>
     </div>
+    <div class="outer">
+    <div class="iconGear"><div></div></div>
+    </div>
+    </div>
 
 
+    <div class="ad4">
     <div class="c-section__center--pulse4">
     <div class="c-section__center--pulse04"></div>
     <div class="c-section--hexagon--4">
@@ -130,7 +150,8 @@
     <div></div>
   </div>
 </div>
-<div class="c-section__center__container">
+
+    <div class="c-section__center__container">
      <div class="c-section__center--box1">
      <img class="c-section__center__img7" src="<?php echo esc_url( get_template_directory_uri() . "/image/sass.png" ); ?>"></img>
      </div>
@@ -144,10 +165,18 @@
       <img class="c-section__center__img8" src="<?php echo esc_url( get_template_directory_uri() . "/image/star4.png" ); ?>"></img>
       </div>
      </div>
-</div>
-  
+
+    <div class="outer">
+    <div class="iconGear"><div></div></div>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="ad5">
     <div class="c-section__center--pulse5">
     <div class="c-section__center--pulse05"></div>
+
     <div class="c-section--hexagon--5">
 <div class="c-section--hexagon--5__img"><img src="<?php echo esc_url( get_template_directory_uri() . "/image/wordpress.png" ); ?>"></img></div>
   <div class="c-section--hexagon__content">
@@ -170,8 +199,15 @@
       <img class="c-section__center__img6" src="<?php echo esc_url( get_template_directory_uri() . "/image/star4.png" ); ?>"></img>
       </div>
      </div>
+   
+    <div class="outer">
+    <div class="iconGear"><div></div></div>
+    </div>
+    </div>
     </div>
 
+
+    <div class="ad6">
     <div class="c-section__center--pulse6">
     <div class="c-section__center--pulse06"></div>
     <div class="c-section--hexagon--6">
@@ -198,7 +234,13 @@
       </div>
      </div>
     </div>
+    <div class="outer">
+    <div class="iconGear"><div></div></div>
+    </div>
+    </div>
 
+
+    <div class="ad7">
     <div class="c-section__center--pulse7">
     <div class="c-section__center--pulse07"></div>
     <div class="c-section--hexagon--7">
@@ -224,6 +266,13 @@
       </div>
      </div>
     </div>
+    <div class="outer">
+    <div class="iconGear"><div></div></div>
+    </div>
+    </div>
+
+
+    <div class="ad8">
 
     <div class="c-section__center--pulse8">
     <div class="c-section__center--pulse08"></div>
@@ -251,6 +300,11 @@
       </div>
      </div>
     </div>
+    <div class="outer">
+    <div class="iconGear"><div></div></div>
+    </div>
+    </div> 
+    
 
     <div class="c-section__center--pulse9">
     <div class="c-section__center--pulse09"></div>
@@ -304,6 +358,8 @@
      </div>
     </div>
   
+
+
   
 
   <!-- <div class="c-section__center--line01"></div>

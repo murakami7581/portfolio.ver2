@@ -54,38 +54,45 @@
 .c-section__center{
     &__container{
         display: none;
-        width: 80%;
-        height: 15%;
         background-image: url(../image/logo.jpg);
         background-size: cover;
         border: 3px double #CC99FF;
-        top:85%;
-        left:50%;
-        transform: translate(-50%,-50%);
+        max-width: 100vw;
+        width: 80vw;
+        margin-left: calc(((100vw – 100%) / 2) * -1);
+        margin-right: calc(((100vw – 100%) / 2) * -1);
+        top:100%;
+        left: 30vw;
         color:#FFFFFF;
         position: fixed;
-        z-index: 110;
+        z-index: 1000;
         text-align: center;
-        font-family: 'klee', sans-serif; 
+        font-family: 'klee', sans-serif;
+        transform: none !important;
     }
   
     &--box1{
         position: relative;
         width: 20%;
-        height: 100%;
         background-color: rgba(255,255,255,0.4);
+        z-index: 10000;
     }
     &__img1{
         position: absolute;
         top: 50%;
         left: 30%;
         transform: translateY(-50%) translateX(-50%);
-        width: 7.5rem;
-        height: 7.5rem; 
+        width: 8.5rem;
+        height: 8.5rem; 
+        z-index: 10000;
         @include tab{
             width: 5rem;
             height: 5rem; 
          }
+        @include tabsp{
+            width: 4.5rem;
+            height: 4.5rem; 
+        }
          @include sp{
             width: 3rem;
             height: 3rem; 
@@ -96,31 +103,41 @@
         top: 50%;
         left: 70%;
         transform: translateY(-50%) translateX(-50%);
-        width: 8rem;
-        height: 8rem; 
+        width: 9rem;
+        height: 9rem;
+              z-index: 10000; 
         @include tab{
-            width: 5.5rem;
-            height: 5.5rem; 
+            width: 6rem;
+            height: 6rem; 
+            left: 75%;
          }
+         @include tabsp{
+            width: 5rem;
+            height: 5rem; 
+        }
          @include sp{
-            width: 3rem;
-            height: 3rem; 
+            width: 3.5rem;
+            height: 3.5rem; 
          }
     }
     &__img4{
         position: absolute;
-        top: 50%;
+        top:50%;
         left: 25%;
         transform: translateY(-50%) translateX(-50%);
-        width: 7.5rem;
-        height: 7.5rem; 
+        width: 8.5rem;
+        height: 8.5rem; 
         @include tab{
-            width: 3.5rem;
-            height: 3.5rem; 
+            width: 5rem;
+            height: 5rem; 
          }
+        @include tabsp{
+            width: 4.5rem;
+            height: 4.5rem; 
+        }
          @include sp{
-            width: 1.5rem;
-            height: 1.5rem; 
+            width: 3rem;
+            height: 3rem; 
          }
     }
     &__img5{
@@ -128,15 +145,19 @@
         top: 50%;
         left: 72.5%;
         transform: translateY(-50%) translateX(-50%);
-        width: 7.5rem;
-        height: 7.5rem; 
+        width: 8.5rem;
+        height: 8.5rem; 
         @include tab{
-            width: 3.5rem;
-            height: 3.5rem; 
+            width: 5rem;
+            height: 5rem; 
          }
+        @include tabsp{
+            width: 4.5rem;
+            height: 4.5rem; 
+        }
          @include sp{
-            width: 1.5rem;
-            height: 1.5rem; 
+            width: 3rem;
+            height: 3rem; 
          }
     }
     &__img7{
@@ -144,8 +165,17 @@
         top: 50%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
-        width: 11rem;
-        height: 11rem;
+        width: 12rem;
+        height: 12rem; 
+        @include tab{
+            width: 8rem;
+            height: 8rem; 
+         }
+    
+         @include sp{
+            width: 5rem;
+            height: 5rem; 
+         }
     }
     &__img9{
         position: absolute;
@@ -153,52 +183,97 @@
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
         width: 10rem;
-        height: 10rem;
+        height: 10rem; 
+        @include tab{
+            width: 6rem;
+            height: 6rem; 
+         }
+    
+         @include sp{
+            width: 5rem;
+            height: 5rem; 
+         }
     }
     &__img11{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
-        width: 10rem;
-        height: 10rem;
+        width: 8.5rem;
+        height: 8.5rem; 
+        @include tab{
+            width: 5rem;
+            height: 5rem; 
+         }
+        @include tabsp{
+            width: 4.5rem;
+            height: 4.5rem; 
+        }
+         @include sp{
+            width: 3rem;
+            height: 3rem; 
+         }
     }
     &__img12{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
-        width: 10rem;
-        height: 10rem;
+        width: 8.5rem;
+        height: 8.5rem; 
+        @include tab{
+            width: 5rem;
+            height: 5rem; 
+         }
+        @include tabsp{
+            width: 4.5rem;
+            height: 4.5rem; 
+        }
+         @include sp{
+            width: 3rem;
+            height: 3rem; 
+         }
     }
     &--box2{
         width: 60%;
         height: 100%;
         background-color: rgba(0,0,0,0.7);
         h3{
-            padding: 1.5rem 0 2rem 0;
+            padding: 1rem 0 2rem 0;
             font-size: 2.5rem;
             text-decoration:underline double #FFCCFF;
+            @include tab{
+               font-size: 2rem;
+             }
+             @include sp{
+               font-size: 1.5rem;
+             }
         }
         p{
             font-size: 1.5rem;
-
+            padding: 1rem;
+            @include tab{
+                font-size: 1.5rem;
+              }
+              @include sp{
+                font-size: 1.35rem;
+              }
         }
     }
   
     &--box3{
         width: 20%;
-        height: 100%;
         position: relative;
         h3{
-            padding: 1.75rem 0 2rem 0;
+            padding: 1rem 0 2rem 0;
             font-size: 2.5rem;
+            @include tab{
+                font-size: 2rem;
+              }
+              @include sp{
+                font-size: 1.5rem;
+              }
         }
-        p{
-            font-size: 1.5rem;
-
-        }
-
     }
     &__img3{
         position: absolute;
@@ -206,7 +281,11 @@
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
         width: 5rem;
-        height: 2.5rem; 
+        height: 2.5rem;  
+         @include sp{
+            width: 4rem;
+            height: 2rem; 
+         }
     }
     &__img6{
         position: absolute;
@@ -215,6 +294,10 @@
         transform: translateY(-50%) translateX(-50%);
         width: 5rem;
         height: 2.5rem; 
+        @include sp{
+            width: 4rem;
+            height: 2rem; 
+         }
     }
     &__img8{
         position: absolute;
@@ -223,6 +306,10 @@
         transform: translateY(-50%) translateX(-50%);
         width: 5rem;
         height: 2.5rem; 
+        @include sp{
+            width: 4rem;
+            height: 2rem; 
+         }
     }
     &__img10{
         position: absolute;
@@ -231,6 +318,10 @@
         transform: translateY(-50%) translateX(-50%);
         width: 5rem;
         height: 2.5rem; 
+        @include sp{
+            width: 4rem;
+            height: 2rem; 
+         }
     }
 }
 

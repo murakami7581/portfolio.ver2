@@ -14,6 +14,14 @@ $tab: 834px;
 }
 
 
+
+$tabsp: 600px;
+@mixin tabsp {
+    @media (max-width: ($tabsp)) {
+        @content;
+    }
+}
+
 $sp: 375px;
 @mixin sp {
     @media (max-width: ($sp)) {
