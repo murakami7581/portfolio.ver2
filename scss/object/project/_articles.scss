@@ -20,16 +20,21 @@
     &__top{
         position: relative;
         width: 100%;
-        height: 100rem;
+        height: 100vh;
         background-image: url(../image/murakami.png);
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
         margin-bottom: 15rem;
         border-radius: 30px;
-        @include sp{
-            background-size: contain;
-            height: 70rem;
+        @include tab{
+            background-position: right;
+         }
+         @include tabsp{
+            background-position: center;
+         }
+         @include sp{
+            background-position: right 35% bottom 50%;
          }
         h2{
             position: absolute;
@@ -41,6 +46,10 @@
             transform: rotate(-20deg);
             -moz-transform: rotate(-20deg);
             -webkit-transform: rotate(-20deg);
+            text-shadow:1px 1px 0 #A16EFF, -1px -1px 0 #A16EFF,
+            -1px 1px 0 #A16EFF, 1px -1px 0 #A16EFF,
+            0px 1px 0 #A16EFF,  0-1px 0 #A16EFF,
+            -1px 0 0 #A16EFF, 1px 0 0 #A16EFF;
             @include tab{
                 font-size: 10rem;
              }
@@ -53,7 +62,7 @@
 
     &__center{
         position: relative;
-        width: 100v;
+        width: 100%;
         height: 80vh;
         margin-bottom: 15rem;
 
@@ -67,6 +76,10 @@
             transform: rotate(20deg);
             -moz-transform: rotate(20deg);
             -webkit-transform: rotate(20deg);
+            text-shadow:1px 1px 0 #A16EFF, -1px -1px 0 #A16EFF,
+            -1px 1px 0 #A16EFF, 1px -1px 0 #A16EFF,
+            0px 1px 0 #A16EFF,  0-1px 0 #A16EFF,
+            -1px 0 0 #A16EFF, 1px 0 0 #A16EFF;
             @include tab{
                 font-size: 10rem;
              }
@@ -81,11 +94,7 @@
             width: 100%;
             height: 100%;
           }
-          &__container4 { 
-            position: relative;
-            width: 100%;
-            height: 100%;
-          }
+  
           &__under{
             position: relative;
             width: 100%;
@@ -111,6 +120,10 @@
                 transform: rotate(-20deg);
                 -moz-transform: rotate(-20deg);
                 -webkit-transform: rotate(-20deg);
+                text-shadow:1px 1px 0 #A16EFF, -1px -1px 0 #A16EFF,
+                -1px 1px 0 #A16EFF, 1px -1px 0 #A16EFF,
+                0px 1px 0 #A16EFF,  0-1px 0 #A16EFF,
+                -1px 0 0 #A16EFF, 1px 0 0 #A16EFF;
                 @include tab{
                     font-size: 10rem;
                  }
@@ -133,12 +146,18 @@
     color: #FFFFFF;
     margin: 0 auto;
     z-index: 100;
+    
     h1{
-        font-size: 8rem;
+        font-size: 12rem;
         text-align: center;
         padding: 7.5rem;
+        margin-bottom: 5rem;
         font-weight: bold;
         font-family: cursive;
+        text-shadow:1px 1px 0 #A16EFF, -1px -1px 0 #A16EFF,
+        -1px 1px 0 #A16EFF, 1px -1px 0 #A16EFF,
+        0px 1px 0 #A16EFF,  0-1px 0 #A16EFF,
+        -1px 0 0 #A16EFF, 1px 0 0 #A16EFF;
         @include tab{
             font-size: 5rem;
             padding: 5rem;
@@ -149,11 +168,16 @@
     h2{
         margin: 3rem;
         font-size: 2rem;
+        
+    }
+    .c-section__profile--name{
+        font-size: 6rem;
+        
+
     }
     .wp-image-216{
-        margin: 0% 15% 15% 30%;
-        width: 40rem;
-        height: 35rem;
+
+        border-radius: 50%;
         @include tab{
             margin: 0;
             width: 25rem;
@@ -161,12 +185,10 @@
          }
     }
     .wp-block-column{
-        p{
-            display: flex;
-            justify-content: center;
+        
             font-size: 2rem;
             line-height: 2;
-        }
+        
     }
     .wp-block-table{
         text-align: center;

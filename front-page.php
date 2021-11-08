@@ -2,8 +2,8 @@
 <main class="l-main">
  <p class="l-main__text--scrool">SCROOL</p>
  <div class="l-main--line"></div>
-<article>
-  <div class="p-section">
+
+<article <?php post_class('p-section'); ?>>
   <div class="p-section__main">
   <div class="u-section__text">
   <p class="u-section__text--1">Portforio</p>
@@ -71,8 +71,6 @@
 
 
     <div class="ad2">
-
-
     <div class="c-section__center--pulse2">
     <div class="c-section__center--pulse02"></div>
     <div class="c-section--hexagon--2">
@@ -305,7 +303,7 @@
     </div>
     </div> 
     
-
+<!-- 
     <div class="c-section__center--pulse9">
     <div class="c-section__center--pulse09"></div>
     <div class="c-section--hexagon--9">
@@ -344,8 +342,8 @@
 </div>
 <div class="c-section__center__container">
      <div class="c-section__center--box1">
-     <!-- <img class="c-section__center__img1" src="<?php echo esc_url( get_template_directory_uri() . "/image/html.png" ); ?>"></img> -->
-     </div>
+     <img class="c-section__center__img1" src="<?php echo esc_url( get_template_directory_uri() . "/image/html.png" ); ?>"></img> -->
+     <!-- </div>
      <div class="c-section__center--box2">
       <h3 class="c-section__center--text1-1">React</h3>
       <p class="c-section__center--text1-2">Reactはまだ習得していません
@@ -356,7 +354,7 @@
       <p class="c-section__center--text1-2">Unknown</p>
       </div>
      </div>
-    </div>
+    </div> -->
   
 
 
@@ -410,7 +408,7 @@
    
    </div>
    </div>
- </div>
+
 </div>
 
 

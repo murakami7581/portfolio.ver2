@@ -14,8 +14,12 @@
 
     function register_my_menu() {
       register_nav_menu( 'header','Header');
+      register_nav_menu( 'hamburger','Hamburger');
+      
     }
     add_action( 'after_setup_theme', 'register_my_menu' ); 
+
+    
 
     function add_css_js() {//関数名add_css_js()を作成
         //CSSの読み込みはここから
@@ -23,9 +27,10 @@
         //全てのページにstyle.cssを読み込み
         wp_enqueue_style('style',get_template_directory_uri().'/style.css' );
         
-        //全てのページにcss/store.cssを読み込み
+        //全てのページにcss/profile.cssを読み込み
         wp_enqueue_style('profile', get_template_directory_uri().'/css/profile.css');
-    
+        wp_enqueue_style('slick', get_template_directory_uri().'/css/slick.css');
+        wp_enqueue_style('slick-theme', get_template_directory_uri().'/css/slick-theme.css');
         //JavaScriptの読み込みはここから
         
         //全てのページにjs/script.jsを読み込み
@@ -44,9 +49,14 @@
               
               //Google CDNのjQueryを出力
               wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), NULL, true );
+              wp_enqueue_script( 'particlesjs', 'https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js', array(), NULL, true );
             }
           }
           add_action( 'init', 'load_google_cdn' );
+        
+         
+   
+         
 
           function SearchFilter($query) {
             if ( !is_admin() && $query->is_main_query() && $query->is_search() ) {
@@ -83,22 +93,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 
 function redirect_404() { if(is_front_page() || is_single() || is_archive() || is_page()|| is_search()) return; include(TEMPLATEPATH . '/404.php'); exit; } add_action('template_redirect', 'redirect_404');
 
-// jquery読み込み -----
-function my_scripts_method() {
-  wp_enqueue_script(
-  'slick.min',
-  get_stylesheet_directory_uri().'/slick/slick.min.js',
-  array( 'jquery' ),
-  '1.8.1', true
-  );
- }
- add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
 
 
-function theme_name_scripts() {
-//jqueryの読み込み(jQueryはフォルダを作成し設置しています)
-wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-3.6.0.min.js', '3.4.1', false );
-//Slickの読み込み(CDNで読み込んでいます)
-wp_enqueue_style( 'slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css' );
-wp_enqueue_style( 'slick-theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css' );
-wp_enqueue_script( 'slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array( 'jquery' ), '1.9.0', false );}
+
+

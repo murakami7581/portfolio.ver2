@@ -1,17 +1,17 @@
 
-$(function () {
-    setTimeout('rect()'); //アニメーションを実行
-});
+// $(function () {
+//     setTimeout('rect()'); //アニメーションを実行
+// });
 
 
-function rect() {
-    $('.u-section__text--1,.u-section__text--2').animate({
-        marginTop: '-=10px'
-    }, 800).animate({
-        marginTop: '+=10px'
-    }, 800);
-    setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
-};
+// function rect() {
+//     $('.u-section__text--1,.u-section__text--2').animate({
+//         marginTop: '-=10px'
+//     }, 800).animate({
+//         marginTop: '+=10px'
+//     }, 800);
+//     setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
+// };
 
   
 // Skillsのアニメーションの初め
@@ -41,7 +41,7 @@ var particles = Particles.init({
         {
             breakpoint: 800,
             options: {
-                maxParticles: 50,
+                maxParticles: 200,
                 sizeVariations: 5,
             },
         

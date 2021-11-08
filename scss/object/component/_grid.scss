@@ -57,25 +57,27 @@
         background-image: url(../image/logo.jpg);
         background-size: cover;
         border: 3px double #CC99FF;
-        max-width: 100vw;
-        width: 80vw;
-        margin-left: calc(((100vw – 100%) / 2) * -1);
-        margin-right: calc(((100vw – 100%) / 2) * -1);
-        top:100%;
-        left: 30vw;
-        color:#FFFFFF;
         position: fixed;
+        width: 80%;
+        top:75%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color:#FFFFFF;
         z-index: 1000;
         text-align: center;
         font-family: 'klee', sans-serif;
-        transform: none !important;
+        @include tab{
+            top:60%;
+         }
+        //  @include sp{
+        //     width: 70%;
+        // }
     }
   
     &--box1{
         position: relative;
         width: 20%;
         background-color: rgba(255,255,255,0.4);
-        z-index: 10000;
     }
     &__img1{
         position: absolute;
@@ -84,7 +86,6 @@
         transform: translateY(-50%) translateX(-50%);
         width: 8.5rem;
         height: 8.5rem; 
-        z-index: 10000;
         @include tab{
             width: 5rem;
             height: 5rem; 
