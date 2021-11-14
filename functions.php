@@ -19,8 +19,6 @@
     }
     add_action( 'after_setup_theme', 'register_my_menu' ); 
 
-    
-
     function add_css_js() {//関数名add_css_js()を作成
         //CSSの読み込みはここから
         
@@ -53,10 +51,6 @@
             }
           }
           add_action( 'init', 'load_google_cdn' );
-        
-         
-   
-         
 
           function SearchFilter($query) {
             if ( !is_admin() && $query->is_main_query() && $query->is_search() ) {

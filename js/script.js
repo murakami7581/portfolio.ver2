@@ -113,3 +113,16 @@ $(function(){
     $('.l-header__container--tab').toggleClass('is-active');
   });
 }());
+
+$(function () {
+  $(window).scroll(function () {
+    $('.c-section__top__inner--text1,.c-section__top__inner--text2,.c-section__top__inner--text3').each(function () {
+      const targetElement = $(this).offset().top;
+      const scroll = $(window).scrollTop();
+      const windowHeight = $(window).height();
+      if (scroll > targetElement - windowHeight) {
+        $(this).addClass('view');
+      }
+    });
+  });
+});

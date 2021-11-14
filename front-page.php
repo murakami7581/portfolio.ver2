@@ -12,14 +12,14 @@
   </div>
   <div class="p-section__inner">
     <div class="p-section__top">
-    <!-- 写真は後日写真スタジオで撮影したものを使用 -->
+    
      <h2>Profile</h2> 
      
      <div class="c-section__top__inner--text">
-       <p class="c-section__top__inner--text1">このポートフォリオサイトを閲覧していただきありがとうございます。
-         <br>初めまして未経験からWeb制作に転職希望の村上良哉と申します。</p>
-         <p class="c-section__top__inner--text2">前職は電力グループ会社に４年４ヶ月勤めていました。</p>
-         <p class="c-section__top__inner--text3">Webサイトのコーディングを独学＋スクールで学び、現在はスキルの幅を増やすためデザイン業務を学習しています。</p>
+       <p class="c-section__top__inner--text1">Yoshiya Murakami</p>
+       </p>
+         <p class="c-section__top__inner--text2">1998年生まれ、●●●●●●●●●●学校卒。</p>
+         <p class="c-section__top__inner--text3">Webサイトの<strong><strong>コーディング及びWordPress</strong></strong>を学び、現在はスキルの幅を増やすためデザイン業務を学習しています。</p>
      </div>
      <div class="c-section__top__botton">
      <a href="<?php echo esc_url(home_url('profile')); ?>">〜DETAIL〜</a>

@@ -1,25 +1,28 @@
+@use '../../global' as g;
+
 .c-section__top__botton{
     position: absolute;
     z-index: 100;
     color: #FFF5EE;
-    top: 95%;
-    left: 25%;
+    top: 90%;
+    left: 30%;
     transform: translate(-50%, -50%);
     @include tab{
         top: 82.5%;
         left: 30%;
      }
      @include sp{
-        top:  92.5%;
-        left: 30%;
+        top:  85%;
+        left: 50%;
      }
     a{
         color: #FFFFFF;
         font-family: 'klee', sans-serif;
         padding: 1.5rem 2rem;
         background-image: url(../image/light.jpg);
-        border-left: solid 7px #9057FF;/*左線*/
-        border-right: solid 7px #9057FF;/*右線*/
+        border: solid 2px #660099;/*左線*/
+        border-left: solid 5px #9966FF;/*左線*/
+        border-right: solid 5px #9966FF;/*右線*/
         font-size: 2.25rem;
         @include tab{
             padding: 1.25rem 1.5rem;
@@ -31,8 +34,8 @@
          }
     }
     :hover{
-        box-shadow: 0 0 1.5rem 0.75rem #fff;/*ボタンの外側に*/
-        text-shadow: 0 0 1rem 1rem #fff;/*文字の周りに*/
+        box-shadow: 0 0 1rem 0.5rem #9966FF;/*ボタンの外側に*/
+        text-shadow: 0 0 1rem 1rem #9966FF;/*文字の周りに*/
       }
 
 }
@@ -40,7 +43,7 @@
 .c-section__center{
 &__botton{
     position: absolute;
-    top: 95%;
+    top: 100%;
     left: 75%;
     transform: translate(-50%, -50%);
     z-index: 100;
@@ -57,8 +60,9 @@
         padding: 1.25rem 1.5rem;
         font-size: 2.25rem;
         background-image: url(../image/light.jpg);
-        border-left: solid 7px #9057FF;/*左線*/
-        border-right: solid 7px #9057FF;/*右線*/
+        border: solid 2px #660099;/*左線*/
+        border-left: solid 5px #9966FF;/*左線*/
+        border-right: solid 5px #9966FF;/*右線*/
         @include tab{
             padding: 1rem;
             font-size: 1.25rem;
@@ -69,8 +73,8 @@
          }
     }
     :hover{
-    box-shadow: 0 0 1.5rem 0.75rem #fff;/*ボタンの外側に*/
-    text-shadow: 0 0 1rem 1rem #fff;/*文字の周りに*/
+        box-shadow: 0 0 1rem 0.5rem #9966FF;/*ボタンの外側に*/
+        text-shadow: 0 0 1rem 1rem #9966FF;/*文字の周りに*/
   }
 }
 }
@@ -90,8 +94,9 @@
         padding: 1.5rem 2rem;
         font-size: 2.25rem;
         background-image: url(../image/light.jpg);
-        border-left: solid 7px #9057FF;/*左線*/
-        border-right: solid 7px #9057FF;/*右線*/
+        border: solid 2px #660099;/*左線*/
+        border-left: solid 5px #9966FF;/*左線*/
+        border-right: solid 5px #9966FF;/*右線*/
         @include tab{
             padding: 1rem;
             font-size: 1rem;
@@ -103,8 +108,8 @@
     
     }
     :hover{
-        box-shadow: 0 0 1.5rem 0.75rem #fff;/*ボタンの外側に*/
-        text-shadow: 0 0 1rem 1rem #fff;/*文字の周りに*/
+        box-shadow: 0 0 1rem 0.5rem #9966FF;/*ボタンの外側に*/
+        text-shadow: 0 0 1rem 1rem #9966FF;/*文字の周りに*/
       }
 }
 

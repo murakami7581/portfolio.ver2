@@ -1,3 +1,4 @@
+@use '../../global' as g;
 
 .p-section{
     position: relative;
@@ -20,13 +21,14 @@
     &__top{
         position: relative;
         width: 100%;
-        height: 100vh;
-        background-image: url(../image/murakami.png);
+        height: 135vh;
+        background-image: url(../image/people.png);
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
         margin-bottom: 15rem;
         border-radius: 30px;
+        font-family: 'Homemade Apple', cursive;
         @include tab{
             background-position: right;
          }
@@ -34,8 +36,10 @@
             background-position: center;
          }
          @include sp{
+            height: 100vh;
             background-position: right 35% bottom 50%;
          }
+        
         h2{
             position: absolute;
             color: #FFF8DC	;
@@ -166,13 +170,26 @@
     &--content{
  
     h2{
-        margin: 3rem;
+        margin-bottom: 3rem;
         font-size: 2rem;
+        
         
     }
     .c-section__profile--name{
         font-size: 6rem;
-        
+        text-shadow:1px 1px 0 #A16EFF, -1px -1px 0 #A16EFF,
+        -1px 1px 0 #A16EFF, 1px -1px 0 #A16EFF,
+        0px 1px 0 #A16EFF,  0-1px 0 #A16EFF,
+        -1px 0 0 #A16EFF, 1px 0 0 #A16EFF;
+
+    }
+    .c-section__profile--name2{
+        font-size: 2rem;
+        margin-bottom: -4rem;
+        text-shadow:1px 1px 0 #A16EFF, -1px -1px 0 #A16EFF,
+        -1px 1px 0 #A16EFF, 1px -1px 0 #A16EFF,
+        0px 1px 0 #A16EFF,  0-1px 0 #A16EFF,
+        -1px 0 0 #A16EFF, 1px 0 0 #A16EFF;
 
     }
     .wp-image-216{
@@ -185,23 +202,17 @@
          }
     }
     .wp-block-column{
-        
-            font-size: 2rem;
-            line-height: 2;
-        
+        font-size: 2rem;
+        line-height: 2;
     }
     .wp-block-table{
         text-align: center;
     }
-    h3{
-        margin: 7.5rem 0 ;
-        font-size: 2.5rem;
-    }
-    h4{
-        font-size: 2.25rem;
-        margin-bottom: 3rem;
-        color: #FFFF22;
-    }
+    // h3{
+    //     // margin: 7.5rem 0 0 0;
+    //     // font-size: 2.5rem;
+    // }
+
     p{
         font-size: 2rem;
         line-height: 2.5;
@@ -209,12 +220,56 @@
     .wp-block-column{
         text-align: center;
     }
-    .wp-block-columns{
+    .c-section__profile__column{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        margin: 5rem 0;
+        text-shadow:1px 1px 0 #A16EFF, -1px -1px 0 #A16EFF,
+        -1px 1px 0 #A16EFF, 1px -1px 0 #A16EFF,
+        0px 1px 0 #A16EFF,  0-1px 0 #A16EFF,
+        -1px 0 0 #A16EFF, 1px 0 0 #A16EFF;
+        &::before,&::after{
+            border: 1px solid rgba($color: #A16EFF, $alpha: 0.4);
+            content: "";
+            width: 30%; /* 線の長さ */
+        }
+        &::before{
+            margin-right: 5rem; 
+            background: linear-gradient(-90deg, #000000, transparent);
+        }
+        &::after{
+            margin-left: 5rem; 
+            background: linear-gradient(90deg, #000000, transparent);
+        }
+    }
+    .c-section__profile__columns{
+        &--1,&--2,&--3{
+            border-radius: 20px;
+            border: 1px solid #A16EFF;
+            margin-bottom: 3rem;
+            text-shadow:1px 1px 0 #000000, -1px -1px 0 #000000,
+            -1px 1px 0 #000000, 1px -1px 0 #000000,
+            0px 1px 0 #000000,  0-1px 0 #000000,
+            -1px 0 0 #000000, 1px 0 0 #000000;
+            background: linear-gradient(-135deg, #AAAAAA, #000000);
+        }
+        &--1{
+            border: 1px solid #A16EFF;
+        }
+        // &--2{
+
+        // }
+        // &--3{
+
+        // }
         h4{
+            font-size: 3rem;
             
-            background: linear-gradient(transparent 70%, #A16EFF 0%);
-            display: inline-block;
-           
+        } 
+        p{
+            font-size: 2rem;
         }
     }
     }
@@ -230,11 +285,15 @@
     margin: 0 auto;
     z-index: 100;
     h1{
-        font-size: 8rem;
+        font-size: 12rem;
         text-align: center;
         padding: 7.5rem;
         font-weight: bold;
         font-family: cursive;
+        text-shadow:1px 1px 0 #A16EFF, -1px -1px 0 #A16EFF,
+        -1px 1px 0 #A16EFF, 1px -1px 0 #A16EFF,
+        0px 1px 0 #A16EFF,  0-1px 0 #A16EFF,
+        -1px 0 0 #A16EFF, 1px 0 0 #A16EFF;
         @include tab{
             font-size: 5rem;
             padding: 5rem;
@@ -284,30 +343,46 @@
     color: #FFFFFF;
     margin: 0 auto;
     z-index: 100;
+
     h1{
-        font-size: 8rem;
+        font-size: 12rem;
         text-align: center;
-        padding: 7.5rem 0 0 0;
+        padding: 7.5rem 0 ;
         font-weight: bold;
         font-family: cursive;
+        text-shadow:1px 1px 0 #A16EFF, -1px -1px 0 #A16EFF,
+        -1px 1px 0 #A16EFF, 1px -1px 0 #A16EFF,
+        0px 1px 0 #A16EFF,  0-1px 0 #A16EFF,
+        -1px 0 0 #A16EFF, 1px 0 0 #A16EFF;
+
         @include tab{
             font-size: 5rem;
             padding: 5rem;
          }
     }
-    &--gallery{
-        
-        .wp-block-gallery{
-            font-size: 2.25rem;
-            li{
-                margin-top: 10%;
-                border: 1px solid #A16EFF;
-              
-            }
-         
-        }
-      
+    h2{
+        font-size: 1.75rem;
+        text-align: center;
+        padding: 4rem 0 3rem 0;
+        text-shadow:1px 1px 0 #A16EFF, -1px -1px 0 #A16EFF,
+        -1px 1px 0 #A16EFF, 1px -1px 0 #A16EFF,
+        0px 1px 0 #A16EFF,  0-1px 0 #A16EFF,
+        -1px 0 0 #A16EFF, 1px 0 0 #A16EFF;
     }
+    h3{
+        font-size: 1.75rem;
+        text-align: center;
+
+    }
+    p{
+        font-size: 1.75rem;
+        text-align: center;
+        padding: 1.5rem 0 4rem 0;
+    }
+    .wp-block-image{
+        border: 1px solid #A16EFF;
+    }
+
 }
 
 
@@ -321,11 +396,15 @@
     margin: 0 auto;
     z-index: 100;
     h1{
-        font-size: 8rem;
+        font-size: 12rem;
         text-align: center;
         padding: 7.5rem;
         font-weight: bold;
         font-family: cursive;
+        text-shadow:1px 1px 0 #A16EFF, -1px -1px 0 #A16EFF,
+        -1px 1px 0 #A16EFF, 1px -1px 0 #A16EFF,
+        0px 1px 0 #A16EFF,  0-1px 0 #A16EFF,
+        -1px 0 0 #A16EFF, 1px 0 0 #A16EFF;
         @include tab{
             font-size: 5rem;
             padding: 5rem;

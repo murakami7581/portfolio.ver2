@@ -1,56 +1,85 @@
+@use '../../global' as g;
 .c-section__top__inner{
-
-&--text{
-    position: absolute;
-    top: 30%;
-    left: 5%;
-    font-size: 2rem;
-    color: #FFF5EE;
-    line-height: 2;
-    font-family: 'klee', sans-serif;
-    width: 37.5%;
-    height: 100%;
-    @include tab{
-        top: 20%;
-        width: 50%;
-        font-size: 1.5rem;
-     }
-    @include sp{
-        top: 5%;
-        font-size: 1rem;
-     }
-}
+ 
+// &--text{
+    
+//     // width: 100%;
+//     // height: 100vh;
+//     // position: relative;
+//     // position: absolute;
+//     // top: 30%;
+//     // left: 5%;
+//     // font-size: 2rem;
+//     // color: #FFF5EE;
+//     // line-height: 2;
+//     // font-family: 'klee', sans-serif;
+//     // width: 37.5%;
+//     // height: 100%;
+//     // @include tab{
+//     //     top: 20%;
+//     //     width: 50%;
+//     //     font-size: 1.5rem;
+//     //  }
+//     // @include sp{
+//     //     top: 5%;
+//     //     font-size: 1rem;
+//     //  }
+// }
 
 &--text1{
-    position: absolute;
-    top: 0;
-    left: 2.5%;
+
+
     @include sp{
-        top: 20%;
+        top: 40%;
+        font-size: 5rem;
      }
 }
 &--text2{
+    width: 40%;
     position: absolute;
-    top: 25%;
-    left: 2.5%;
-  
+    top: 55%;
+    left: 20%;
+    font-size: 2.5rem;
+    color: #FFF5EE;
+    transform: translateY(-50%) translateX(-50%);
+    font-family: 'klee', sans-serif;
+    opacity : 0;
+    transition: opacity 5s;
+    padding-left: 2rem;
+    border-left: solid 5px #9966CC;/*左線*/
+    @include tab{
+        left: 50%;
+        width: 100%;
+    }
     @include sp{
-        top: 45%;
+        font-size: 1.5rem;
      }
 }
 &--text3{
+    width: 50%;
     position: absolute;
-    top: 40%;
-    left: 2.5%;
+    top: 70%;
+    left: 25%;
+    font-size: 3rem;
+    color: #FFF5EE;
+    transform: translateY(-50%) translateX(-50%);
+    font-family: 'klee', sans-serif;
+    opacity : 0;
+    transition: opacity 7s;
+    border-left: solid 5px #9966CC;/*左線*/
+    padding-left: 2rem;
     @include tab{
-        top: 40%;
+        left: 50%;
+        width: 100%;
      }
      @include sp{
-        top: 60%;
+        font-size: 2rem;
      }
 }
 }
-
+.c-section__top__inner--text1.view,.c-section__top__inner--text2.view,.c-section__top__inner--text3.view{
+    opacity: 1;
+  }
 .c-section__center{
     &__container{
         display: none;

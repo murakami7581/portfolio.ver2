@@ -1,32 +1,25 @@
 @charset "utf-8";
 
 /*リセット*/
-@import "../scss/founddation/reset";
-// ベース
-@import "../scss/founddation/base";
-@import "../scss/founddation/mixin";
+@use "../scss/foundation";
+@use "../scss/global";
+@use "../scss/layout/footer";
+@use "../scss/layout/header";
+@use "../scss/layout/main";
 
-@import "../scss/layout/footer";
-@import "../scss/layout/header";
-@import "../scss/layout/main";
-@import "../scss/layout/sidebar";
+@use "../scss/object/component/button";
+@use "../scss/object/component/shape";
+@use "../scss/object/component/grid";
+@use "../scss/object/component/media";
 
-@import "../scss/object/component/button";
-@import "../scss/object/component/shape";
-@import "../scss/object/component/grid";
-@import "../scss/object/component/media";
+@use "../scss/object/project/articles";
+@use "../scss/object/project/gallery";
 
-@import "../scss/object/project/articles";
-@import "../scss/object/project/comments";
-@import "../scss/object/project/gallery";
-
-@import "../scss/object/utility/align";
-@import "../scss/object/utility/clearfix";
-@import "../scss/object/utility/margin";
-@import "../scss/object/utility/position";
-@import "../scss/object/utility/size";
-@import "../scss/object/utility/text";
-
-//  @import
+@use "../scss/object/utility/align";
+@use "../scss/object/utility/clearfix";
+@use "../scss/object/utility/margin";
+@use "../scss/object/utility/position";
+@use "../scss/object/utility/size";
+@use "../scss/object/utility/text";
 
 
