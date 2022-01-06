@@ -1,0 +1,117 @@
+@use '../../global' as g;
+
+
+.c-section__under--slider{
+    max-width: 50%;
+    width: 100%;
+    margin: 5rem auto;
+
+    @include g.mq('tab'){
+      top: 20%;
+   }
+   @include g.mq('sp'){
+      top: 25%;
+   }
+    img{
+    width: 100%;
+    height: 35rem;
+    @include g.mq('tab'){
+      width: 80%;
+      height: 25rem;
+   }
+   @include g.mq('sp'){
+    width: 80%;
+    height: 10rem;
+ }
+    }
+    &--nav{
+        max-width: 80%;
+        width: 100%;
+        height: 10rem;
+        margin: 0 auto;
+        @include g.mq('tab'){
+          top: 25%;
+       }
+       @include g.mq('sp'){
+          top: 35%;
+       }
+        .slick-slide{
+            margin: 0 1rem;
+            border: 2px solid #9966CC;
+            @include g.mq('tab'){
+              margin: 0 0.5rem;
+           }  
+           :hover{
+            box-shadow: 0 0 1rem 0.5rem #9966CC;/*ボタンの外側に*/
+          }
+        }
+    
+        img{
+            height: 10rem;
+            border: 1.5px solid #CCCCFF;
+          @include g.mq('tab'){
+              height: 7.5rem;
+           } 
+        
+        }
+      
+    }
+}
+
+.slide-arrow {
+    bottom: 0;
+    height: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    width: 0;
+  }
+  .prev-arrow {
+    border-top: solid 5px #CC33FF;
+    border-right: solid 5px #CC33FF;
+    width: 60px;
+    height: 60px;
+    transform: rotate(225deg);
+    left: -85px;
+    @include g.mq('tab'){
+      width: 30px;
+      height: 30px;
+      left: -30px;
+   }
+   @include g.mq('tab'){
+      width: 25px;
+      height: 25px;
+      left: -20px;
+   }
+  }
+  .next-arrow {
+    border-top: solid 5px #CC33FF;
+    border-right: solid 5px #CC33FF	;
+    width: 60px;
+    height: 60px;
+    transform: rotate(45deg);
+    right: -85px;
+    @include g.mq('tab'){
+      width: 30px;
+      height: 30px;
+      right: -30px;
+   }
+   @include g.mq('sp'){
+      width: 25px;
+      height: 25px;
+      right: -25px;
+   }
+  }
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    padding: 0;
+  }
+  // .slick-track{
+  //   @include tab{
+  //     width: 0;
+
+  //  }
+  // }

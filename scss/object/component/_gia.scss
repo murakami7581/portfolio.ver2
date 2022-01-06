@@ -1,0 +1,415 @@
+@use '../../global' as g;
+
+
+    // .outer{
+    //     position: relative;
+    //     width: 300px;
+    //     height: 300px;
+    //     animation:20s linear infinite rotation2;
+    //     @include g.mq('tab'){
+    //         width: 225px;
+    //         height: 225px;
+    //         animation:0s linear infinite rotation2;
+    //      }
+    //      @include g.mq('sp'){
+    //         width: 225px;
+    //         height: 225px;
+    //      }
+    // }
+    
+    // .iconGear,
+    // .iconGear:before,
+    // .iconGear:after,
+    // .iconGear div:before{
+    //     position: absolute;
+    //     width: 40px;
+    //     height: 200px;
+    //     content: '';
+    //     background-color: rgba(51, 102, 153 ,0.85);
+    //     border-radius: 1px;
+    //     @include g.mq('tab'){
+    //         width: 30px;
+    //         height: 150px;
+    //      }
+    //      @include g.mq('sp'){
+    //         width: 30px;
+    //         height: 150px;
+    //      }
+    // }
+    // .iconGear{
+    //     top: 50px;
+    //     left: 130px;
+    //     @include g.mq('tab'){
+    //         width: 37.5px;
+    //         left: 97.5px;
+    //      }
+    //      @include g.mq('sp'){
+    //         width: 37.5px;
+    //         left: 97.5px;
+    //      }
+    // }
+    // .iconGear:before{
+    //     top: 0;
+    //     left: 0;
+    //     transform: rotate(45deg);
+    // }
+    // .iconGear:after {
+    //     top: 0;
+    //     left: 0;
+    //     transform: rotate(-45deg);
+    // }
+    // .iconGear div:before{
+    //     top: -20px;
+    //     left: 60px;
+    //     transform: rotate(90deg);
+    //     @include g.mq('tab'){
+    //         top: -15px;
+    //         left: 45px;
+    //      }
+    //      @include g.mq('sp'){
+    //         top: -15px;
+    //         left: 45px;
+    //      }
+    //  }
+    // .iconGear div{
+    //     position: absolute;
+    //     top: 20px;
+    //     left: -60px;
+    //     width: 160px;
+    //     height: 160px;
+    //     background-color: rgba(51, 102, 153 ,0.85);
+    //     border-radius: 50%;
+    //     z-index: 5;
+    //     @include g.mq('tab'){
+    //         top: 15px;
+    //         left: -45px;
+    //         width: 120px;
+    //         height: 120px;
+    //      }
+    //      @include g.mq('sp'){
+    //         top: 15px;
+    //         left: -45px;
+    //         width: 120px;
+    //         height: 120px;
+    //      }
+    //  }
+    // .iconGear div:after {
+    //     position: absolute;
+    //     top: 40px;
+    //     left: 40px;
+    //     content: '';
+    //     width: 80px;
+    //     height: 80px;
+    //     background-color: #000000;
+    //     border-radius: 50%;
+    //     @include g.mq('tab'){
+    //         top: 30px;
+    //         left: 30px;
+    //         width: 60px;
+    //         height: 60px;
+    //      }
+    //      @include g.mq('sp'){
+    //         top: 30px;
+    //         left: 30px;
+    //         width: 60px;
+    //         height: 60px;
+    //      }
+    // }
+
+    // .outer1{
+    //     position: relative;
+    //     width: 750px;
+    //     height: 750px;
+    //     animation:20s linear infinite rotation1;
+    //     @include g.mq('sp'){
+    //         width: 375px;
+    //         height: 375px;
+    //     animation:0s linear infinite rotation1;
+    //      }
+
+    // }
+    
+    // .iconGear1,
+    // .iconGear1:before,
+    // .iconGear1:after,
+    // .iconGear1 div:before{
+    //     position: absolute;
+    //     width: 100px;
+    //     height: 500px;
+    //     content: '';
+    //     background-color: #336699;
+    //     border-radius: 1px;
+    //     @include g.mq('tab'){
+    //         width: 50px;
+    //         height: 250px;
+    //      }
+        
+    // }
+    // .iconGear1{
+    //     top: 125px;
+    //     left: 325px;
+    //     @include g.mq('tab'){
+    //         top: 62.5px;
+    //         left: 162.5px;
+    //      }
+
+    // }
+    // .iconGear1:before{
+    //     top: 0;
+    //     left: 0;
+    //     transform: rotate(45deg);
+    // }
+    // .iconGear1:after {
+    //     top: 0;
+    //     left: 0;
+    //     transform: rotate(-45deg);
+    // }
+    // .iconGear1 div:before{
+    //     top: -50px;
+    //     left: 150px;
+    //     transform: rotate(90deg);
+    //     @include g.mq('tab'){
+    //         top:-25px;
+    //         left: 75px;
+    //      }
+    //  }
+    // .iconGear1 div{
+    //     position: absolute;
+    //     top: 50px;
+    //     left: -150px;
+    //     width: 400px;
+    //     height: 400px;
+    //     background-color: #336699;
+    //     border-radius: 50%;
+    //     z-index: 5;
+    //     @include g.mq('tab'){
+    //         top: 25px;
+    //         left: -75px;
+    //         width: 200px;
+    //         height: 200px;
+    //      }
+    //  }
+    // .iconGear1 div:after {
+    //     position: absolute;
+    //     top: 100px;
+    //     left: 100px;
+    //     content: '';
+    //     width: 200px;
+    //     height: 200px;
+    //     background-color: #000000;
+    //     border-radius: 50%;
+    //     @include g.mq('tab'){
+    //         top: 50px;
+    //         left: 50px;
+    //         width: 100px;
+    //         height: 100px;
+    //      }
+    // }
+
+    .ad{
+display: flex;
+        img{
+            width: 40vw;
+            height: auto;
+            opacity: 0.5;
+            animation:20s linear infinite rotation1;
+        }
+        .tori{
+            position: absolute;
+            top:20%;
+            left:30%;
+            width: 50vw;
+            height: auto;
+            z-index: -1;
+            opacity: 0.75;
+            animation:20s linear infinite rotation2;
+        }
+        @include g.mq('tab'){
+            top:75%;
+            left:50%;
+         }
+         @include g.mq('sp'){
+            left:50%;
+         }
+      }
+
+      .ad1{
+        position: absolute;
+        top:48.5vh;
+        left:15vw;
+
+        .ad-3{
+            width: 15rem;
+            height: auto;
+            animation:20s linear infinite rotation1; 
+        }
+        @include g.mq('tab'){
+            top:35%;
+            left:17.5%;
+         }
+         @include g.mq('tabsp'){
+            left:0%;
+        }
+        @include g.mq('sp'){
+            left:-10%;
+         }
+      }
+      
+      .ad2{
+        position: absolute;
+        top:25%;
+        left:15%;
+
+        .ad-3{
+            width: 15rem;
+            height: auto;
+            animation:20s linear infinite rotation1;
+        }
+        @include g.mq('tab'){
+            top:5%;
+            left:5%;
+         }
+         @include g.mq('tabsp'){
+            top: 0%;
+            left:-5%;
+        }
+        @include g.mq('sp'){
+            left:-15%;
+         }
+      }
+   
+      .ad3{
+        position: absolute;
+        top:35%;
+        left:28.5%;
+
+        .ad-3{
+            width: 15rem;
+            height: auto;
+            animation:20s linear infinite rotation1;
+        }
+        @include g.mq('tabsp'){
+            top: 7.5%;
+            left:35%;
+        }
+        @include g.mq('sp'){
+            left:25%;
+         }
+      }
+      .ad4{  
+        position: absolute;
+        top:55%;
+        left:37.5%;
+        .ad-3{
+            width: 15rem;
+            height: auto;
+            animation:20s linear infinite rotation1;
+        }
+        @include g.mq('tab'){
+            top:27.5%;
+            left:42.5%;
+         }
+         @include g.mq('tabsp'){
+            top: 20%;
+            left:20%;
+        }
+        @include g.mq('sp'){
+            left:5%;
+         }
+      }
+      .ad5{
+        position: absolute;
+        top:60%;
+        left:52.5%;
+        .ad-3{
+            width: 15rem;
+            height: auto;
+            animation:20s linear infinite rotation1;
+        }
+        @include g.mq('tab'){
+            top:42.5%;
+            left:60%;
+         }
+         @include g.mq('tabsp'){
+            top: 30%;
+            left:40%;
+        }
+
+        @include g.mq('sp'){
+            top: 32.5%;
+            left:27.5%;
+         }
+      }
+      .ad6{
+        position: absolute;
+        top:77.5%;
+        left:32.5%;
+        .ad-3{
+            width: 15rem;
+            height: auto;
+            animation:20s linear infinite rotation1;
+        }
+        @include g.mq('tab'){
+            top:52.5%;
+            left:30%;
+         }
+         @include g.mq('tabsp'){
+            top:45%;
+            left:35%;
+        }
+        @include g.mq('sp'){
+            top:47.5%;
+            left:27.5%;
+         }   
+      }
+      .ad7{
+          position: absolute;
+          top:75%;
+          left:7.5%;
+          .ad-3{
+            width: 15rem;
+            height: auto;
+            animation:20s linear infinite rotation1;
+        }
+          @include g.mq('tab'){
+            top:50%;
+            left:0%;
+         }
+         @include g.mq('tabsp'){
+            top:50%;
+            left:-7.5%;
+        }
+        @include g.mq('sp'){
+            left:-15%;
+         }
+      }
+      .ad8{
+        position: absolute;
+        top:97.5%;
+        left:3.5%;
+
+        .ad-3{
+            width: 15rem;
+            height: auto;
+            animation:20s linear infinite rotation1;
+        }
+        @include g.mq('tab'){
+            top:67.5%;
+            left:10%;
+         }
+         @include g.mq('sp'){
+            top:62.5%;
+            left:17.5%;
+        }
+ 
+      }
+      
+      @keyframes rotation1{
+        0%{ transform:rotate(0);}
+        100%{ transform:rotate(360deg); }
+      }
+      @keyframes rotation2{
+        0%{ transform:rotate(0);}
+        100%{ transform:rotate(-360deg); }
+      }
+

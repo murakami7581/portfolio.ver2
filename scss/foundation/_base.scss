@@ -11,11 +11,14 @@
  body { 
   margin: 0px;
   -webkit-text-size-adjust: 100%;
-  background-image: url(../image/tunnel.jpg);
+  background:linear-gradient(rgba(0,0,0,1), rgba(51,0,51,0.9)),url(../image/tunnel.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
+  background-blend-mode: screen ;
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  color: #FFFFFF;
 }
 .f-body{
   position: relative;
@@ -30,7 +33,9 @@
   z-index: 10;
 }
 
-
+.current_page_item {
+  color: #FF44FF;
+  }
 
 @-moz-keyframes swing {
     0% { -moz-transform: rotate(0deg) }
@@ -84,8 +89,8 @@
     transition: width 0.05s, height 0.05s;
   }
   .dot1.active {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     background: #00dda2;
   }
   .dot2 {

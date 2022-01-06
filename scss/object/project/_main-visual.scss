@@ -1,0 +1,120 @@
+@use '../../global' as g;
+
+
+.p-section{
+    position: relative;
+    width   : 80%;
+    height  : 100%;
+    margin  : 0 auto;
+    &__main{
+        position: relative;
+        width   : 100%;
+        height  : 60rem;
+    
+    }
+    &__inner{
+        position     : relative;
+        z-index      : 500;
+        width        : 100%;
+        height       : 100%;
+        background   : radial-gradient(rgba(87,3,92,0.8),rgba(11, 11, 11,1));
+        border-radius: 30px;
+    }  
+    &__top{
+        position: relative;
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        margin-bottom: 15rem;
+        border-radius: 30px;
+        .c-section__topimage{
+            width: 100%;
+            height: auto;
+        }
+        @include g.mq('tab'){
+            background-position: right;
+        }
+        @include g.mq('tabsp'){
+            background-position: center;
+        }
+        @include g.mq('sp'){
+            height: 100vh;
+            background-position: right 35% bottom 50%;
+        }
+        
+        h2{
+            padding-top: 5rem;
+            width: 45%;
+            font-size: 15rem;
+            -webkit-text-stroke: 1px #CC99FF;
+            color: rgba(87,3,92,0);
+            font-family: cursive;
+            margin-bottom: 5rem;
+            @include g.mq('tab'){
+                font-size: 10rem;
+            }
+            @include g.mq('sp'){
+                font-size: 7.5rem;
+            }
+        }
+
+    }
+
+    &__center{
+        position: relative;
+        width: 90%;
+        height: 80vh;
+        margin-bottom: 15rem;
+        margin: 0 auto;
+        h2{
+            margin-top: -5%;
+            width: 45%;
+            font-size: 15rem;
+            -webkit-text-stroke: 1px #CC99FF;
+            color: rgba(87,3,92,0);
+            font-family: cursive;
+            @include g.mq('tab'){
+                font-size: 10rem;
+            }
+            @include g.mq('sp'){
+                font-size: 7.5rem;
+            }
+        }
+        }
+    
+        &__container { 
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        &__under{
+            margin-top: 20rem;
+            position: relative;
+            width: 100%;
+            height: 100rem;
+            z-index: 10;
+            opacity: 0.8;
+            @include g.mq('tab'){
+                height: 70rem;
+            }
+            @include g.mq('sp'){
+                height: 50rem;
+            }
+        
+            h2{
+                width: 45%;
+                font-size: 15rem;
+                -webkit-text-stroke: 1px #CC99FF;
+                color: rgba(87,3,92,0);
+                font-family: cursive;
+                margin-left: 5%;
+                @include g.mq('tab'){
+                    font-size: 10rem;
+                }
+                @include g.mq('sp'){
+                    font-size: 7.5rem;
+                }
+            }
+        }
+        }

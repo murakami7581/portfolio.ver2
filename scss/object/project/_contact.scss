@@ -1,0 +1,94 @@
+@use '../../global' as g;
+
+.p-section__contact{
+    position: relative; 
+    width: 80%;
+    height: 100%;
+    background: radial-gradient(rgba(87,3,92,0.8),rgba(11, 11, 11,1));
+    margin: 0 auto;
+    z-index: 100;
+    border-radius: 30px;
+    font-size: 2rem;
+    h1{
+        padding: 5% 0 0 5%;
+        width: 45%;
+        font-size: 15rem;
+        -webkit-text-stroke: 1px #9966CC;
+        color: rgba(87,3,92,0);
+        font-family: cursive;
+        @include g.mq('tab'){
+            font-size: 5rem;
+            padding: 5rem;
+         }
+    }
+    &--content{
+        max-width: 80%;
+        height: 100%;
+        margin: 5rem auto;
+        display: block;
+        @include g.mq('tab'){
+            margin-left: 20%;
+         }
+ 
+    }
+    }
+    // .c-contact__text{
+    //     :hover{
+          
+    //     }
+    // }
+    .c-contact__name,.c-contact__email,.c-contact__subject,.c-contact__company,.c-contact__tel,.c-contact__message{
+        display: flex;
+        margin-bottom: 2.5vh;
+        width: 100%;
+        justify-content: center;
+        border: 1px solid #CC99FF;
+        height: 4.5rem;
+        &:hover>&__left{
+            background:linear-gradient(-135deg, rgba(235, 3, 235),rgba(68, 4, 68));
+        }
+
+        &__left{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            p{
+                padding-left: 1vw;
+            }
+        }
+        &__right{
+            width: 50%;
+            display: flex;
+            border-left: 1px solid #CC99FF;
+            text-align: center;
+        }
+
+    }
+
+    .c-contact__submit{
+        margin-top: 2.5vh;
+        width: 10%;
+       margin-top: 2.5vh;
+        margin: 0 0 0 auto;
+        border: 1px solid #CC99FF;
+        height: 4.5rem;
+        text-align: center;
+        background:linear-gradient(-135deg, rgba(235, 3, 235),rgba(68, 4, 68));
+    }
+
+    .wpcf7-form-control{
+        height: 100%;
+      
+    }
+    .wpcf7-form-control-wrap{
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+
+        @include g.mq('tab'){
+            margin: 0 0 5% 0;
+            width: 100%;
+         }
+    }
+ 

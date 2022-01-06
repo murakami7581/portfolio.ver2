@@ -1,0 +1,44 @@
+@use '../../global' as g;
+
+.c-main__container{
+    z-index: 100;
+    position: fixed;
+    top:10%;
+    left: 90vw;
+    font-size: 1.5rem;
+    text-align: right;
+    a:hover{
+    color: #FF44FF;
+    }
+    img{
+        width: 90vw;
+    }
+    &__top{
+        padding: 1rem 0;
+    }
+   ul{
+    margin-top: 2rem;
+    #menu-item-620{
+        // padding: 2.5vh 2.5vw;
+        a{
+            // padding: 1vh 2.5vw;
+        }
+    }
+    #menu-item-67{
+        padding: 2.5vh 0;
+        a{
+            // padding: 0 3vw;
+        }
+        }
+    
+    #menu-item-214{
+        // padding: 2.5vh 2.5vw;
+        a{
+            // padding: 0 2vw;
+        }
+        
+    }
+
+   }
+
+ }

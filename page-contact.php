@@ -1,5 +1,13 @@
 <?php get_header(); ?>
 <main class="l-main">
+<!-- <div class="c-main__container">
+  
+  <a class="c-main__container__top" href="<?php echo esc_url(home_url('')); ?>">Top</a>
+  <?php wp_nav_menu( array( 
+  'theme_location' => 'header' 
+  ) ); 
+  ?>
+  </div> -->
  <p class="l-main__text--scrool">SCROOL</p>
  <div class="l-main--line"></div>
 <article>

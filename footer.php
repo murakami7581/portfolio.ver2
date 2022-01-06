@@ -1,4 +1,5 @@
 <footer class="l-footer">
+    
 </footer>
 <?php wp_footer(); ?>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>

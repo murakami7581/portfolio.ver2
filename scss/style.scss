@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/*リセット*/
+@use "../scss/foundation";
+@use "../scss/global";
+@use "../scss/layout/footer";
+@use "../scss/layout/header";
+@use "../scss/layout/main";
+
+@use "../scss/object/component/button";
+@use "../scss/object/component/contact-content";
+@use "../scss/object/component/gia";
+@use "../scss/object/component/hexagon";
+@use "../scss/object/component/media";
+@use "../scss/object/component/menu";
+@use "../scss/object/component/profile-content";
+@use "../scss/object/component/skills-content";
+@use "../scss/object/component/slider";
+@use "../scss/object/component/text";
+@use "../scss/object/component/works-content";
+
+@use "../scss/object/project/profile";
+@use "../scss/object/project/main-visual";
+@use "../scss/object/project/works";
+@use "../scss/object/project/contact";
+
+@use "../scss/object/utility/align";
+@use "../scss/object/utility/clearfix";
+@use "../scss/object/utility/margin";
+@use "../scss/object/utility/position";
+@use "../scss/object/utility/size";
+
+
+

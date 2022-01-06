@@ -1,17 +1,17 @@
 
-// $(function () {
-//     setTimeout('rect()'); //アニメーションを実行
-// });
+$(function () {
+    setTimeout('rect()'); //アニメーションを実行
+});
 
 
-// function rect() {
-//     $('.u-section__text--1,.u-section__text--2').animate({
-//         marginTop: '-=10px'
-//     }, 800).animate({
-//         marginTop: '+=10px'
-//     }, 800);
-//     setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
-// };
+function rect() {
+    $('.c-section__text--1,.c-section__text--2').animate({
+        marginTop: '-=10px'
+    }, 800).animate({
+        marginTop: '+=10px'
+    }, 800);
+    setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
+};
 
   
 // Skillsのアニメーションの初め
@@ -35,7 +35,7 @@ var particles = Particles.init({
     sizeVariations: 8,
     color: ['#dd00d2', '#404B69', '#DBEDF3'],
     connectParticles: true,
-    maxParticles: 300,
+    maxParticles: 200,
     speed: 0.5,
     responsive: [
         {
@@ -111,18 +111,53 @@ $(window).mousemove(function (e) {
 $(function(){
   $('.c-header__botton').on('click', function(){
     $('.l-header__container--tab').toggleClass('is-active');
+    $('.c-header__botton--line').toggleClass('active');
+    $('.c-header__botton--text').toggleClass('is-active');
   });
 }());
 
-$(function () {
-  $(window).scroll(function () {
-    $('.c-section__top__inner--text1,.c-section__top__inner--text2,.c-section__top__inner--text3').each(function () {
-      const targetElement = $(this).offset().top;
-      const scroll = $(window).scrollTop();
-      const windowHeight = $(window).height();
-      if (scroll > targetElement - windowHeight) {
-        $(this).addClass('view');
-      }
-    });
-  });
+
+// Profile-pageのアニメーション初め
+$(".c-text__top").on("click", function() {
+  $(".c-column__container")
+    .addClass("show1")
+    .fadeIn();
+
+  $(".c-column__career,.c-text-last")
+  .addClass("notshow")
+  .fadeOut();
 });
+
+
+$(".c-text__center").on("click", function() {
+  $(".c-column__career")
+    .addClass("show1")
+    .fadeIn();
+  // return false;
+  // $(".c-text__top,.c-text__bottom")
+  // .addClass("no")
+  $(".c-column__container,.c-text-last")
+  .addClass("notshow")
+  .fadeOut();
+});
+
+$(".c-text__bottom").on("click", function() {
+  $(".c-text-last")
+    .addClass("show1")
+    .fadeIn();
+  // return false;
+  // $(".c-text__top,.c-text__center")
+  // .addClass("no")
+  $(".c-column__container,.c-column__career")
+  .addClass("notshow")
+  .fadeOut();
+});
+
+
+$(".p-botton__profile").on("click", function() {
+  $(".c-column__container,.c-column__career,.c-text-last").fadeOut();
+  // return false;
+});
+
+// Profile-pageのアニメーション終わり
+
