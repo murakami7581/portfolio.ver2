@@ -1,243 +1,142 @@
 @use '../../global' as g;
 
 .p-section__works{
-    position: relative; 
-    width: 80%;
-    height: 100%;
-    background: radial-gradient(rgba(87,3,92,0.8),rgba(11, 11, 11,1));
-    margin: 0 auto;
-    z-index: 100;
-    border-radius: 30px;
-    
+    position      : relative;
+    z-index       : 100; 
+    width         : 80%;
+    height        : 100%;
+    background    : radial-gradient(rgba(87,3,92,0.8),rgba(11, 11, 11,1));
+    border-radius : 30px;
+    padding-bottom: 5rem;
+    margin        : 0 auto;
     h1{
-        padding: 5% 0 0 5%;
-        width: 45%;
-        font-size: 15rem;
+        width              : 45%;
+        color              : rgba(87,3,92,0);
+        font-size          : 15rem;
+        font-family        : cursive;
         -webkit-text-stroke: 1px #9966CC;
-        color: rgba(87,3,92,0);
-        font-family: cursive;
+        padding            : 5% 0 0 5%;
+        margin-bottom      : 5%;
         @include g.mq('tab'){
-            font-size: 5rem;
-            padding: 5rem;
+            font-size: 8rem;
+        }
+        @include g.mq('sp'){
+            font-size: 6rem;
          }
     }
     &--content{
-       width: 60vw;
+       width: 80%;
        margin: 0 auto;
-    .c-section__works__title1{
-        padding-top: 10rem;
-        margin-left: -5%;
-        margin-bottom: 5rem;
-        font-size: 10rem;
-        color: #FFFFFF;
+       h2{
+        font-size: 5vw;
         font-weight: bold;
+        margin-bottom: 5vh;
+        @include g.mq('tab'){
+            font-size: 4vw;
+        }
+        @include g.mq('tabsp'){
+            font-size: 4vw;
+            margin-bottom: 3vh;
+        }
+        @include g.mq('sp'){
+            margin-bottom: 1vh;
+        }
     }
-    .c-section__works__image1{
-        padding: 5% 5% 0 0;
-        text-align: right;
-        width: auto;
-        height: 90vh;
-        position: relative;
-        font-family: YakuHanJP, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-   
+    p{
+        font-size: 1.5vw;
+        margin-bottom: 3vh;
+        @include g.mq('tab'){
+            font-size: 1.25vw;
+        }
+        @include g.mq('tabsp'){
+            margin-bottom: 1vh;
+        }
+        @include g.mq('sp'){
+            font-size: 1vw;
+        }
+    }
+    .c-section__works__image{
         &::before,&::after{
             content: "";
             position: absolute;
             z-index: 10;
-            background-image: url(../image/cube.jpg);
+            background-image: url(../image/cube2.png);
             background-size: cover;
         }
         &::before{
-            top: 0vh;
-            width: 3vw;
-            height: 90vh;
-            left: 0vw;
+            width: 3%;
+            height: 100%;
+            top: 0;
+            right: 0;
     }
         &::after{
-            top: 85vh;
+            width: 100%;
+            height: 4%;
+            top: 0;
             left: 0;
-            width: 60vw;
-            height: 5vh;
     }
-    .c-section__works__image{
-        width: 57.5vw;
-        height: 65vh;
     }
-    .c-section__works__inner--image{
-        position: absolute;
-        z-index: 1;
-        top: 70vh;
-        left: 10vw;
-    }
-    h4{
-        text-align: left;
-        position: absolute;
-        z-index: 10;
-        top: 17.5vh;
-        left: 6vw;
-        font-size: 5vw;
-        font-weight: bold;
+    .c-section__works__image1{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: right;
+        margin-bottom: 15%;
         &::before,&::after{
             content: "";
             position: absolute;
-            background-image: url(../image/cube.png);
+            z-index: 10;
+            background-image: url(../image/cube2.jpg);
             background-size: cover;
         }
         &::before{
-            top: -20vh;
-            left: -5.9vw;  
-            width: 57.5vw;
-            height: 5vh;
+            width: 3%;
+            height: 100%;
+            top: 0%;
+            left: 0%;
+    }
+        &::after{
+            top: 97.5%;
+            left: 0;
+            width: 100%;
+            height: 4%;
+    }
+    .wp-image-516,.wp-image-745{
+        width: 70%;
+        height: 100%;
+    }
 
-    }
-        &::after{
-            top: -20vh;
-            width: 3vw;
-            height: 90vh;
-            left: 51vw;
-    }
-    }
-    p{
-        text-align: left;
+    .c-works__text1,.c-works__text2{
         position: absolute;
-        top: 55vh;
-        left: 6vw;
-        font-size: 1vw;
-        &::after{
-            content: "";
-            position: absolute;
-            border: 3px solid rgba(255, 255, 255, 0.75);
-            border-top: none;
-            border-right: none;
-            top: -55vh;
-            left: 20vw;
-            width: 32.5vw;
-            height: 55vh;
+        z-index: 10;
+        top: 12.5%;
+        left: 10%;
+        text-align: left;
+        img{
+            width: 7.5vw;
+            height: 7.5vw;
+            margin-top: 3vh;
+            margin-left: 2.5vw;
+            @include g.mq('tabsp'){
+                width: 7vw;
+                height: 7vw;
+                margin-top: 1.5vh;
+            }
+            @include g.mq('tabsp'){
+                width: 7vw;
+                height: 7vw;
+                margin-top: 1.5vh;
+            }
+            @include g.mq('sp'){
+                margin-top: 0;
+            }
+            
         }
     }
-}
-    .c-section__works__title2{
-        text-align: right;
-        margin-top: 10rem;
-        margin-right: -5%;
-        margin-bottom: 5rem;
-        font-size: 10rem;
-        color: #FFFFFF;
-        font-weight: bold;
+    .wp-block-image{
+        margin: 0;
     }
-    // .c-section__works--2{
-    //     padding-bottom: 10rem;
-    // }
-    // .c-section__works__image2{
-    //     text-align: right;
-    //     padding: 5% 5% 0 0;
-    //     box-shadow: 0 0 8px gray;
-    //     width: auto;
-    //     height: 90vh;
-    //     position: relative;
-    //     font-family: YakuHanJP, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-   
-    //     &::before,&::after{
-    //         content: "";
-    //         position: absolute;
-    //         z-index: 10;
-    //         border: 1px solid rgba(255, 255, 255, 0.9);
-    //     }
-    //     &::before{
-    //         border-top: none;
-    //         border-right: none;
-    //         top: 0;
-    //         left: 42.5vw;
-    //         width: 17.5vw;
-    //         height: 19.5vh;
-    // }
-    //     &::after{
-    //         border-bottom: none;
-    //         top: 80vh;
-    //         left: 12.5vw;
-    //         width: 40vw;
-    //         height: 10vh;
-    // }
-    
-    // h4{
-    //     text-align: left;
-    //     position: absolute;
-    //     z-index: 1;
-    //     top: 31.5vh;
-    //     left: 6vw;
-    //     font-size: 5vw;
-    //     font-weight: bold;
-    //     &::before,&::after{
-    //         content: "";
-    //         position: absolute;
-    //         background: -moz-linear-gradient(top, #0000CC, #CC00FF);
-    //         background: -webkit-linear-gradient(top, #0000CC, #CC00FF);
-    //         background: linear-gradient(to bottom, #0000CC, #CC00FF);
-    //         box-shadow: 0 0 20px #9966FF;
-    //     }
-    //     &::before{
-    //         top: -31.5vh;
-    //         left: 31.5vw;
-    //         width: 10vw;
-    //         height: 27.5vh;
-    // }
-    //     &::after{
-    //         top: 2.5vh;
-    //         left: -6vw;
-    //         width: 2vw;
-    //         height: 20vh;
-    // }
-    // }
-    // p{
-    //     text-align: left;
-    //     position: absolute;
-    //     z-index: 1;
-    //     top: 67.5vh;
-    //     left: 6vw;
-    //     font-size: 1vw;
-    //     &::after{
-    //         content: "";
-    //         position: absolute;
-    //         top: 5vh;
-    //         left: 20vw;
-    //         width: 6vw;
-    //         height: 10vh;
-    //         background: -moz-linear-gradient(top, #0000CC, #CC00FF);
-    //         background: -webkit-linear-gradient(top, #0000CC, #CC00FF);
-    //         background: linear-gradient(to bottom, #0000CC, #CC00FF);
-    //         box-shadow: 0 0 20px #9966FF;
-    //     }
-    // }
-    // }
-}
 }
 
-
-// h1{
-//     padding: 5% 0 0 5%;
-//     width: 45%;
-//     font-size: 15rem;
-//     color: magenta;
-//     font-family: cursive;
-//     position: relative;
-//     line-height: 1.1;
-
-  
-//     &:before,
-//     &:after {
-//       top: 6.5rem;
-//       left: 6.5rem;
-//       position: absolute;
-//       display: block;
-//       content: "Contact";
-//       mix-blend-mode: color-burn;
-//     }
-//     &:before {
-//       color: cyan;
-//       transform: translate(1px, 1px) rotate(0.1deg);
-//     }
-//     &:after {
-//         color: rgba(87,3,92,0.8);
-//       transform: translate(-1px, -1px);
-//     }
-//   }
+}
+}

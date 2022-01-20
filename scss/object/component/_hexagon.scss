@@ -1,212 +1,74 @@
 @use '../../global' as g;
 
 .c-section{
-        &--hexagon__content {
-            position: relative;
-            width: 100px;
-            height: 86.67px;
-            
-        }
-        
-        &--hexagon__content div {
-            width: 50px;
-            height: 86.5px;
-            position: absolute;
-            left: 25px;
-            border-top: 2px solid #000;
-            border-bottom: 2px solid #000;
-            transform-origin: center;
-            box-sizing: border-box;
-            background-color: #c0c0c0;
-           
+    &--hexagon__content {
+        position: relative;
+        width   : 100px;
+        height  : 86.67px;
+    }
+    &--hexagon__content div {
+        position        : absolute;
+        left            : 25px;
+        width           : 50px;
+        height          : 86.5px;
+        transform-origin: center;
+        box-sizing      : border-box;
+        background-color: #c0c0c0;
+        border-top      : 2px solid #000;
+        border-bottom   : 2px solid #000;
         }
         &--hexagon__content div:nth-of-type(1) {
-            transform: rotate(0deg);
+            transform   : rotate(0deg);
             border-color: #9966FF;
-          }
+        }
         &--hexagon__content div:nth-of-type(2) {
-            transform: rotate(60deg);
+            transform   : rotate(60deg);
             border-color: #9966FF;
         }
         &--hexagon__content div:nth-of-type(3) {
-            transform: rotate(120deg);
+            transform   : rotate(120deg);
             border-color: #9966FF;
-          }
-        &--hexagon--1{
-            display: none;
- 
-            &__img{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                z-index: 100;
-                transform: translate(-50%, -50%);
-                img{
-                    width: 7.5rem;
-                    height: 7.5rem;
-                }
-            }
-
         }
-        &--hexagon--2{
-            display: none;
-            &__img{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                z-index: 100;
-                transform: translate(-50%, -50%);
-                img{
-                    width: 7.5rem;
-                    height: 7.5rem;
-                }
-            }
-        }
-        &--hexagon--3{
-            display: none;
-
-            &__img{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                z-index: 100;
-                transform: translate(-50%, -50%);
-                img{
-                    width: 7.5rem;
-                    height: 7.5rem;
-                }
-            }
-        }
-        &--hexagon--4{
-            display: none;
-
-            &__img{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                z-index: 100;
-                transform: translate(-50%, -50%);
-                img{
-                    width: 8.5rem;
-                    height: 8.5rem;
-                }
-            }
-        }
-        &--hexagon--5{
-            display: none;
-
-            &__img{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                z-index: 100;
-                transform: translate(-50%, -50%);
-                img{
-                    width: 7.5rem;
-                    height: 7.5rem;
-                }
-            }
-        }
-        &--hexagon--6{
-            display: none;
-   
-            &__img{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                z-index: 100;
-                transform: translate(-50%, -50%);
-                img{
-                    width: 8.5rem;
-                    height: 8.5rem;
-                }
-            }
-        }        
-        &--hexagon--7{
-            display: none;
-
-            &__img{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                z-index: 100;
-                transform: translate(-50%, -50%);
-                img{
-                    width: 6rem;
-                    height: 6rem;
-                }
-            }
-        }
+        &--hexagon--1,
+        &--hexagon--2,
+        &--hexagon--3,
+        &--hexagon--4,
+        &--hexagon--5,
+        &--hexagon--6,
+        &--hexagon--7,
         &--hexagon--8{
             display: none;
-    
+            @include g.mq('tab'){
+                display: block;
+            }
             &__img{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                z-index: 100;
+                position : absolute;
+                top      : 50%;
+                left     : 50%;
+                z-index  : 100;
                 transform: translate(-50%, -50%);
                 img{
-                    width: 6rem;
-                    height: 6rem;
+                    width : 7.5rem;
+                    height: 7.5rem;
                 }
             }
         }
-        &--hexagon--9{
-            display: none;
-
-            &__img{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                z-index: 100;
-                transform: translate(-50%, -50%);
+        &--hexagon--4,
+        &--hexagon--6{
                 img{
-                    width: 6rem;
-                    height: 6rem;
+                    width : 8.5rem;
+                    height: 8.5rem;
                 }
             }
-        }
-        &--hexagon--10{
-            display: none;
-
-            &:hover{
-                animation: p-section--hexagon--10 .1s  infinite;
-            }
-
-            &__img{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                z-index: 100;
-                transform: translate(-50%, -50%);
+        &--hexagon--7,
+        &--hexagon--8{
                 img{
-                    width: 6rem;
+                    width : 6rem;
                     height: 6rem;
                 }
             }
         }
 
-}
-
-    
- 
-
-
-@keyframes  p-section--hexagon--9{
-    0% {transform: translate(0px, 2px) rotateZ(0deg)}
-    25% {transform: translate(2px, 2px) rotateZ(1deg)}
-    50% {transform: translate(0px, 2px) rotateZ(0deg)}
-    75% {transform: translate(2px, 0px) rotateZ(-1deg)}
-    100% {transform: translate(0px, 0px) rotateZ(0deg)}
-} 
-@keyframes  p-section--hexagon--10{
-    0% {transform: translate(0px, 2px) rotateZ(0deg)}
-    25% {transform: translate(2px, 2px) rotateZ(1deg)}
-    50% {transform: translate(0px, 2px) rotateZ(0deg)}
-    75% {transform: translate(2px, 0px) rotateZ(-1deg)}
-    100% {transform: translate(0px, 0px) rotateZ(0deg)}
-}
 
 
 

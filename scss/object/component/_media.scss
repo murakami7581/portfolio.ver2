@@ -1,5 +1,8 @@
 @use '../../global' as g;
 
+
+
+
 .c-body__img{
     width: 100%;
     height: 100%;
@@ -26,372 +29,197 @@
 
 
 .c-section__center{
-                     
-  &--pulse01{
-    background: linear-gradient(-135deg, #333333, #9966CC);
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    padding: 8px;
-    border-radius: 50%;
-    animation: animate 2s linear infinite;
-    z-index: 100;
+  &--pulse1,
+  &--pulse2,
+  &--pulse3,
+  &--pulse4,
+  &--pulse5,
+  &--pulse6,
+  &--pulse7,
+  &--pulse8{
     @include g.mq('tab'){
-      top:55%;
-   }
-   
-   &:hover{
-    position: absolute;
-    top:25%;
-    left:25%;
-    transform: translate(-50%,-50%);
-    padding: 40px;
-    transform:rotateX(75deg);
-    border-color:  #9966CC;
-    @include g.mq('tab'){
-      left:32.5%;
-   }
-
-   }
-   &:hover +.c-section--hexagon--1{
-    display: block;
-    position: absolute;
-    top:10%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    z-index: 100;
-    @include g.mq('tab'){
-      top:27.5%;
-   }
-
+      position: absolute;
+   } 
   }
-  &:hover ~.c-section__center__container{
-    display: block;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-  &--pulse02{
-    background: linear-gradient(-135deg, #333333, #9966CC);
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    padding: 8px;
+  &--pulse01,
+  &--pulse02,
+  &--pulse03,
+  &--pulse04,
+  &--pulse05,
+  &--pulse06,
+  &--pulse07,
+  &--pulse08{
+    position     : absolute;
+    top          : 50%;
+    left         : 50%;
+    transform    : translate(-50%,-50%);
+    z-index      : 100;
     border-radius: 50%;
-    animation: animate 2s linear infinite;
-    z-index: 100;
-    @include g.mq('tab'){
-      top:55%;
-   }
-  
+    background   : linear-gradient(-135deg, #333333, #9966CC);
+    padding      : 8px;
+    animation    : animate 2s linear infinite;
+
     &:hover{
-        position: absolute;
-        top:25%;
-        left:25%;
-        transform: translate(-50%,-50%);
-        padding: 40px;
-        transform:rotateX(75deg);
-        @include g.mq('tab'){
-          left:33.5%;
-       }
- 
-       }
-       &:hover +.c-section--hexagon--2{
+      position : absolute;
+      top      : 20%;
+      left     : 20%;
+      transform: translate(-50%,-50%);
+      padding  : 3.5vw;
+      transform:rotateX(75deg); 
+      @include g.mq('tab'){
+        display: none;
+      } 
+    }
+    &:hover ~.c-section__center__container{
+      display        : block;
+      display        : flex;
+      justify-content: space-between;
+      @include g.mq('tab'){
+        display: none;
+      } 
+    }
+  }
+  &--pulse01,
+  &--pulse04,
+  &--pulse03,
+  &--pulse07{
+    @include g.mq('tab'){
+      top          : 90%;
+      left         : 22.5%;
+      padding      : 30px;
+      transform    : rotateX(75deg);
+    } 
+  }
+  &--pulse06,
+  &--pulse02,
+  &--pulse05,
+  &--pulse08{
+    @include g.mq('tab'){
+      top          : 90%;
+      left         : 22.5%;
+      padding      : 30px;
+      transform    : rotateX(75deg);
+    } 
+  }
+  &--pulse01{
+  &:hover +.c-section--hexagon--1{
+    display: block;
+    position: absolute;
+    top:5%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    @include g.mq('tab'){
+      display: none;
+    } 
+  }
+}  
+
+  &--pulse02{
+      &:hover +.c-section--hexagon--2{
         display: block;
         position: absolute;
-        top:10%;
+        top:5%;
         left:50%;
         transform: translate(-50%,-50%);
         z-index: 100;
         @include g.mq('tab'){
-          top:27.5%;
-       }
-
-      }
-      &:hover ~.c-section__center__container{
-        display: block;
-        display: flex;
-        justify-content: space-between;
+          display: none;
+        } 
       }
   }
   &--pulse03{
-    background: linear-gradient(-135deg, #333333, #9966CC);
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    padding: 8px;
-    border-radius: 50%;
-    animation: animate 2s linear infinite;
-    z-index: 100;
-    @include g.mq('tab'){
-      top:55%;
-   }
-  
-    &:hover{
-        position: absolute;
-        top:25%;
-        left:25%;
-        transform: translate(-50%,-50%);
-        padding: 40px;
-        transform:rotateX(75deg);
-        @include g.mq('tab'){
-          left:32.5%;
-       }
- 
-       }
-       &:hover +.c-section--hexagon--3{
+      &:hover +.c-section--hexagon--3{
         display: block;
         position: absolute;
-        top:10%;
+        top:5%;
         left:50%;
         transform: translate(-50%,-50%);
         z-index: 100;
         @include g.mq('tab'){
-          top:27.5%;
-       }
-      }
-      &:hover ~.c-section__center__container{
-        display: block;
-        display: flex;
-        justify-content: space-between;
+          display: none;
+        } 
       }
   }
   &--pulse04{
-    background: linear-gradient(-135deg, #333333, #9966CC);
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    padding: 8px;
-    border-radius: 50%;
-    animation: animate 2s linear infinite;
-    z-index: 100;
-    @include g.mq('tab'){
-      top:55%;
-   }
- 
-    &:hover{
-        position: absolute;
-        top:25%;
-        left:25%;
-        transform: translate(-50%,-50%);
-        padding: 40px;
-        transform:rotateX(75deg);
-        @include g.mq('tab'){
-          left:33%;
-       }
-
-      
-       }
-       &:hover +.c-section--hexagon--4{
+      &:hover +.c-section--hexagon--4{
         display: block;
         position: absolute;
-        top:10%;
+        top:5%;
         left:50%;
         transform: translate(-50%,-50%);
         z-index: 100;
         @include g.mq('tab'){
-          top:27.5%;
-       }
- 
-      }
-      &:hover~.c-section__center__container{
-        display: block;
-        display: flex;
-        justify-content: space-between;
-       
-
+          display: none;
+        } 
       }
   }
   &--pulse05{
-    background: linear-gradient(-135deg, #333333, #9966CC);
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    padding: 8px;
-    border-radius: 50%;
-    animation: animate 2s linear infinite;
-    z-index: 100;
-    @include g.mq('tab'){
-      top:55%;
-   }
- 
-    &:hover{
-        position: absolute;
-        top:25%;
-        left:25%;
-        transform: translate(-50%,-50%);
-        padding: 40px;
-        transform:rotateX(75deg);
-        @include g.mq('tab'){
-          left:32.5%;
-       }
-       }
-       &:hover +.c-section--hexagon--5{
+      &:hover +.c-section--hexagon--5{
         display: block;
         position: absolute;
-        top:10%;
+        top:5%;
         left:50%;
         transform: translate(-50%,-50%);
         z-index: 100;
         @include g.mq('tab'){
-          top:27.5%;
-        }
-      }
-      &:hover ~.c-section__center__container{
-        display: block;
-        display: flex;
-        justify-content: space-between;
+          display: none;
+        } 
       }
   }
   &--pulse06{
-    background: linear-gradient(-135deg, #333333, #9966CC);
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    padding: 8px;
-    border-radius: 50%;
-    animation: animate 2s linear infinite;
-    z-index: 100;
-    @include g.mq('tab'){
-      top:55%;
-   }
-  
-    &:hover{
-        position: absolute;
-        top:25%;
-        left:25%;
-        transform: translate(-50%,-50%);
-        padding: 40px;
-        transform:rotateX(75deg);
-        @include g.mq('tab'){
-          left:32.5%;
-       }
-
-       }
-       &:hover +.c-section--hexagon--6{
+      &:hover +.c-section--hexagon--6{
         display: block;
         position: absolute;
-        top:10%;
+        top:5%;
         left:50%;
         transform: translate(-50%,-50%);
         z-index: 100;
         @include g.mq('tab'){
-          top:27.5%;
-       }
-
-      }
-      &:hover ~.c-section__center__container{
-        display: block;
-        display: flex;
-        justify-content: space-between;
+          display: none;
+        } 
       }
   }
   &--pulse07{
-    background: linear-gradient(-135deg, #333333, #9966CC);
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    padding: 8px;
-    border-radius: 50%;
-    animation: animate 2s linear infinite;
-    z-index: 100;
-    @include g.mq('tab'){
-      top:55%;
-   }
-
-    &:hover{
-        position: absolute;
-        top:25%;
-        left:25%;
-        transform: translate(-50%,-50%);
-        padding: 40px;
-        transform:rotateX(75deg);
-        @include g.mq('tab'){
-          left:32.5%;
-       }
-
-       }
-       &:hover +.c-section--hexagon--7{
+      &:hover +.c-section--hexagon--7{
         display: block;
         position: absolute;
-        top:10%;
+        top:5%;
         left:50%;
         transform: translate(-50%,-50%);
         z-index: 100;
         @include g.mq('tab'){
-          top:27.5%;
-       }
-
-      }
-      &:hover ~.c-section__center__container{
-        display: block;
-        display: flex;
-        justify-content: space-between;
+          display: none;
+        } 
       }
   }
   &--pulse08{
-    background: linear-gradient(-135deg, #333333, #9966CC);
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    padding: 8px;
-    border-radius: 50%;
-    animation: animate 2s linear infinite;
-    z-index: 100;
-    @include g.mq('tab'){
-      top:55%;
-   }
-
-    &:hover{
-        position: absolute;
-        top:25%;
-        left:25%;
-        transform: translate(-50%,-50%);
-        padding: 40px;
-        transform:rotateX(75deg);
-        @include g.mq('tab'){
-          left:32.5%;
-       }
-       }
-       &:hover +.c-section--hexagon--8{
-        display: block;
-        position: absolute;
-        top:10%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        z-index: 100;
-        @include g.mq('tab'){
-          top:27.5%;
-       }
-      }
-      &:hover ~.c-section__center__container{
-        display: block;
-        display: flex;
-        justify-content: space-between;
-      }
+    &:hover +.c-section--hexagon--8{
+      display: block;
+      position: absolute;
+      top:5%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      z-index: 100;
+      @include g.mq('tab'){
+        display: none;
+      } 
+    }
+    }
   }
-  }
+  
 
-
- @keyframes animate {
-   0%{
-     box-shadow:  0 0 0 0 rgba(207,135,237, 0.6), 0 0 0 0 rgba(207,135,237,0.6);
-   }
-   30%{
-     box-shadow:  0 0 0 9px rgba(29, 171, 209, 0),0 0 0 0 rgba(207,135,237,0.6);
-   }
-   65%{
-     box-shadow:  0 0 0 9px rgba(29, 171, 209, 0),0 0 0 10px rgba(29, 171, 209, 0);
-   }
-   100%{
-    box-shadow:  0 0 0 0 rgba(29, 171, 209, 0),0 0 0 10px rgba(29, 171, 209, 0);
+  @keyframes animate {
+    0%{
+      box-shadow:  0 0 0 0 rgba(207,135,237, 0.6), 0 0 0 0 rgba(207,135,237,0.6);
+    }
+    30%{
+      box-shadow:  0 0 0 9px rgba(29, 171, 209, 0),0 0 0 0 rgba(207,135,237,0.6);
+    }
+    65%{
+      box-shadow:  0 0 0 9px rgba(29, 171, 209, 0),0 0 0 10px rgba(29, 171, 209, 0);
+    }
+    100%{
+      box-shadow:  0 0 0 0 rgba(29, 171, 209, 0),0 0 0 10px rgba(29, 171, 209, 0);
+    }
   }
- }

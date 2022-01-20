@@ -4,44 +4,5 @@
   position: relative;
   height: 10rem;
 
-  
-
-
-.menu-header-container{
-  @include g.mq('tab') {
-   display: none;
-  }
-    ul{
-        display: flex;
-        align-items: center;
-        li{
-            a{
-                position:relative;
-                margin: 0 3rem;
-                font-size: 2rem;
-                font-weight: bold;
-                &::before {
-                  background: #9933CC;
-                  content: "";
-                  z-index: 1;
-                  height: 2px;
-                  position: absolute;
-                  left: 0;
-                  right: 0;
-                  bottom: -5px;
-                  transform: scale(0, 1);
-                  transform-origin: right center 0;
-                  -webkit-transform: 1s cubic-bezier(0.23, 1, 0.32, 1);
-                  transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
-            }
-            &:hover::before{
-              transform: scale(1, 1);
-              transform-origin: left center 0;
-              }
-            }
-        }
-    }
-}
-
 }
 

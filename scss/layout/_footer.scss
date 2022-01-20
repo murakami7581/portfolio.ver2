@@ -1,7 +1,14 @@
 @use '../global' as g;
 
 .l-footer{
-    height: 10rem;
+    width          : 100%;
+    height         : 10rem;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    p{
+        font-size: 1.5rem;
+    }
 }
 
 

@@ -1,35 +1,8 @@
-
-$(function () {
-    setTimeout('rect()'); //アニメーションを実行
-});
-
-
-function rect() {
-    $('.c-section__text--1,.c-section__text--2').animate({
-        marginTop: '-=10px'
-    }, 800).animate({
-        marginTop: '+=10px'
-    }, 800);
-    setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
-};
-
-  
-// Skillsのアニメーションの初め
-  $(function(){
-    var item_num = $('div.p-section__circlebox__item').length;
-    var deg = 360.0/item_num;
-    var red = (deg*Math.PI/180.0);
-    var circle_r = $("div.p-section__circlebox__item").width() * 3.5;
-    $('div.p-section__circlebox__item').each(function(i, elem) {
-        var x = Math.cos(red * i) * circle_r + circle_r;
-        var y = Math.sin(red * i) * circle_r + circle_r;
-        $(elem).css('left', x);
-        $(elem).css('top', y);
-    });
-});
-// Skillsのアニメーションの終わり
-
-// ヘッダーのアニメーションの初め
+window.onload = function() {
+  const loader = document.getElementById('loading-wrapper');
+  loader.classList.add('completed');
+}
+// Particles.js初め
 var particles = Particles.init({
     selector: '.f-body__background',
     sizeVariations: 8,
@@ -38,20 +11,41 @@ var particles = Particles.init({
     maxParticles: 200,
     speed: 0.5,
     responsive: [
+      {
+        breakpoint: 1000,
+        options: {
+            maxParticles: 100,
+            sizeVariations: 4,
+        },
+    
+    },
         {
             breakpoint: 800,
             options: {
-                maxParticles: 200,
-                sizeVariations: 5,
+                maxParticles: 75,
+                sizeVariations: 3,
             },
         
         },
+        {
+          breakpoint: 600,
+          options: {
+              maxParticles: 50,
+              sizeVariations: 2,
+          },
+      
+      },
+        {
+          breakpoint: 400,
+          options: {
+              maxParticles: 25,
+              sizeVariations: 1,
+          },
+      
+      },
     ]
   });
-// ヘッダーのアニメーションの終わり
-
-
-
+// Particles.js終わり
 $(window).mousemove(function (e) {
     $('.dot1,.dot2').css({
       left: e.pageX,
@@ -64,11 +58,19 @@ $(window).mousemove(function (e) {
   $('a').on('mouseleave', function () {
     $('.dot1,.dot2').removeClass('active');
   })
- 
-
-
-
-
+// ヘッダーのアニメーション初め
+  $(function () {
+    setTimeout('rect()'); 
+});
+function rect() {
+    $('.c-section__text').animate({
+        marginTop: '-=10px'
+    }, 1000).animate({
+        marginTop: '+=10px'
+    }, 1000);
+    setTimeout('rect()', 2000); 
+};
+// ヘッダーのアニメーション終わり
 
   $(function() {
     $('.c-section__under--slider').slick({
@@ -81,8 +83,8 @@ $(window).mousemove(function (e) {
       asNavFor: '.c-section__under--slider--nav',
     });  
     $('.c-section__under--slider--nav').slick({
-      slidesToShow: 5,
-      slidesToScroll: 2,
+      slidesToShow: 4,
+      slidesToScroll: 1,
       asNavFor: '.c-section__under--slider',
       arrows: false,
       dots: false,
@@ -90,9 +92,15 @@ $(window).mousemove(function (e) {
       focusOnSelect: true,
       responsive: [
         {
-          breakpoint: 834, 
+          breakpoint: 1000, 
           settings: {
             slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 834, 
+          settings: {
+            slidesToShow: 2,
           }
         },
         {
@@ -102,11 +110,8 @@ $(window).mousemove(function (e) {
           },
         },
       ],
-
     }); 
 });
-
-
 
 $(function(){
   $('.c-header__botton').on('click', function(){
@@ -115,8 +120,6 @@ $(function(){
     $('.c-header__botton--text').toggleClass('is-active');
   });
 }());
-
-
 // Profile-pageのアニメーション初め
 $(".c-text__top").on("click", function() {
   $(".c-column__container")
@@ -124,40 +127,40 @@ $(".c-text__top").on("click", function() {
     .fadeIn();
 
   $(".c-column__career,.c-text-last")
-  .addClass("notshow")
   .fadeOut();
 });
 
 
 $(".c-text__center").on("click", function() {
   $(".c-column__career")
-    .addClass("show1")
-    .fadeIn();
-  // return false;
-  // $(".c-text__top,.c-text__bottom")
-  // .addClass("no")
+  .addClass("show1")
+  .fadeIn();
   $(".c-column__container,.c-text-last")
-  .addClass("notshow")
   .fadeOut();
 });
 
 $(".c-text__bottom").on("click", function() {
   $(".c-text-last")
-    .addClass("show1")
-    .fadeIn();
-  // return false;
-  // $(".c-text__top,.c-text__center")
-  // .addClass("no")
+  .addClass("show1")
+  .fadeIn();
   $(".c-column__container,.c-column__career")
-  .addClass("notshow")
   .fadeOut();
 });
 
-
 $(".p-botton__profile").on("click", function() {
   $(".c-column__container,.c-column__career,.c-text-last").fadeOut();
-  // return false;
+});
+
+$(window).resize(function () {                     // Windowサイズが変更された時
+  var win = $(window).width();
+  var bp = 1024; // ブレークポイント（px）
+  if (win < bp) {
+    $(".c-column__container,.c-column__career,.c-text-last").fadeIn();
+  }
 });
 
 // Profile-pageのアニメーション終わり
-
+window.onload = function () {
+  const loader_element = document.getElementById('loading');
+  loader_element.classList.add('loaded');
+  };

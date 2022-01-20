@@ -1,15 +1,59 @@
 @use '../../global' as g;
+.c-section__text{
+
+  &::after{
+    content: "Portforio Site";
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    @include g.mq('sp'){
+      top: 75%;
+    }
+  }
+img{
+  width: 70rem;
+  height: auto;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include g.mq('tab'){
+    width: 50rem;
+
+  }
+  @include g.mq('sp'){
+    width: 100vw;
+    top  : 60%;
+  }
+}
+}
+
 .p-section__top--text{
-    position  : absolute;
-    top       : 50%;
-	  left      : 50%;
-	  transform : translate(-50%, -50%);
-    font-size : 10rem;
-    font-weight: bold;
+    position       : absolute;
+    top            : 40%;
+	  left           : 50%;
+	  transform      : translate(-50%, -50%);
+    font-size      : 12.5rem;
+    font-weight    : bold;
+    letter-spacing : 1vw;
+    @include g.mq('tab'){
+      top             : 40%;
+      font-size       : 15vw;
+      -ms-writing-mode: tb-rl;
+      writing-mode    : vertical-rl;
+      text-orientation: upright; 
+    }
+    @include g.mq('sp'){
+      top           : 50%;
+
+    }
 }
 .glitch{
     position:relative;
     margin:0 auto;
+
   }
   @keyframes noise-anim{
     $steps:20;
@@ -28,6 +72,9 @@
     overflow:hidden;
     clip:rect(0,900px,0,0); 
     animation:noise-anim 2s infinite linear alternate-reverse;
+    @include g.mq('tab'){
+      display: none;
+    }
   }
   
   @keyframes noise-anim-2{
@@ -47,6 +94,9 @@
     overflow:hidden;
     clip:rect(0,900px,0,0); 
     animation:noise-anim-2 3s infinite linear alternate-reverse;
+    @include g.mq('tab'){
+      display: none;
+    }
   }
 .c-section__top__inner--text1.view,.c-section__top__inner--text2.view,.c-section__top__inner--text3.view{
     opacity: 1;
@@ -60,14 +110,15 @@
         border: 3px double #CC99FF;
         position: fixed;
         width: 80%;
-        top:75%;
+        top:92.5%;
         left: 50%;
         transform: translate(-50%,-50%);
         color:#FFFFFF;
         z-index: 1000;
         text-align: center;
+        line-height: 1.25;
         @include g.mq('tab'){
-            top:60%;
+          display: none;
          }
     }
   
@@ -79,7 +130,7 @@
     &__img1{
         position: absolute;
         top: 50%;
-        left: 35%;
+        left: 50%;
         transform: translateY(-50%) translateX(-50%);
         width: 8.5rem;
         height: 8.5rem; 
@@ -99,7 +150,7 @@
     &__img2{
         position: absolute;
         top: 50%;
-        left: 65%;
+        left: 50%;
         transform: translateY(-50%) translateX(-50%);
         width: 9rem;
         height: 9rem;
@@ -109,10 +160,6 @@
             height: 6rem; 
             left: 75%;
          }
-         @include g.mq('tabsp'){
-            width: 5rem;
-            height: 5rem; 
-        }
         @include g.mq('sp'){
             width: 3.5rem;
             height: 3.5rem; 
@@ -121,18 +168,14 @@
     &__img4{
         position: absolute;
         top:50%;
-        left: 35%;
+        left: 50%;
         transform: translateY(-50%) translateX(-50%);
-        width: 8.5rem;
-        height: 8.5rem; 
+        width: 10rem;
+        height: 10rem; 
         @include g.mq('tab'){
             width: 5rem;
             height: 5rem; 
          }
-         @include g.mq('tabsp'){
-            width: 4.5rem;
-            height: 4.5rem; 
-        }
         @include g.mq('sp'){
             width: 3rem;
             height: 3rem; 
@@ -141,10 +184,10 @@
     &__img5{
         position: absolute;
         top: 50%;
-        left: 70%;
+        left: 50%;
         transform: translateY(-50%) translateX(-50%);
-        width: 8.5rem;
-        height: 8.5rem; 
+        width: 10rem;
+        height: 10rem;
         @include g.mq('tab'){
             width: 5rem;
             height: 5rem; 
@@ -259,4 +302,22 @@
         }
     }
 }
+.c-section__center__container1__sp,
+.c-section__center__container2__sp,
+.c-section__center__container3__sp,
+.c-section__center__container4__sp,
+.c-section__center__container5__sp,
+.c-section__center__container6__sp,
+.c-section__center__container7__sp,
+.c-section__center__container8__sp{
+  display: none;
+  @include g.mq('tab'){
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    border-bottom: 1px solid #B2B2B2;
+    padding-bottom: 3rem;
+  }
 
+}

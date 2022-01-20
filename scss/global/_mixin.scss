@@ -1,12 +1,12 @@
 
 @use "variables" as var;
 
-$sizes: tab, tabsp, sp;  //冒頭に使うサイズを明記するとわかりやすい
+$sizes: pc pctab, tab, tabsp, sp;  //冒頭に使うサイズを明記するとわかりやすい
 
   $breakpoint: ( 
-    'sp': 'screen and (max-width: 375px)',
-    'tabsp': 'screen and (max-width: 600px)',
-    'tab': 'screen and (max-width: 834px)',
+    'sp': 'screen and (max-width: 600px)',
+    'tabsp': 'screen and (max-width: 0px)',
+    'tab': 'screen and (max-width: 1024px)',
   ) !default;
   
   //mixinを定義（初期値はmd）
@@ -15,26 +15,5 @@ $sizes: tab, tabsp, sp;  //冒頭に使うサイズを明記するとわかり�
       @content;
     }
   }
-// $tab: 834px;
-// @mixin tab {
-//     @media (max-width: ($tab)) {
-//         @content;
-//     }
-// }
 
-
-
-// $tabsp: 600px;
-// @mixin tabsp {
-//     @media (max-width: ($tabsp)) {
-//         @content;
-//     }
-// }
-
-// $sp: 375px;
-// @mixin sp {
-//     @media (max-width: ($sp)) {
-//         @content;
-//     }
-// }
 

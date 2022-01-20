@@ -1,20 +1,49 @@
 @use '../../global' as g;
-
 .c-section__top__botton{
-    position: absolute;
-    z-index: 100;
-    color: #FFF5EE;
-    top: 80%;
-    left: 48.5%;
+    position : absolute;
+    z-index  : 100;
+    top      : 80%;
+    left     : 48.5%;
     transform: translate(-50%, -50%);
     @include g.mq('tab'){
-        top: 82.5%;
-        left: 30%;
-     }
-     @include g.mq('sp'){
-        top:  85%;
-        left: 50%;
-     }
+    position : static;
+    display: flex;
+    justify-content: center;
+    transform: translate(0);
+    margin-top: -5rem;
+    }
+    @include g.mq('sp'){
+      margin-top: -2.5rem;
+    }
+ 
+    a{
+      position: relative;
+      z-index: 1;
+      font-size: 3rem;
+      padding: 2rem 5rem;
+      -webkit-text-stroke: 1px #FF00FF;
+      color: rgba(0,0,0,0);
+       @include g.mq('sp'){
+        font-size: 2rem;
+        padding: 1.25rem 3.5rem;
+       }
+      &:hover{
+        color: #FF00FF;
+        font-weight: bold;
+      }
+      &::before{
+        transform: skewX(-15deg);
+        content: ""; /*ボックスを作る*/
+        position: absolute;/*ポジションで中央に配置*/
+        top: 0; 
+        bottom: 0; 
+        left: 0; 
+        right: 0;
+        z-index: -1;/* 親要素の後ろに来るように-1 */
+        background-color: rgba(0,0,0,1);
+        border: 1px solid #00FFFF;
+      }
+    }
 }
 .c-botton__topimage{
     width: 20rem;
@@ -22,17 +51,47 @@
 }
 
 .c-section__under__botton{
-    position: absolute;
-    z-index: 100;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    img{
-        width: 25vw;
-    }
-    @include g.mq('tab'){
-        top: 85%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+  @include g.mq('tab'){
+    margin-top: 7.5rem;
+   }
+   @include g.mq('tabsp'){
+    margin-top: 5rem;
+   }
+   @include g.mq('sp'){
+    margin-top: 3.5rem;
+   }
+   a{
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    padding: 2rem 8rem;
+    -webkit-text-stroke: 1px #FF00FF;
+    color: rgba(0,0,0,0);
+     @include g.mq('sp'){
+      font-size: 2rem;
+      padding: 1.25rem 4rem;
      }
+
+    &:hover{
+      color: #FF00FF;
+      font-weight: bold;
+    }
+    &::before{
+      transform: skewX(-15deg);
+      content: ""; /*ボックスを作る*/
+      position: absolute;/*ポジションで中央に配置*/
+      top: 0; 
+      bottom: 0; 
+      left: 0; 
+      right: 0;
+      z-index: -1;/* 親要素の後ろに来るように-1 */
+      background-color: rgba(0,0,0,1);
+      border: 1px solid #9966CC;
+    }
+  }
 }
 
 .c-header__botton{
@@ -40,17 +99,33 @@
     // @include g.mq('tab'){
         display: block;
         position: fixed;
-        top: 75px;
+        top: 50px;
         right: 2.5%;
         z-index: 1100;
-        width: 7.5rem;
-        height: 3.5rem;
+        width: 8rem;
+        height: 4rem;
+        @include g.mq('tab'){
+          width: 6rem;
+          height: 3rem;
+       }
+       @include g.mq('sp'){
+        width: 4rem;
+        height: 2rem;
+     }
         .c-header__botton--text{
             text-align: center;
             font-size: 2rem;
             font-weight: bold;
             margin-top: 5rem;
             -webkit-text-stroke: 1px #FFCCFF;
+            @include g.mq('tab'){
+              font-size: 1.5rem;
+              margin-top: 4rem;
+           }
+           @include g.mq('sp'){
+            font-size: 1rem;
+            margin-top: 3rem;
+         }
         }
         .is-active{
             text-align: center;
@@ -62,28 +137,36 @@
           }
   }
   .c-header__underbotton{
-    display: block;
+    display: flex;
     position: fixed;
     top: 90%;
-    right: 3.5%;
+    right: 4%;
     z-index: 1100;
     width: 5rem;
     height: 5rem;
-
+    @include g.mq('tab'){
+      right: 2%;
+   }
+    @include g.mq('sp'){
+      right: -1.5%;
+   }
+    
   }
   .c-header__botton--twitterimage{
       width:100%;
       height: auto;
       margin: 0 auto;
+      @include g.mq('tab'){
+        width: 75%;
+     }
+     @include g.mq('sp'){
+      width: 50%;
+   }
       &:hover{
           background-color: #FFCCFF;
           border-radius: 50%;
       }
-      img{
-          width: 100%;
-      }
   }
-  
   /*----------------------------
   * メニュー本体
   *----------------------------*/
@@ -91,7 +174,7 @@
         display: block;
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         z-index: 1000;
         width: 100%;
         height: 100%;
@@ -106,33 +189,21 @@
   .l-header__container--z{
       position: relative;
       z-index: 100;
-  }
-  .l-header__container--haikei{
       width: 100%;
-      height: 100%;
-      position: absolute;
-      top:0;
-      left: 0;
-      z-index: 0;
-      opacity: 0.6;
-      background-color: rgba(0,0,0,0.9);
+      height: auto;
+      background-color: rgba(0,0,0,0.1);
       img{
-          width: 100%;
-          height: auto;
+        display: block;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+        @include g.mq('tab'){
+          width: 75%;
+          background-color: rgba(0,0,0,0.125);
+       }
       }
   }
-  .menu-item{
-   
-    @include g.mq('tab'){
-        display: block;
-        width: 100%;
-        height: auto;
-        padding: .5em 1em;
-        text-align: center;
-        box-sizing: border-box;
-    }
- 
-  }
+
   
   /*----------------------------
   * アニメーション部分
@@ -141,58 +212,102 @@
   /* アニメーション前のメニューの状態 */
   .l-header__container--tab{
     display: none;
-    background:linear-gradient(rgba(0,0,0,1), rgba(51,0,51,0.9));
-    @include g.mq('tab'){
-        display: block;
-        transform: translateX(100%);
-        transition: all .3s linear;
-        
-    }
+
     ul{
- 
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15rem;
+      @include g.mq('sp'){
+        display: block;
+        margin-top: 7.5rem;
+     }
         li{
          width: 100%;
          height: auto;
          text-align: center;
-         padding: 3rem 0;
+         background-color: rgba(0,0,0,0.1);
          @include g.mq('sp'){
-            padding: 1.5rem;
-            margin: 5rem 20%;
-        }
-   
-         a{
-            img{
-                &:hover{
-                        animation: hurueru 0.1s  infinite;
-                }
-            }
-            .l-header__container--topimage{
-               width: 12.5rem;
-               height: auto;
-           
-           }
+          margin-bottom: 2rem;
+       }
+       @include g.mq('sp'){
+        &::before{
+          content: "";
+          position: absolute;
+          top: 50%;   /* 縦軸をセンタリングする */ 
+          left: -4rem;
+          transform: translateY(-50%);   /* 縦軸をセンタリングする */  
+          border: 15px solid transparent;
+          border-left: 24px solid #00FFFF;   /* 好みで色を変えてください */ 
          }
+     }
+   
+          a{
+            position: relative;
+            font-size: 5rem;
+            font-weight: bold;
+            @include g.mq('tab'){
+              font-size: 3rem;
+           }
+            @include g.mq('sp'){
+              font-size: 4rem;
+           }
+
+            &:hover{
+              &::before{
+                content: "";
+                position: absolute;
+                top: 50%;   /* 縦軸をセンタリングする */ 
+                left: -4rem;
+                transform: translateY(-50%);   /* 縦軸をセンタリングする */  
+                border: 12.5px solid transparent;
+                border-left: 20px solid #00FFFF;   /* 好みで色を変えてください */  
+                @include g.mq('tab'){
+                  display: none;
+               }
+              }
+             }
         }
+
+         }
+
+        }
+
     }
-  }
-  .l-header__container--profileimage,.l-header__container--worksimage,.l-header__container--contactimage{
-      width: 20rem;
-      height: auto;
-  }
-  @keyframes hurueru {
-    0% {transform: translate(0px, 0px) rotateZ(0deg)}
-    25% {transform: translate(3px, 3px) rotateZ(1deg)}
-    50% {transform: translate(0px, 3px) rotateZ(0deg)}
-    75% {transform: translate(3px, 0px) rotateZ(-1deg)}
-    100% {transform: translate(0px, 0px) rotateZ(0deg)}
-}
 
   /* アニメーション後のメニューの状態 */
   .l-header__container--tab.is-active{
     display: flex;
     justify-content: center;
-    transform: translateX(0);
     }
+.l-header__container--haikei{
+    background:linear-gradient(rgba(0,0,0,1), rgba(51,0,51,1)),url(../image/header_bg2.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-blend-mode: screen ;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.99;
+    @include g.mq('tab') {
+      &::before{
+        background:linear-gradient(rgba(0,0,0,0.1), rgba(51,0,51,0.25)),url(../image/header_bg2.gif)no-repeat center;
+        background-size: cover;/* cover指定できる */
+        content: "";
+        display: block;
+        position: fixed;/* 擬似要素ごと固定 */
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;/* 横幅いっぱい */
+        height: 100vh;/* 縦幅いっぱい */
+    }
+  }
+}
 
   .c-header__botton--line > span{
         display: block;

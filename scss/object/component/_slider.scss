@@ -2,116 +2,121 @@
 
 
 .c-section__under--slider{
-    max-width: 50%;
-    width: 100%;
-    margin: 5rem auto;
+    width        : 100%;
+    max-width    : 60%;
+    height       : 100%;
+    margin       : 0 auto;
+    border       : 2px solid #9966CC;
+    margin-bottom: 5rem;
+    @include g.mq('tab'){
+      max-width    : 60%;
+      margin-bottom: 3rem;
+    } 
+   
 
-    @include g.mq('tab'){
-      top: 20%;
-   }
-   @include g.mq('sp'){
-      top: 25%;
-   }
     img{
-    width: 100%;
-    height: 35rem;
-    @include g.mq('tab'){
-      width: 80%;
-      height: 25rem;
-   }
-   @include g.mq('sp'){
-    width: 80%;
-    height: 10rem;
- }
+      width       : 100%;
+      height      : 20vw;
+      object-fit  : cover;
+      border-right: 1.5px solid #CCCCFF;
     }
     &--nav{
-        max-width: 80%;
-        width: 100%;
-        height: 10rem;
-        margin: 0 auto;
-        @include g.mq('tab'){
-          top: 25%;
-       }
-       @include g.mq('sp'){
-          top: 35%;
-       }
+        max-width : 90%;
+        width     : 100%;
+        min-height: auto;
+        margin    : 0 auto;
         .slick-slide{
-            margin: 0 1rem;
-            border: 2px solid #9966CC;
-            @include g.mq('tab'){
-              margin: 0 0.5rem;
-           }  
-           :hover{
-            box-shadow: 0 0 1rem 0.5rem #9966CC;/*ボタンの外側に*/
-          }
+        width : 100%;
+        height: 100%;
+        margin: 0 1rem;
+        border: 2px solid #9966CC;
+        @include g.mq('tab'){
+          margin: 0 0.5rem;
+        }  
+        &:hover{
+          box-shadow: 0 0 1rem 0.5rem #9966CC;/*ボタンの外側に*/
+          @include g.mq('tab'){
+            box-shadow: 0 0 0.5rem 0.25rem
+          }  
+        }
         }
     
         img{
-            height: 10rem;
-            border: 1.5px solid #CCCCFF;
+          width     : 100%;
+          height    : 7.5vw;
+          object-fit: cover;
+          border    : 1.5px solid #CCCCFF;
           @include g.mq('tab'){
-              height: 7.5rem;
-           } 
-        
+            height: 15vw;
+          } 
+          @include g.mq('tabsp'){
+            height: 15vw;
+          }
+          @include g.mq('sp'){
+            height: 20vw;
+          }
         }
       
     }
 }
 
 .slide-arrow {
-    bottom: 0;
-    height: 0;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    width: 0;
-  }
+  width   : 0;
+  height  : 0;
+  position: absolute;
+  top     : 0;
+  bottom  : 0;
+  margin  : auto;
+}
   .prev-arrow {
     border-top: solid 5px #CC33FF;
     border-right: solid 5px #CC33FF;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     transform: rotate(225deg);
-    left: -85px;
+    left: -70px;
     @include g.mq('tab'){
       width: 30px;
       height: 30px;
-      left: -30px;
+      left: -60px;
    }
-   @include g.mq('tab'){
-      width: 25px;
-      height: 25px;
-      left: -20px;
+   @include g.mq('tabsp'){
+    width: 25px;
+    height: 25px;
+    left: -45px;
+ }
+   @include g.mq('sp'){
+    border-top: solid 3px #CC33FF;
+    border-right: solid 3px #CC33FF;
+    width: 15px;
+    height: 15px;
+    left: -25px;
    }
   }
   .next-arrow {
     border-top: solid 5px #CC33FF;
-    border-right: solid 5px #CC33FF	;
-    width: 60px;
-    height: 60px;
+    border-right: solid 5px #CC33FF;
+    width: 45px;
+    height: 45px;
     transform: rotate(45deg);
-    right: -85px;
+    right: -70px;
     @include g.mq('tab'){
       width: 30px;
       height: 30px;
-      right: -30px;
+      right: -60px;
    }
+   @include g.mq('tabsp'){
+    width: 25px;
+    height: 25px;
+    right: -45px;
+ }
    @include g.mq('sp'){
-      width: 25px;
-      height: 25px;
+      border-top: solid 3px #CC33FF;
+      border-right: solid 3px #CC33FF;
+      width: 15px;
+      height: 15px;
       right: -25px;
    }
   }
-  button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
-    padding: 0;
-  }
-  // .slick-track{
-  //   @include tab{
-  //     width: 0;
 
-  //  }
-  // }
+

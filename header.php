@@ -11,6 +11,42 @@
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
+  <div id="loading">
+  <div class="loader">
+  <span class="inner one"></span>
+  <span class="inner two"></span>
+  <span class="inner three"></span>
+  <span class="inner four"></span>
+  <span class="inner five"></span>
+  <span class="inner six"></span>
+</div>
+<div class="loading-text">
+		<span class="loading-text-words">L</span>
+		<span class="loading-text-words">O</span>
+		<span class="loading-text-words">A</span>
+		<span class="loading-text-words">D</span>
+		<span class="loading-text-words">I</span>
+		<span class="loading-text-words">N</span>
+		<span class="loading-text-words">G</span>
+    <span class="loading-text-words">.</span>
+    <span class="loading-text-words">.</span>
+    <span class="loading-text-words">.</span>
+	</div>
+</div>
+<!-- <div class="loading">
+	<div class="loading-text">
+		<span class="loading-text-words">L</span>
+		<span class="loading-text-words">O</span>
+		<span class="loading-text-words">A</span>
+		<span class="loading-text-words">D</span>
+		<span class="loading-text-words">I</span>
+		<span class="loading-text-words">N</span>
+		<span class="loading-text-words">G</span>
+    <span class="loading-text-words">.</span>
+    <span class="loading-text-words">.</span>
+    <span class="loading-text-words">.</span>
+	</div>
+</div> -->
     <!-- 緑のカーソル部分初め -->
     <div class="f-cursor">
       <div class="f-cursor2">
@@ -18,15 +54,12 @@
         <span class="dot2"></span>
       </div>
     <!-- 緑のカーソル部分終わり -->
-      
       <div class="f-body">
         <!-- particles.js 初め -->
         <canvas class="f-body__background"></canvas>
         <!-- particles.js 終わり -->
     <?php wp_body_open(); ?>
-      <!-- ヘッダー部分 初め -->
       <header class="l-header">
-        <!-- ハンバーガーメニュー 初め -->
         <button type="button" class="c-header__botton">
           <div class="c-header__botton--line">
             <span></span>
@@ -37,23 +70,19 @@
           <p class="c-header__botton--text is-active">Close</p>
         </button>
         <div class="c-header__underbotton">
-          <a href="https://twitter.com/@murakami_web"><img class="c-header__botton--twitterimage" src="<?php echo esc_url( get_template_directory_uri() . "/image/Twitter.png" ); ?>"></img></a>
+          <a href="https://twitter.com/@murakami_web"><img loading="lazy" class="c-header__botton--twitterimage" src="<?php echo esc_url( get_template_directory_uri() . "/image/header_icon.png" ); ?>"></img></a>
         </div>
-        <!-- ハンバーガーメニュー 終わり -->
-        <!-- ハンバーガーメニュー内のメニュー部分 初め -->
         <div class="l-header__container--tab">
-        <div class="l-header__container--z">
-            <ul>
-              <li><a href="<?php echo esc_url(home_url('')); ?>"><img class="l-header__container--topimage" src="<?php echo esc_url( get_template_directory_uri() . "/image/Top.png" ); ?>"></img></a></li>
-              <li><a href="<?php echo esc_url(home_url('Profile')); ?>"><img class="l-header__container--profileimage" src="<?php echo esc_url( get_template_directory_uri() . "/image/Profile.png" ); ?>"></img></a></li>
-              <li><a href="<?php echo esc_url(home_url('Works')); ?>"><img class="l-header__container--worksimage" src="<?php echo esc_url( get_template_directory_uri() . "/image/Works.png" ); ?>"></img></a></li>
-              <li><a href="<?php echo esc_url(home_url('Contact')); ?>"><img class="l-header__container--contactimage" src="<?php echo esc_url( get_template_directory_uri() . "/image/Contact.png" ); ?>"></img></a></li>
-            </ul>
-</div>
-            <div class="l-header__container--haikei"><img src="<?php echo esc_url( get_template_directory_uri() . "/image/tunnel3.png" ); ?>"></img>
-          <div> 
+          <div class="l-header__container--z">
+          <img loading="lazy" class="c-header__container--pageimage" src="<?php echo esc_url( get_template_directory_uri() . "/image/header_img.png" ); ?>"></img>
+              <ul>
+                <li><a href="<?php echo esc_url(home_url('')); ?>">Top</a></li>
+                <li><a href="<?php echo esc_url(home_url('Profile')); ?>">Profile</a></li>
+                <li><a href="<?php echo esc_url(home_url('Works')); ?>">Works</a></li>
+                <li><a href="<?php echo esc_url(home_url('Contact')); ?>">Contact</a></li>
+              </ul>
+          </div>
+          <div class="l-header__container--haikei"></div> 
         </div>
-        <!-- ハンバーガーメニュー内のメニュー部分 終わり -->
       </header>
-      <!-- ヘッダー部分 終わり -->
 <!-- header.php終わり -->
