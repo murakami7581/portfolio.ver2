@@ -7,22 +7,40 @@
 @use "../scss/layout/header";
 @use "../scss/layout/main";
 
+@use "../scss/object/component/background";
 @use "../scss/object/component/button";
-@use "../scss/object/component/contact-content";
+@use "../scss/object/component/contact-form";
 @use "../scss/object/component/circle";
 @use "../scss/object/component/hexagon";
+@use "../scss/object/component/icon";
+@use "../scss/object/component/leftside";
+@use "../scss/object/component/load-shape";
+@use "../scss/object/component/load-text";
 @use "../scss/object/component/media";
 @use "../scss/object/component/menu";
+@use "../scss/object/component/pageselect-menu";
 @use "../scss/object/component/profile-content";
+@use "../scss/object/component/rightside";
+@use "../scss/object/component/section-text";
 @use "../scss/object/component/skills-content";
 @use "../scss/object/component/slider";
-@use "../scss/object/component/text";
-@use "../scss/object/component/works-content";
+@use "../scss/object/component/title";
+@use "../scss/object/component/work-content";
 
 @use "../scss/object/project/profile";
+@use "../scss/object/project/load";
+@use "../scss/object/project/pageselect";
 @use "../scss/object/project/main-visual";
 @use "../scss/object/project/works";
 @use "../scss/object/project/contact";
+@use "../scss/object/project/hamburger-botton";
+@use "../scss/object/project/side";
+@use "../scss/object/project/section-top";
+@use "../scss/object/project/section-center";
+@use "../scss/object/project/section-bottom";
+@use "../scss/object/project/section-botton";
+@use "../scss/object/project/box";
+
 
 @use "../scss/object/utility/align";
 @use "../scss/object/utility/clearfix";

@@ -1,0 +1,57 @@
+@use '../../global' as g;
+
+.c-work__image{
+    &::before,&::after{
+        content: "";
+        position        : absolute;
+        z-index         : 10;
+        background-image: url(../image/work-borderright.png);
+        background-size : cover;
+    }
+    &::before{
+        width : 3%;
+        height: 100%;
+        top   : 0;
+        right : 0;
+    }
+    &::after{
+        width : 100%;
+        height: 4%;
+        top   : 0;
+        left  : 0;
+    }
+}
+
+.c-section__works__image1{
+    position     : relative;
+    width        : 100%;
+    height       : 100%;
+    text-align   : right;
+    margin-bottom: 15%;
+    &::before,&::after{
+        content         : "";
+        position        : absolute;
+        z-index         : 10;
+        background-image: url(../image/work-borderleft.jpg);
+        background-size : cover;
+    }
+    &::before{
+        width : 3%;
+        height: 100%;
+        top   : 0%;
+        left  : 0%;
+    }
+    &::after{
+        width: 100%;
+        height: 4%;
+        top   : 97.5%;
+        left  : 0;
+    }
+}
+.wp-image-516,.wp-image-745{
+    width: 70%;
+    height: 100%;
+}
+.wp-block-image{
+    margin: 0;
+}

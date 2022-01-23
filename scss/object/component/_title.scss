@@ -1,0 +1,30 @@
+@use '../../global' as g;
+
+.c-title{
+    &::after{
+        content  : "Portforio Site";
+        position : absolute;
+        top      : 90%;
+        left     : 90%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        @include g.mq('sp'){
+        top: 75%;
+        }
+    }
+    img{
+        width    : 70rem;
+        height   : auto;
+        position : absolute;
+        top      : 70%;
+        left     : 50%;
+        transform: translate(-50%, -50%);
+        @include g.mq('tab'){
+        width: 50rem;
+        }
+        @include g.mq('sp'){
+        width: 100vw;
+        top  : 60%;
+        }
+    }
+}

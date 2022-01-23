@@ -1,84 +1,61 @@
 @use '../../global' as g;
 
-.ad{
+.c-circle{
     @include g.mq('tab'){
         display: none;
     }
-        img{
-            width    : 40vw;
-            height   : auto;
-            opacity  : 0.35;
-            animation: 20s linear infinite rotation1;
-        }
-        .tori{
-            width    : 50vw;
-            height   : auto;
-            position : absolute;
-            top      : 20%;
-            left     : 30%;
-            z-index  : -1;
-            opacity  : 0.3;
-            animation: 20s linear infinite rotation2;
-        }
+    &__leftimage{
+        width    : 40vw;
+        height   : auto;
+        opacity  : 0.35;
+        animation: 20s linear infinite rotation1;
+    }
+    &__rightimage{
+        width    : 50vw;
+        height   : auto;
+        position : absolute;
+        top      : 20%;
+        left     : 30%;
+        z-index  : -1;
+        opacity  : 0.3;
+        animation: 20s linear infinite rotation2;
+    }
 
     }
-.p-circle1__sp,
-.p-circle2__sp,
-.p-circle3__sp,
-.p-circle4__sp,
-.p-circle5__sp,
-.p-circle6__sp,
-.p-circle7__sp,
-.p-circle8__sp{
-display: none;
-@include g.mq('tab'){
-    display: block;
-    text-align: center;
-}
-  
-   .c-circle1__sp__img,
-   .c-circle2__sp__img,
-   .c-circle3__sp__img,
-   .c-circle4__sp__img,
-   .c-circle5__sp__img,
-   .c-circle6__sp__img,
-   .c-circle7__sp__img,
-   .c-circle8__sp__img{
+
+.c-center__title--sp{
     display: none;
     @include g.mq('tab'){
-        width: 30vw;
-        height: auto;
-        display: inline-block;
-        margin: 2rem 0 3rem 0;
+        display   : block;
+        text-align: center;
     }
- 
-   }
-}
-.p-circle1,
-.p-circle3,
-.p-circle5,
-.p-circle7{
-    position: absolute;
-    @include g.mq('tab'){
-        position       : static;
-        display        : flex;
-        justify-content: center;
+    img{
+        display: none;
+        @include g.mq('tab'){
+            width: 30vw;
+            height: auto;
+            display: inline-block;
+            margin: 2rem 0 3rem 0;
+        }  
     }
 
 }
+.p-circle1,
 .p-circle2,
+.p-circle3,
 .p-circle4,
+.p-circle5,
 .p-circle6,
+.p-circle7,
 .p-circle8{
     position: absolute;
     @include g.mq('tab'){
         position       : static;
         display        : flex;
         justify-content: center;
-        
     }
-}
 
+}
 .p-circle1{
     top : 52.5%;
     left: 20.5%;
@@ -111,7 +88,14 @@ display: none;
     top :80%;
     left:0%;
 }
-.ad-3{
+.c-circle1__image,
+.c-circle2__image,
+.c-circle3__image,
+.c-circle4__image,
+.c-circle5__image,
+.c-circle6__image,
+.c-circle7__image,
+.c-circle8__image{
     width    : 11vw;
     height   : auto;
     animation: 20s linear infinite rotation1;
@@ -129,5 +113,68 @@ display: none;
 @keyframes rotation2{
     0%{ transform:rotate(0);}
     100%{ transform:rotate(-360deg); }
+}
+
+.c-skill__center{
+    position     : absolute;
+    top          : 50%;
+    left         : 50%;
+    transform    : translate(-50%,-50%);
+    z-index      : 100;
+    border-radius: 50%;
+    background   : linear-gradient(-135deg, #333333, #9966CC);
+    padding      : 8px;
+    animation    : wave 2s linear infinite;
+    @include g.mq('tab'){
+        top      : 90%;
+        left     : 22.5%;
+        padding  : 30px;
+        transform: rotateX(75deg);
+    } 
+    &:hover{
+            position : absolute;
+            top      : 20%;
+            left     : 20%;
+            transform: translate(-50%,-50%);
+            padding  : 3.5vw;
+            transform:rotateX(75deg); 
+            @include g.mq('tab'){
+                display: none;
+            } 
+        }
+        &:hover +.c-skill__shape{
+            display: block;
+            position: absolute;
+            top:5%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            z-index: 100;
+            @include g.mq('tab'){
+                display: none;
+            } 
+        }
+        &:hover ~.p-center__box{
+            display        : block;
+            display        : flex;
+            justify-content: space-between;
+            @include g.mq('tab'){
+                display: none;
+            } 
+    }
+}
+
+@keyframes wave {
+    0%{
+        box-shadow:  0 0 0 0 rgba(207,135,237, 0.6), 0 0 0 0 rgba(207,135,237,0.6);
+    }
+    30%{
+        box-shadow:  0 0 0 9px rgba(29, 171, 209, 0),0 0 0 0 rgba(207,135,237,0.6);
+    }
+    65%{
+        box-shadow:  0 0 0 9px rgba(29, 171, 209, 0),0 0 0 10px rgba(29, 171, 209, 0);
+    }
+    100%{
+        box-shadow:  0 0 0 0 rgba(29, 171, 209, 0),0 0 0 10px rgba(29, 171, 209, 0);
+    }
 }
 

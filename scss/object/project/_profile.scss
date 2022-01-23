@@ -1,429 +1,81 @@
 @use '../../global' as g;
 
-.p-section__profile{ 
-    position      : relative; 
-    z-index       : 100;
-    width         : 100%;
-    height        : 100%;
-    background    : radial-gradient(rgba(87,3,92,0.8),rgba(11, 11, 11,1));
-    border-radius : 30px;
-    padding-bottom: 5rem;
-    margin        : 0 auto;
+.p-profile{ 
     h1{
-        width              : 45%;
-        color              : rgba(87,3,92,0);
-        font-size          : 15rem;
-        font-family        : cursive;
         -webkit-text-stroke: 1px #9966CC;
         padding            : 5% 0 0 5%;
-        margin-bottom      : 5%;
-        @include g.mq('tab'){
-            font-size: 8rem;
-        }
-        @include g.mq('sp'){
-            font-size: 6rem;
-        }
     }
-    &--content{
+    &__content{
         position : relative; 
         max-width: 90%;
         margin   : 0 auto;
-
-    .p-section__profile--image{
-        position: relative;
-        img{
-            width: 100%;
-            height: auto;
-        }
-        .wp-image-756{
-            @include g.mq('tab'){
-                display: none;
-            }
-        }
+}
+}
+.p-profile__text{
+    position: absolute;
+    top     : 3%;
+    left    : 0;
+    @include g.mq('tab'){
+        width     : 100%;
+        position  : static;
+        display   : inline-block;
+        text-align: center;
     }
-
-    .p-section__profile--imagetab{
-        display: none;
+    img{
+        width        : 25vw;
+        height       : auto;
+        margin-bottom: 2.5vh;
         @include g.mq('tab'){
-            display: block;
-            img{
-                width  : 100%;
-                height : auto;
-                display: block;
-                margin-bottom: 10rem;
-            }
+            display: none;
         }
     }
-    
-    .p-text{
-        position: absolute;
-        top     : 3%;
-        left    : 0;
+}
+.wp-block-image{
+    margin: 0;
+}
+.c-select{
+    position   : relative;
+    font-size  : 2vw;
+    margin-left: 3.5vw;
+    @include g.mq('tab'){
+        margin-left: 0;
+    }
+    &__top,&__center,&__bottom{
+        width        : 75%;
+        height       : 100%;
+        position     : relative;
+        border-bottom: 1px solid #439bb5;
+        padding      : 0.5rem 0;
+        margin-bottom: 3rem;
         @include g.mq('tab'){
-            width: 100%;
-            display: inline-block;
-            position: static;
-            text-align: center;
+            display: none;
         }
-        img{
-            width : 25vw;
-            height: auto;
-            margin-bottom: 2.5vh;
-            @include g.mq('tab'){
-                display: none;
-            }
-        }
-    }
-    .wp-block-image{
-        margin: 0;
-    }
-    .c-text{
-        position   : relative;
-        font-size  : 2vw;
-        margin-left: 3.5vw;
-        @include g.mq('tab'){
-            margin-left: 0;
-        }
-        &__top,&__center,&__bottom{
-            position      : relative;
-            width         : 75%;
-            height        : 100%;
-            border-bottom : 1px solid #439bb5;
-            padding-bottom: 1rem;
-            margin-bottom : 3vh;
-            @include g.mq('tab'){
-                display: none;
-            }
-            @include g.mq('sp'){
-                // font-size     : 1vw;
-                // margin-bottom : 0.5rem;
-            }
-            &:hover{
-                &::before{
-                    content: "";
-                    position: absolute;
-                    top: 42.5%;   
-                    left: -2vw;
-                    transform: translateY(-50%);  
-                    border: 10px solid transparent;
-                    border-left: 16px solid #00FFFF;   
-                }
-            }
-        }
-    }
-    .p-botton__profile{
-        position  : relative;
-        z-index   : 1;
-        display   : block;
-        text-align: right;
-        padding   : 5% 5% 0 0;
-        @include g.mq('tab'){
-            padding: 0;
-        }
-        img{
-            width: 3rem;
-            height: auto;
-        }
-    }
-    .c-column__container,
-    .c-column__career,
-    .c-text-last{
-        width           : 40%;
-        height          : 100%;
-        display         : none;
-        position        : fixed;
-        top             : 0;
-        right           : 12.5%; 
-        z-index         : 10;
-        font-size       : 1.5rem;
-        background-color: rgba(87,3,92,0.75);
-        overflow-y      : auto;
-        padding-top     : 3rem;
-        margin          : 0 auto;
-
-        &::before{
-            content     : "";
-            width       : 100%;
-            height      : 100%;
-            display     : block;
-            position    : absolute;
-            top         : 0;
-            left        : 0;
-            border-width: 0 8px;
-            border-style: solid;
-            border-color: rgba(13,44,67,0.5);
-        }
-        &::after{
-            content     : "";
-            width       : 100%;
-            height      : 100%;
-            display     : block;
-            position    : absolute;
-            top         : 0;
-            left        : 0;
-            border-width: 0 4px;
-            border-style: solid;
-            border-color: #439bb5;
-        }
-        @include g.mq('tab'){
-            display: block;
-            position: static;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(87,3,92,0);
-            padding: 0;
-            margin-bottom: 3rem;
-            &::before,&::after{
-                display: none;
-            }
-            img{
-                display: none;
-            }
-        }
-    }
-    .c-column__container{
-
-        h2{
-            width              : 100%;
-            -webkit-text-stroke: 1px #CC99FF;
-            font-size          : 5rem;
-            font-weight        : bold;
-            margin-bottom      : 5rem;
-            @include g.mq('tab'){
- 
-            }
-            @include g.mq('sp'){
-                font-size    : 3rem;
-                margin-bottom: 3rem;
-            }
-        }
-        .wp-block-group{
-            padding: 0 10%;
-            @include g.mq('tab'){
-                padding: 0;
-            }
-        
-        h3{
-            font-size    : 2.5rem;
-            font-family  : “游明朝”, YuMincho, “Hiragino Mincho ProN W3”, “ヒラギノ明朝 ProN W3”, “Hiragino Mincho ProN”, “HG明朝E”, “ＭＳ Ｐ明朝”, “ＭＳ 明朝”, serif;
-            line-height  : 1.5;
-            margin-bottom: 2.5rem;
-            @include g.mq('tab'){
-               
-            }
-            @include g.mq('sp'){
-                font-size    : 1.5rem;
-                margin-bottom: 1.5rem;
-            }
-        }
-        
-        h4{
-            @include g.mq('tab'){
-                font-size: 1.75rem;
-            }
-            @include g.mq('sp'){
-                font-size: 1.25rem;
-            }
-        }
-        h5{
-            font-size: 5rem;
-            margin   : 1.5rem 0 3rem 0;
-            @include g.mq('tab'){
-                font-size    : 4rem;
-            }
-            @include g.mq('sp'){
-                font-size    : 3rem;
-                margin-bottom: 2rem;
-            }
-        }
-        p{
-            font-size  : 1.75rem;
-            line-height: 1.75;
-            @include g.mq('tab'){
-                position   : relative;
-                font-size  : 1.25rem;
-                line-height: 2;
-                padding    : 1rem 2rem;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-                &::before,&::after{
-                    position: absolute;
-                    top: 0;
-                    content: '';
-                    width: 20px;
-                    height: 100%;
-                    border-top: 1px solid #9966FF;
-                    border-bottom: 1px solid #9966FF;
-                    -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
-                }
-                &::before{
-                    left: 0;
-                    border-left: 4px solid #9966FF;
-                }
-                &::after{
-                    right: 0;
-                    border-right: 4px solid #9966FF;
-                }
-            }
-            @include g.mq('sp'){
-                font-size  : 1rem;
-                line-height: 2;
+        &:hover{
+            &::before{
+                content: "";
+                position: absolute;
+                top: 42.5%;   
+                left: -2vw;
+                transform: translateY(-50%);  
+                border: 10px solid transparent;
+                border-left: 16px solid #00FFFF;   
             }
         }
     }
 }
-    .c-column__career{
-
-        .wp-block-columns{
-            margin-bottom: 1.25rem;
-        }
-        h2{
-            width              : 100%;
-            -webkit-text-stroke: 1px #CC99FF;
-            font-size          : 5rem;
-            font-weight        : bold;
-            margin-bottom      : 5rem;
-            @include g.mq('tab'){
-               
-            }
-            @include g.mq('sp'){
-                font-size    : 3rem;
-                margin-bottom: 3rem;
-            }
-        }
-        .wp-block-group{
-            padding: 0 10%;
-            @include g.mq('tab'){
-                position   : relative;
-                font-size  : 1.5rem;
-                line-height: 1.5;
-                padding    : 1rem 2rem;
-            &::before,&::after{
-                    position: absolute;
-                    top: 0;
-                    content: '';
-                    width: 20px;
-                    height: 100%;
-                    border-top: 1px solid #9966FF;
-                    border-bottom: 1px solid #9966FF;
-                    -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
-                }
-                &::before{
-                    left: 0;
-                    border-left: 4px solid #9966FF;
-                }
-                &::after{
-                    right: 0;
-                    border-right: 4px solid #9966FF;
-                }
-            }
-        }
-        p{
-            font-size  : 1.75rem;
-            line-height: 1.75;
-            @include g.mq('tab'){
-                text-align : left;
-                font-size  : 1.25rem;
-                line-height: 2;
-            }
-           
-            @include g.mq('sp'){
-                text-align : center;
-                font-size  : 1.25rem;
-        
-            }
-
-        }
+.c-profile__botton{
+    position  : relative;
+    z-index   : 1;
+    display   : block;
+    text-align: right;
+    padding   : 5% 5% 0 0;
+    @include g.mq('tab'){
+        padding: 0;
     }
-    .c-text-last{
-
-        h2{
-            width              : 100%;
-            text-align         : center;
-            -webkit-text-stroke: 1px #CC99FF;
-            font-size          : 5rem;
-            font-weight        : bold;
-            margin-bottom      : 4rem;
-            @include g.mq('sp'){
-                font-size    : 3rem;
-                margin-bottom: 3rem;
-            }
- 
-        }
-        .wp-block-group{
-            padding: 0 10%;
-            @include g.mq('tab'){
-                padding: 0;
-            }
-            h3{
-                font-size    : 2.5rem;
-                line-height  : 1.5;
-                margin-bottom: 2rem;
-                @include g.mq('tab'){
-                    font-size    : 2rem;
-                    margin-bottom: 2rem;
-                }
-                @include g.mq('sp'){
-                    font-size    : 1.5rem;
-                    margin-bottom: 1.5rem;
-                }
-            }
-        
-        h4{
-            font-size: 1.25rem;
-            margin-bottom   : 3rem ;
-            @include g.mq('tab'){
-
-            }
-        }
-        p{
-            font-size  : 1.75rem;
-            line-height: 1.75;
-            text-align: left;
-            @include g.mq('tab'){
-                position   : relative;
-                font-size  : 1.25rem;
-                line-height: 2;
-                padding    : 1rem 2rem;
-                &::before,&::after{
-                    position: absolute;
-                    top: 0;
-                    content: '';
-                    width: 20px;
-                    height: 100%;
-                    border-top: 1px solid #9966FF;
-                    border-bottom: 1px solid #9966FF;
-                    -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
-                }
-                &::before{
-                    left: 0;
-                    border-left: 4px solid #9966FF;
-                }
-                &::after{
-                    right: 0;
-                    border-right: 4px solid #9966FF;
-                }
-            }
-
-            @include g.mq('sp'){
-                font-size  : 1rem;
-                line-height: 2;
-            }
-        }
+    img{
+        width: 3rem;
+        height: auto;
     }
 }
-    .show1 {
-        display: block;
-    }
 
-    .has-text-align-left{
-        display        : flex;
-        justify-content: center;
-
-    }
-}
-}
 

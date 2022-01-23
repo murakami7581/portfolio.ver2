@@ -15,6 +15,4 @@ http://<?php echo esc_html($_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']); ?>
 </div>
 </article>	
 
-<?php get_sidebar(); ?>
-
 <?php get_footer(); ?>

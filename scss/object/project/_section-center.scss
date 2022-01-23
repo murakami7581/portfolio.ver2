@@ -1,0 +1,24 @@
+@use '../../global' as g;
+.p-section__center{
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin-bottom: 15rem;
+    margin: 0 auto;
+    h1{
+        margin-bottom: 3rem;
+        &::after{
+            content: "〜Hover over the center of the circle";
+            font-size: 3vw;
+            margin-left: 2rem;
+            @include g.mq('tab'){
+                display: none;
+            }
+        }
+    }
+}
+.p-skill{
+    @include g.mq('tab'){
+        position: absolute;
+    } 
+}

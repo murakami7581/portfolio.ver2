@@ -1,9 +1,8 @@
 @use '../../global' as g;
 
-
-.c-section__under--slider{
-    width        : 100%;
-    max-width    : 60%;
+.c-slider{
+  &__image{
+    width        : 60%;
     height       : 100%;
     margin       : 0 auto;
     border       : 2px solid #9966CC;
@@ -12,52 +11,43 @@
       max-width    : 60%;
       margin-bottom: 3rem;
     } 
-   
-
     img{
       width       : 100%;
       height      : 20vw;
       object-fit  : cover;
       border-right: 1.5px solid #CCCCFF;
     }
-    &--nav{
-        max-width : 90%;
-        width     : 100%;
-        min-height: auto;
-        margin    : 0 auto;
-        .slick-slide{
-        width : 100%;
-        height: 100%;
-        margin: 0 1rem;
-        border: 2px solid #9966CC;
-        @include g.mq('tab'){
-          margin: 0 0.5rem;
-        }  
-        &:hover{
-          box-shadow: 0 0 1rem 0.5rem #9966CC;/*ボタンの外側に*/
-          @include g.mq('tab'){
-            box-shadow: 0 0 0.5rem 0.25rem
-          }  
-        }
-        }
-    
-        img{
-          width     : 100%;
-          height    : 7.5vw;
-          object-fit: cover;
-          border    : 1.5px solid #CCCCFF;
-          @include g.mq('tab'){
-            height: 15vw;
-          } 
-          @include g.mq('tabsp'){
-            height: 15vw;
-          }
-          @include g.mq('sp'){
-            height: 20vw;
-          }
-        }
-      
+  }
+  &__nav{
+    width     : 80%;
+    min-height: auto;
+    margin    : 0 auto;
+    .slick-slide{
+    width : 100%;
+    height: 100%;
+    margin: 0 1rem;
+    border: 2px solid #9966CC;
+    @include g.mq('tab'){
+      margin: 0 0.5rem;
+    }  
+    &:hover{
+      box-shadow: 0 0 1rem 0.5rem #9966CC;/*ボタンの外側に*/
+      @include g.mq('tab'){
+        box-shadow: 0 0 0.5rem 0.25rem
+      }  
     }
+    }
+    img{
+      width     : 100%;
+      height    : 7.5vw;
+      object-fit: cover;
+      border    : 1.5px solid #CCCCFF;
+      @include g.mq('tab'){
+        height: 15vw;
+      } 
+    }
+  }
+  
 }
 
 .slide-arrow {
