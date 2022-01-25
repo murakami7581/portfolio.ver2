@@ -1,17 +1,17 @@
 @use '../../global' as g;
 
 .c-title{
-    &::after{
-        content  : "Portforio Site";
-        position : absolute;
-        top      : 90%;
-        left     : 90%;
-        transform: translate(-50%, -50%);
-        font-size: 2rem;
-        @include g.mq('sp'){
-        top: 75%;
-        }
-    }
+    // &::after{
+    //     content  : "Portforio Site";
+    //     position : absolute;
+    //     top      : 90%;
+    //     left     : 90%;
+    //     transform: translate(-50%, -50%);
+    //     font-size: 2rem;
+    //     @include g.mq('sp'){
+    //     top: 75%;
+    //     }
+    // }
     img{
         width    : 70rem;
         height   : auto;
@@ -26,5 +26,16 @@
         width: 100vw;
         top  : 60%;
         }
+    }
+}
+.c-title__center--pc{
+    @include g.mq('tab'){
+        display: none;
+    }
+}
+.c-title__center--sp{
+    display: none;
+    @include g.mq('tab'){
+        display: block;
     }
 }

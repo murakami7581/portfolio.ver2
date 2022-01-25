@@ -15,7 +15,7 @@
         height   : auto;
         position : absolute;
         top      : 20%;
-        left     : 30%;
+        left     : 25%;
         z-index  : -1;
         opacity  : 0.3;
         animation: 20s linear infinite rotation2;
@@ -32,7 +32,7 @@
     img{
         display: none;
         @include g.mq('tab'){
-            width: 30vw;
+            width: 22.5vw;
             height: auto;
             display: inline-block;
             margin: 2rem 0 3rem 0;
@@ -57,35 +57,35 @@
 
 }
 .p-circle1{
-    top : 52.5%;
+    top : 51%;
     left: 20.5%;
 }
 .p-circle2{
-    top : 20%;
-    left: 16%;
+    top : 18.5%;
+    left: 10%;
 }
 .p-circle3{
-    top : 30%;
-    left: 31%;
+    top : 28.5%;
+    left: 25%;
 }
 .p-circle4{  
     top : 49%;
-    left: 40%;
+    left: 37%;
 }
 .p-circle5{
     top : 52.5%;
-    left: 56%;
+    left: 53%;
 }
 .p-circle6{
-    top : 68%;
-    left: 31%;
+    top : 70%;
+    left: 30%;
 }
 .p-circle7{
-    top : 58.5%;
-    left: 5%;
+    top : 65%;
+    left: 7.5%;
 }
 .p-circle8{
-    top :80%;
+    top :85%;
     left:0%;
 }
 .c-circle1__image,

@@ -38,7 +38,7 @@
       <span class="f-body__cursor--smail"></span>
       <span class="f-body__cursor--large"></span>
       <!-- particles.js 初め -->
-      <canvas class="f-body is-particles"></canvas>
+      <canvas class="f-body__background is-particles"></canvas>
       <!-- particles.js 終わり -->
     <?php wp_body_open(); ?>
       <header class="l-header">

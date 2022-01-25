@@ -77,7 +77,6 @@
 
     function redirect_404() { if(is_front_page() || is_single() || is_archive() || is_page()|| is_search()) return; include(TEMPLATEPATH . '/404.php'); exit; } add_action('template_redirect', 'redirect_404');
 
-
-
+    add_filter('show_admin_bar', '__return_false');
 
 

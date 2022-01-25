@@ -155,5 +155,12 @@ $(window).resize(function () {                     // Windowサイズが変更�
     $(".c-select__introduction,.c-select__career,.c-select__vision").fadeIn();
   }
 });
+$(window).resize(function () {                     // Windowサイズが変更された時
+  var win = $(window).width();
+  var bp = 1025; // ブレークポイント（px）
+  if (win > bp) {
+    $(".c-select__introduction,.c-select__career,.c-select__vision").fadeOut();
+  }
+});
 
 // Profile-pageのアニメーション終わり

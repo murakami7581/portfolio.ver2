@@ -1,7 +1,27 @@
 @use '../../global' as g;
-.p-section__bottom--slider{
+
+
+.p-section__bottom{
+  position: relative;
+  width: 90%;
+  height: 100%;
+  z-index: 10;
+  padding-bottom: 12.5rem;
+  margin: 0 auto;
+  @include g.mq('tab'){
+    padding-bottom: 10rem;
+  }
+  @include g.mq('sp'){
+    padding-bottom: 5rem;
+  }
+  h1{
+    padding-top: 0;
+    margin-top: 5rem;
+  }
+  &--slider{
     max-width : 100%;
     width     : 100%;
     min-height: auto;
     margin    : 0 auto;
   }
+}

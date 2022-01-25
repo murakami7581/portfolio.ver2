@@ -5,12 +5,12 @@
     <div class="c-leftside__line"></div>
   </div>
   <div class="c-rightside__botton">
-    <a href="https://twitter.com/@murakami_web"><img loading="lazy" src="<?php echo esc_url( get_template_directory_uri() . "/image/header_icon.png" ); ?>" alt=”Twitterのアイコン></img></a>
+    <a href="https://twitter.com/@murakami_web"><img loading="lazy" src="<?php echo esc_url( get_template_directory_uri() . "/image/header_icon.svg" ); ?>" alt=”Twitterのアイコン></img></a>
   </div>
   <article <?php post_class('p-section'); ?>>
     <div class="p-section__inner p-contact">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-          <h1><?php the_title(); ?></h1>
+      <h1><img loading="eager" src="<?php echo esc_url( get_template_directory_uri() . "/image/main_contact.svg" ); ?>"alt=”Contactの見出し”></img></h1>
           <div class="p-contact__form">
             <?php the_content(); ?>
           </div>
