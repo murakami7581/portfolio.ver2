@@ -10,6 +10,7 @@
     @include g.mq('tab'){
         width : 6rem;
         height: 3rem;
+        right : 1%;
     }
     @include g.mq('sp'){
         width : 4rem;

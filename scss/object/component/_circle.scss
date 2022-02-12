@@ -32,13 +32,18 @@
     img{
         display: none;
         @include g.mq('tab'){
-            width: 22.5vw;
+            width: 30%;
             height: auto;
             display: inline-block;
             margin: 2rem 0 3rem 0;
-        }  
+        }
+        @include g.mq('sp'){
+            width: 40%;
+        } 
     }
-
+}
+.is-click{
+    display: block;
 }
 .p-circle1,
 .p-circle2,
@@ -50,9 +55,11 @@
 .p-circle8{
     position: absolute;
     @include g.mq('tab'){
-        position       : static;
-        display        : flex;
-        justify-content: center;
+        position           : static;
+        display            : flex;
+        justify-content    : center;
+        -webkit-perspective: 500px;
+        perspective        : 500px;
     }
 
 }
@@ -127,7 +134,7 @@
     animation    : wave 2s linear infinite;
     @include g.mq('tab'){
         top      : 90%;
-        left     : 22.5%;
+        left     : 21%;
         padding  : 30px;
         transform: rotateX(75deg);
     } 
@@ -137,7 +144,7 @@
             left     : 20%;
             transform: translate(-50%,-50%);
             padding  : 3.5vw;
-            transform:rotateX(75deg); 
+            transform: scaleY(0.2);
             @include g.mq('tab'){
                 display: none;
             } 

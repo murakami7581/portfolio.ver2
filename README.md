@@ -1,2 +1,3 @@
-＃portforio
-＃portforio
+＃portforio→portfolio
+
+村上のポートフォリオサイトです。

@@ -66,13 +66,16 @@ body {
 
 .f-body__cursor{
   cursor: none;
+  @include g.mq('tab') {
+    cursor: auto;
+  }
   &--smail,&--large{
     position      : absolute;
     z-index       : 10000;
     transform     : translate(-50%, -50%);
     border-radius : 100%;
     pointer-events: none;
-    @include g.mq('sp'){
+    @include g.mq('tab'){
       display: none;
     }
   }

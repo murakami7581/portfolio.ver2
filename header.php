@@ -13,13 +13,27 @@
   <body <?php body_class(); ?>>
   <div class="f-body">
     <div id="f-body__load">
-      <div  class="p-load__container">
-        <span class="c-load__shape  c-road__shape--animation1"></span>
-        <span class="c-load__shape  c-road__shape--animation2"></span>
-        <span class="c-load__shape  c-road__shape--animation3"></span>
-        <span class="c-load__shape  c-road__shape--animation4"></span>
-        <span class="c-load__shape  c-road__shape--animation5"></span>
-        <span class="c-load__shape  c-road__shape--animation6"></span>
+      <div class="p-load__container">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:9;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
       </div>
       <div class="c-load__text">
         <span>L</span>
@@ -29,9 +43,6 @@
         <span>I</span>
         <span>N</span>
         <span>G</span>
-        <span>.</span>
-        <span>.</span>
-        <span>.</span>
       </div>
     </div>
     <div class="f-body__cursor">
@@ -53,7 +64,7 @@
         </button>
         <div class="p-header__container is-header__container">
           <div class="p-header__menu c-header__menu c-header__menu--bg">
-          <img loading="lazy" src="<?php echo esc_url( get_template_directory_uri() . "/image/header_img.png"); ?>" alt=”PageSelectのタイトル”></img>  
+          <img loading="lazy" src="<?php echo esc_url( get_template_directory_uri() . "/image/header_img.svg"); ?>" alt=”PageSelectのタイトル”></img>  
             <nav>
               <ul>
                 <li><a href="<?php echo esc_url(home_url('')); ?>">Top</a></li>

@@ -2,34 +2,41 @@
 
 .p-profile{ 
     h1{
-        -webkit-text-stroke: 1px #9966CC;
-        padding            : 5% 0 0 5%;
+        img{
+            padding: 5% 0 0 5%;
+            @include g.mq('tab'){
+                width  : 50%;
+                padding: 5rem 0 0 0;
+            }
+        }
+        
     }
     &__content{
         position : relative; 
         max-width: 90%;
         margin   : 0 auto;
 }
-}
-.p-profile__text{
-    position: absolute;
-    top     : 3%;
-    left    : 0;
-    @include g.mq('tab'){
-        width     : 100%;
-        position  : static;
-        display   : inline-block;
-        text-align: center;
-    }
-    img{
-        width        : 25vw;
-        height       : auto;
-        margin-bottom: 2.5vh;
+    &__text{
+        position: absolute;
+        top     : 3%;
+        left    : 0;
         @include g.mq('tab'){
-            display: none;
+            width     : 100%;
+            position  : static;
+            display   : inline-block;
+            text-align: center;
+        }
+        img{
+            width        : 25vw;
+            height       : auto;
+            margin-bottom: 2.5vh;
+            @include g.mq('tab'){
+                display: none;
+            }
         }
     }
 }
+
 .wp-block-image{
     margin: 0;
 }

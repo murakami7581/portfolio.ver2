@@ -5,7 +5,7 @@
         content: "";
         position        : absolute;
         z-index         : 10;
-        background-image: url(../image/work-borderright.png);
+        background-image: url(../image/work-borderright.jpg);
         background-size : cover;
     }
     &::before{
@@ -48,10 +48,35 @@
         left  : 0;
     }
 }
-.wp-image-516,.wp-image-865{
-    width: 70%;
+.wp-image-889,.wp-image-891,.wp-image-957{
+    width : 70%;
     height: 100%;
 }
 .wp-block-image{
     margin: 0;
+}
+.wp-block-columns{
+    margin-bottom: 0;
+}
+.c-work__link{
+    position     : relative;
+    display      : inline-block;
+    border-bottom: 3px solid #439bb5;
+    @include g.mq('tab'){
+        border-bottom: 1px solid #439bb5;
+    }
+    &:hover{
+        &::before{
+            content: "";
+            position: absolute;
+            top: 47.5%;   
+            left: -2vw;
+            transform: translateY(-50%);  
+            border: 10px solid transparent;
+            border-left: 16px solid #00FFFF; 
+            @include g.mq('tab'){
+                display: none;
+            }  
+        }
+    }
 }

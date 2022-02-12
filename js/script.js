@@ -119,6 +119,48 @@ $(function(){
   });
 }());
 
+$(".c-skill__shape--icon1").on("click", function() {
+  $(".c-center__text--sp1")
+    .addClass("is-click")
+    .fadeIn();
+});
+$(".c-skill__shape--icon2").on("click", function() {
+  $(".c-center__text--sp2")
+    .addClass("is-click")
+    .fadeIn();
+});
+$(".c-skill__shape--icon3").on("click", function() {
+  $(".c-center__text--sp3")
+    .addClass("is-click")
+    .fadeIn();
+});
+$(".c-skill__shape--icon4").on("click", function() {
+  $(".c-center__text--sp4")
+    .addClass("is-click")
+    .fadeIn();
+});
+$(".c-skill__shape--icon5").on("click", function() {
+  $(".c-center__text--sp5")
+    .addClass("is-click")
+    .fadeIn();
+});
+$(".c-skill__shape--icon6").on("click", function() {
+  $(".c-center__text--sp6")
+    .addClass("is-click")
+    .fadeIn();
+});
+$(".c-skill__shape--icon7").on("click", function() {
+  $(".c-center__text--sp7")
+    .addClass("is-click")
+    .fadeIn();
+});
+$(".c-skill__shape--icon8").on("click", function() {
+  $(".c-center__text--sp8")
+    .addClass("is-click")
+    .fadeIn();
+});
+
+
 // Profile-pageのアニメーション初め
 $(".c-select__top").on("click", function() {
   $(".c-select__introduction")
@@ -160,6 +202,7 @@ $(window).resize(function () {                     // Windowサイズが変更�
   var bp = 1025; // ブレークポイント（px）
   if (win > bp) {
     $(".c-select__introduction,.c-select__career,.c-select__vision").fadeOut();
+    $(".c-center__text--sp").fadeOut();
   }
 });
 

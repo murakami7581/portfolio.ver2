@@ -10,10 +10,7 @@
         display        : flex;
         justify-content: center;
         transform      : translate(0);
-        margin-top     : -5rem;
-    }
-    @include g.mq('sp'){
-        margin-top: -2.5rem;
+        margin-top     : 5rem;
     }
 }
 .p-botton__bottom{
@@ -27,6 +24,6 @@
         margin-top: 5rem;
     }
     @include g.mq('sp'){
-        margin-top: 3.5rem;
+        margin-top: 5rem;
     }
 }

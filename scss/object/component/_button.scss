@@ -3,6 +3,7 @@
 .c-hamburger{
   display : block;
   &__text{
+    position           : relative;
     text-align         : center;
     font-size          : 2rem;
     font-weight        : bold;
@@ -14,7 +15,7 @@
     }
     @include g.mq('sp'){
       font-size : 1rem;
-      margin-top: 3rem;
+      margin-top: 3.5rem;
     }
   }
   .is-active{
@@ -69,16 +70,15 @@
   a{
     position           : relative;
     z-index            : 1;
-    color              : rgba(0,0,0,0);
+    color              : #FF55FF;
     font-size          : 3rem;
-    -webkit-text-stroke: 1px #FF00FF;
     padding            : 2rem 5rem;
     @include g.mq('sp'){
       font-size: 2rem;
       padding  : 1.25rem 3.5rem;
     }
     &:hover{
-      color      : #FF00FF;
+      color      : #FF55FF;
       font-weight: bold;
     }
     &::before{
@@ -90,8 +90,8 @@
       left            : 0;
       transform       : skewX(-15deg);
       z-index         : -1;
-      border          : 1px solid #00FFFF;
-      background-color: rgba(0,0,0,1);
+      border          : 2.5px solid #00FFFF;
+      background      : url(../image/main_botton.jpg)no-repeat center;
     }
   }
 }
@@ -100,7 +100,7 @@
   a{
     &::before{
       content         : ""; /*ボックスを作る*/
-      border          : 1px solid #9966CC;
+      border          : 2.5px solid #9966CC;
     }
   }
 }

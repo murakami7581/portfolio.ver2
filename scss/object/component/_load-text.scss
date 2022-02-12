@@ -5,13 +5,12 @@
   display        : flex;
   justify-content: center;
   align-items    : flex-end;
-  color          : #FFFFFF;
   font-size      : 7.5rem;
   font-weight    : bold;
   span {
     display      : inline-block;
     margin       : 0 5px 15rem 5px;
-    @include g.mq('sp'){
+    @include g.mq('tab'){
       font-size  : 3rem;
     }
     @for $i from 0 through 10 {
@@ -26,4 +25,16 @@
   0% {filter: blur(0px);}
   100% {filter: blur(7px);}
 }
+
+@keyframes animateTheBodyBg {
+  from {
+    filter: hue-rotate(0deg)
+  }
+
+  to {
+    filter: hue-rotate(360deg)
+  }
+}
+
+
 

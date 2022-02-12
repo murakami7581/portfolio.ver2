@@ -5,7 +5,7 @@
   position: relative;
   width: 90%;
   height: 100%;
-  z-index: 10;
+  z-index: -1;
   padding-bottom: 12.5rem;
   margin: 0 auto;
   @include g.mq('tab'){
@@ -17,6 +17,15 @@
   h1{
     padding-top: 0;
     margin-top: 5rem;
+    @include g.mq('tab'){
+      // padding-bottom: 10rem;
+    }
+    @include g.mq('sp'){
+      margin: 7.5rem 0 5rem 0;
+    }
+    img{
+      width: 100%;
+    }
   }
   &--slider{
     max-width : 100%;

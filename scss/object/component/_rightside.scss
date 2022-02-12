@@ -9,10 +9,10 @@
     width: 5rem;
     height: 5rem;
     @include g.mq('tab'){
-      right: 2%;
+      right: 1.5%;
     }
     @include g.mq('sp'){
-      right: -1.5%;
+      right: -1%;
     }
     img{
       width:100%;

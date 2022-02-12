@@ -1,6 +1,6 @@
 
 <footer class="l-footer">
-    <p>@www.○○○○○○○○○○.com</p>
+    <p>portfolio.murakamiyoshiya.com</p>
 </footer>
 <?php wp_footer(); ?>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>

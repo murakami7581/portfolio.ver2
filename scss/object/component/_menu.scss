@@ -7,7 +7,7 @@
         display   : block;
         text-align: center;
         margin    : 0 auto;
-        @include g.mq('tab'){
+        @include g.mq('sp'){
             width: 75%;
         }
     }
@@ -15,6 +15,9 @@
         display        : flex;
         justify-content: space-between;
         margin-top     : 15rem;
+        @include g.mq('tab'){
+            margin-top : 9rem;
+        }
         @include g.mq('sp'){
             display   : block;
             margin-top: 7.5rem;
