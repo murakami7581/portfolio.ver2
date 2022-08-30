@@ -296,7 +296,7 @@
           <section class="p-section__bottom">
             <h1><img loading="eager" src="<?php echo esc_url( get_template_directory_uri() . "/image/main_assignmentworks.jpg" ); ?>"alt=”Worksの見出し”></img></h1>
             <div class="p-section__bottom--slider c-slider">
-            <div class="c-slider__image">
+            <!-- <div class="c-slider__image">
               <img loading="lazy" src="<?php echo esc_url( get_template_directory_uri() . "/image/hamburger.jpg" ); ?>" alt=ハンバーガーサイトの画像></img>
               <img loading="lazy" src="<?php echo esc_url( get_template_directory_uri() . "/image/portfolio.jpg" ); ?>"></img>
               <img loading="lazy" src="<?php echo esc_url( get_template_directory_uri() . "/image/RaiseTech1.jpg" ); ?>"></img>
@@ -311,7 +311,7 @@
               <img loading="lazy" src="<?php echo esc_url( get_template_directory_uri() . "/image/RaiseTech2.jpg" ); ?>"></img>
               <img loading="lazy" src="<?php echo esc_url( get_template_directory_uri() . "/image/RaiseTech3.jpg" ); ?>"></img>
               <img loading="lazy" src="<?php echo esc_url( get_template_directory_uri() . "/image/RaiseTech4.jpg" ); ?>"></img>
-            </div>
+            </div> -->
             <div class="p-botton__bottom c-section__botton c-section__botton--purple">
               <a href="<?php echo esc_url(home_url('works')); ?>">VIEW MORE</a>
             </div>
